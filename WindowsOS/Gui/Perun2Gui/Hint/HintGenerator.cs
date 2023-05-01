@@ -88,11 +88,11 @@ namespace Perun2Gui.Hint
 
         private void Init()
         {
-            A_StackForce = new HintArray(new string[] { "stack", "force" }); // ok
-            A_CommandsSF = new HintArray(new string[] { "copy", "create", "createDirectory", "createFile", "createDirectories", "createFiles", "move", "rename" }); // ok
+            A_StackForce = new HintArray(new string[] { "stack", "force" });
+            A_CommandsSF = new HintArray(new string[] { "copy", "create", "createDirectory", "createFile", "createDirectories", "createFiles", "move", "rename" });
             A_Commands = new HintArray(new string[] { "print", "copy", "create", "createDirectory", "createFile", "createDirectories", "createFiles",
                 "delete", "drop", "hide", "lock", "move", "open", 
-                "select", "sleep", "rename", "recreate", "remodify", "reaccess", "rechange", "run", "unhide", "unlock", "inside", "if", "while", "else" }); // ok
+                "select", "sleep", "rename", "recreate", "remodify", "reaccess", "rechange", "run", "unhide", "unlock", "inside", "if", "while", "else" });
             A_MultiCoreVariables = new HintArray(new string[] { "files", "directories", "recursiveFiles", "recursiveDirectories" });
             A_Functions = new HintArray(new string[] { "substring()", "anyInside()", "after()", "absolute()", "afterDigits()", "afterLetters()", 
                 "any()", "average()", "before()", "beforeDigits()", "beforeLetters()", "binary()", "contains()", "capitalize()", "ceil()",
@@ -111,9 +111,9 @@ namespace Perun2Gui.Hint
                 "change", "compressed", "modification", "lifetime", "size", "depth",
                 "drive", "extension", "fullName", "name", "parent", "path",
                 "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December",
-                "Monday", "Tuesday", "Wednesday", "Thursday", "Friday",  "Saturday", "Sunday", "true", "false"
+                "Monday", "Tuesday", "Wednesday", "Thursday", "Friday",  "Saturday", "Sunday", "true", "false", "notepad", "paint", "mspaint"
             }); // ok
-            A_BCEE = new HintArray(new string[] { "break", "continue", "exit", "error" }); // ok
+            A_BCEE = new HintArray(new string[] { "break", "continue", "exit", "error" });
             A_Semicolon = new HintArray(new string[] { ";" });
             A_String = new HintArray(new string[] { "''" }, HintType.Retreating);
             A_CoreCommands = new HintArray(new string[] { "print", "copy", "create", "delete", "drop", "hide", "lock", "select", "unhide", "unlock" });
@@ -128,7 +128,7 @@ namespace Perun2Gui.Hint
                 "access", "creation", "empty", "encrypted", "exists", "hidden", "isDirectory", "isFile", "readonly",
                 "archive", "change", "compressed", "modification", "lifetime", "size", "depth", "drive", "fullName", "name", "parent", "path",
                 "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December",
-                "Monday", "Tuesday", "Wednesday", "Thursday", "Friday",  "Saturday", "Sunday", "true", "false"
+                "Monday", "Tuesday", "Wednesday", "Thursday", "Friday",  "Saturday", "Sunday", "true", "false", "notepad", "paint", "mspaint"
             });
             A_Extensionless = new HintArray(new string[] { "extensionless" });
             A_Extension = new HintArray(new string[] { "extension" });

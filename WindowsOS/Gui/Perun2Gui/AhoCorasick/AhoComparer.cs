@@ -65,7 +65,7 @@ namespace Perun2Gui
                 "files", "recursivefiles", "directories", "recursivedirectories", "index", "this", "location", "success",
                 "archive", "compressed", "empty", "encrypted", "exists", "hidden", "isdirectory", "isfile", "readonly",
                 "access", "change", "creation", "modification", "lifetime", "size", "depth",
-                "drive", "extension", "fullname", "name", "parent", "path", "true", "false" };
+                "drive", "extension", "fullname", "name", "parent", "path", "true", "false", "notepad", "paint", "mspaint" };
             
             Tree = new AhoTree();
             Tree.AddWords(CARDINAL_WORDS, WordType.Cardinal);
