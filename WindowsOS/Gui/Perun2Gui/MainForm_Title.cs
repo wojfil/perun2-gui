@@ -44,12 +44,12 @@ namespace Perun2Gui
                 if (IsCodeSaved)
                 {
                     saveToolStripMenuItem.Enabled = false;
-                    Text = FileNameString + " - Perun2";
+                    Text = FileNameString + " - " + Constants.LANGUAGE_NAME;
                 }
                 else
                 {
                     saveToolStripMenuItem.Enabled = true;
-                    Text = "*" + FileNameString + " - Perun2";
+                    Text = "*" + FileNameString + " - " + Constants.LANGUAGE_NAME;
                 }
             }
             else
@@ -57,12 +57,12 @@ namespace Perun2Gui
                 if (IsCodeSaved)
                 {
                     saveToolStripMenuItem.Enabled = false;
-                    Text = "Untitled - Perun2";
+                    Text = "Untitled - " + Constants.LANGUAGE_NAME;
                 }
                 else
                 {
                     saveToolStripMenuItem.Enabled = true;
-                    Text = "*Untitled - Perun2";
+                    Text = "*Untitled - " + Constants.LANGUAGE_NAME;
                 }
             }
         }

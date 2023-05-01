@@ -27,7 +27,7 @@ namespace Perun2Gui
         public static string[] WEEK_DAY_NAMES = new string[] { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday",  "Saturday", "Sunday" };
 
         public static readonly Color COLOR_FORMBACK_DAY = Color.FromArgb(235, 235, 235);
-        public static readonly Color COLOR_TEXTBACK_DAY = Color.FromArgb(251, 251, 251); // 248
+        public static readonly Color COLOR_TEXTBACK_DAY = Color.FromArgb(251, 251, 251);
         public static readonly Color COLOR_TEXT_SELECTION = Color.FromArgb(0, 128, 128, 128);
 
         public const int GLOBAL_SCRIPT_NAME_LENGTH_LIMIT = 160;
@@ -42,6 +42,7 @@ namespace Perun2Gui
         public static readonly string ACTUALIZATION_FILE_GUI =        WEBSITE_ROOT + @"/api/win3264/newPerun2_Gui.exe";
         public static readonly string ACTUALIZATION_FILE_MANAGER =    WEBSITE_ROOT + @"/api/win3264/newPerun2_Manager.exe";
 
+        public const string LANGUAGE_NAME = "Perun2";
         public const string PERUN2_EXTENSION = ".peru";
         public const string REGISTRY_GLOBAL_SCRIPTS_ROOT = "*\\Perun2\\GlobalScripts\\shell";
         public const string REGISTRY_COMMAND = "\\command";
