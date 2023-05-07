@@ -103,7 +103,7 @@ namespace Perun2Gui.Hint
                 "isUpper()", "join()", "length()", "last()", "left()", "letters()", "lower()", "monthName()", "max()", "median()",
                 "min()", "numbers()", "newYear()", "number()", "path()", "parent()", "power()", "replace()","random()",
                 "repeat()", "reverse()", "right()", "round()", "roman()", "substring()", "sign()", "size()", "split()", "sqrt()", "findText()",
-                "startsWith()", "string()", "sum()", "trim()", "truncate()", "time()", "upper()", "words()", "weekDayName()" }, HintType.Retreating);
+                "startsWith()", "string()", "sum()", "trim()", "truncate()", "time()", "upper()", "words()", "weekDayName()", "shiftMonth()", "shiftWeekDay()" }, HintType.Retreating);
             A_AllVariables = new HintArray(new string[] {
                 "now", "today", "yesterday", "tomorrow", "desktop", "Perun2", "origin", "access",  "alphabet", "ascii", "arguments",
                 "files", "recursiveFiles", "directories", "recursiveDirectories", "index", "this", "location", "success",
