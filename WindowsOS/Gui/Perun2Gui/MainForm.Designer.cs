@@ -136,8 +136,8 @@ namespace Perun2Gui
             this.flagsLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel5 = new System.Windows.Forms.ToolStripStatusLabel();
             this.hintLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.codeBox = new FastColoredTextBoxNS.FastColoredTextBox();
             this.logBackgroundWorker = new System.ComponentModel.BackgroundWorker();
+            this.codeBox = new FastColoredTextBoxNS.FastColoredTextBox();
             this.topMenuStrip.SuspendLayout();
             this.codeMenuStrip.SuspendLayout();
             this.fileMenuStrip.SuspendLayout();
@@ -813,20 +813,22 @@ namespace Perun2Gui
             this.copyToolStripMenuItem_log,
             this.copyAllToolStripMenuItem});
             this.logMenuStrip.Name = "contextMenuStrip1";
-            this.logMenuStrip.Size = new System.Drawing.Size(137, 56);
+            this.logMenuStrip.Size = new System.Drawing.Size(153, 78);
             this.logMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.logMenuStrip_Opening);
             // 
             // copyToolStripMenuItem_log
             // 
             this.copyToolStripMenuItem_log.Name = "copyToolStripMenuItem_log";
-            this.copyToolStripMenuItem_log.Size = new System.Drawing.Size(136, 26);
+            this.copyToolStripMenuItem_log.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
+            this.copyToolStripMenuItem_log.ShowShortcutKeys = false;
+            this.copyToolStripMenuItem_log.Size = new System.Drawing.Size(152, 26);
             this.copyToolStripMenuItem_log.Text = "Copy";
             this.copyToolStripMenuItem_log.Click += new System.EventHandler(this.copyToolStripMenuItem_log_Click);
             // 
             // copyAllToolStripMenuItem
             // 
             this.copyAllToolStripMenuItem.Name = "copyAllToolStripMenuItem";
-            this.copyAllToolStripMenuItem.Size = new System.Drawing.Size(136, 26);
+            this.copyAllToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.copyAllToolStripMenuItem.Text = "Copy all";
             this.copyAllToolStripMenuItem.Click += new System.EventHandler(this.copyAllToolStripMenuItem_Click);
             // 
