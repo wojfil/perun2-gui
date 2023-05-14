@@ -106,7 +106,7 @@ namespace Perun2Gui
 
         static void Start_OpenFile(string path)
         {
-            string ext = Path.GetExtension(path);
+            string ext = Path.GetExtension(path).ToLower();
 
             if (!ext.Equals(Constants.PERUN2_EXTENSION))
             {
