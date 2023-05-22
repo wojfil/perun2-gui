@@ -23,6 +23,8 @@ using System.Windows.Forms;
 using Perun2Installer.Properties;
 using System.Threading;
 using Microsoft.Win32;
+using System.Reflection;
+using System.IO;
 
 namespace Perun2Installer
 {
@@ -73,15 +75,49 @@ namespace Perun2Installer
             topStripPanel2.Size = new Size(Constants.FORM_WIDTH, Constants.TOP_STRIP_HEIGHT);
             topStripPanel3.Size = new Size(Constants.FORM_WIDTH, Constants.TOP_STRIP_HEIGHT);
 
-            labelHead1.Text = "Follow these steps to install\nPerun2 " + Constants.VERSION + " on your machine.";
-            labelRequirements.Text = "- " + Constants.OPERATING_SYSTEM + ", " + Constants.RECOMMENDED_SYSTEM + " or newer" + Environment.NewLine +
-                                     "- free disc space " + Constants.DISC_SIZE + Environment.NewLine;
+            long space = GetDiscSpace();
 
-            recommendedLabel.Text = "- free disc space at least " + Constants.RECOMMENDED_SIZE;
+            labelHead1.Text = "Follow these steps to install\nPerun2 " + GetVersionString() + " on your machine.";
+            labelRequirements.Text = "- " + Constants.RECOMMENDED_SYSTEM + " or newer" + Environment.NewLine +
+                                     "- free disc space " + SpaceToString(space);
 
-            pathSizeLabel.Text = "Required space: " + Constants.DISC_SIZE;
+            recommendedLabel.Text = "- free disc space at least " + GetRecommendedSpace(space) + " MB";
+
+            pathSizeLabel.Text = "Required space: " + SpaceToString(space);
 
             licenseBox.Text = Resources.LICENSE;
+        }
+
+        public static string GetVersionString()
+        {
+            return Application.ProductVersion.Substring(0, Application.ProductVersion.Length - 2);
+        }
+
+        private string SpaceToString(double space)
+        {
+            double mb = (double)space / (1024d * 1024d);
+            int units = (int)Math.Ceiling(mb * 100d);
+
+            int upper = units / 100;
+            int lower = units % 100;
+
+            return upper + "." + lower + " MB";
+        }
+
+        private long GetDiscSpace()
+        {
+            return Properties.Resources.perun2.LongLength
+                + Properties.Resources.Perun2Gui.LongLength
+                + Properties.Resources.Perun2Manager.LongLength
+                + Properties.Resources.uninstall.LongLength
+                + Properties.Resources.Delete_empty_directories.LongLength
+                + Properties.Resources.Select_all.LongLength;
+        }
+
+        private long GetRecommendedSpace(long space)
+        {
+            double mb = (double)space / (1024d * 1024d);
+            return (long)Math.Ceiling(mb * 1.5d);
         }
 
         private void backButton_Click(object sender, EventArgs e)

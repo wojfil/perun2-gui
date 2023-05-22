@@ -12,14 +12,16 @@ namespace Perun2Installer.Actions
 
         public override bool Do()
         {
+            string v = MainForm.GetVersionString();
+
             List<Tuple<string, string>> values = new List<Tuple<string, string>>()
             {
                Tuple.Create("",  ""),
-               Tuple.Create("ApplicationVersion",  Constants.VERSION),
+               Tuple.Create("ApplicationVersion", v),
                Tuple.Create("Contact",  Constants.PUBLISHER),
                Tuple.Create("DisplayName",  Constants.PERUN2),
                Tuple.Create("DisplayIcon",  Paths.GetInstance().GetGuiPath()),
-               Tuple.Create("DisplayVersion",  Constants.VERSION),
+               Tuple.Create("DisplayVersion",  v),
                Tuple.Create("HelpLink",  Constants.WEBSITE_DOCS),
                Tuple.Create("InstallDate", DateTime.Now.ToString("yyyyMMdd")),
                Tuple.Create("InstallLocation", Paths.GetInstance().GetInstallationPath().Quoted()),

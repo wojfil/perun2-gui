@@ -34,11 +34,7 @@ namespace Perun2Installer
 
         public const int PATH_SHORTCUT_LENGTH = 40;
 
-        public static readonly string OPERATING_SYSTEM = "Windows OS (32-bit or 64-bit)";
-        public static readonly string RECOMMENDED_SYSTEM = "Windows 7";
-        public static readonly string VERSION = "0.8.0";
-        public static readonly string DISC_SIZE = "3.43 MB";
-        public static readonly string RECOMMENDED_SIZE = "5 MB";
+        public static readonly string RECOMMENDED_SYSTEM = "Windows OS 7";
 
         public static readonly string FOLDER_MAIN = "Perun2";
         public static readonly string FOLDER_BACKUPS = "backups";
