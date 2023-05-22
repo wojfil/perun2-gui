@@ -74,8 +74,8 @@ namespace Perun2Installer
             topStripPanel3.Size = new Size(Constants.FORM_WIDTH, Constants.TOP_STRIP_HEIGHT);
 
             labelHead1.Text = "Follow these steps to install\nPerun2 " + Constants.VERSION + " on your machine.";
-            labelRequirements.Text = "- " + Constants.OPERATING_SYSTEM + ", " Constants.RECOMMENDED_SYSTEM + " or newer" + Environment.NewLine +
-                                   + "- free disc space " + Constants.DISC_SIZE + Environment.NewLine;
+            labelRequirements.Text = "- " + Constants.OPERATING_SYSTEM + ", " + Constants.RECOMMENDED_SYSTEM + " or newer" + Environment.NewLine +
+                                     "- free disc space " + Constants.DISC_SIZE + Environment.NewLine;
 
             recommendedLabel.Text = "- free disc space at least " + Constants.RECOMMENDED_SIZE;
 
