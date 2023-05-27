@@ -95,6 +95,23 @@ namespace Perun2Installer
             catch (Exception) { }
         }
 
+        public static void EnableLongPaths()
+        {
+            try
+            {
+                string path = "SYSTEM\\CurrentControlSet\\Control\\FileSystem";
+
+                using (RegistryKey reg = Registry.LocalMachine.OpenSubKey(path, true))
+                {
+                    reg.SetValue("LongPathsEnabled", 1, RegistryValueKind.DWord);
+                }
+
+            }
+            catch (Exception e)
+            {
+                Popup.Error(e.Message);
+            }
+        }
 
 
     }

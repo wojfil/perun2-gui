@@ -42,6 +42,8 @@ namespace Perun2Installer
             backButton.Enabled = false;
             cancelButton.Enabled = false;
 
+            RegistryAction.EnableLongPaths();
+
             try
             {
                 bool result = installationActions.Run();
