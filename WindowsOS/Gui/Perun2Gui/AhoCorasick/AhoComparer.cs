@@ -27,7 +27,7 @@ namespace Perun2Gui
         private int RecentWordLength;
         private WordType RecentWordType;
         private bool WaitingForStart;
-        private bool RecentSpace;
+        private bool RecentSpace = false;
 
 
         public AhoComparer()
