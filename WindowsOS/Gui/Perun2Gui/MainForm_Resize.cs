@@ -73,10 +73,14 @@ namespace Perun2Gui
             int h = 156 + size.Height;
 
             if (w < this.MinimumSize.Width)
+            {
                 w = this.MinimumSize.Width;
+            }
 
             if (h < this.MinimumSize.Height)
+            {
                 h = this.MinimumSize.Height;
+            }
 
             int l = this.Left > 0 ? this.Left : 0;
             int t = this.Top > 0 ? this.Top : 0;
@@ -104,10 +108,14 @@ namespace Perun2Gui
             }
 
             if (w > WholeScreen.Width)
+            {
                 w = WholeScreen.Width;
+            }
 
             if (h > WholeScreen.Height)
+            {
                 h = WholeScreen.Height;
+            }
 
             bool normal = this.WindowState == FormWindowState.Normal;
             this.WindowState = FormWindowState.Normal;
@@ -196,11 +204,20 @@ namespace Perun2Gui
         {
             if (this.Width > WholeScreen.Width)
             {
+                this.Left = 0;
                 return;
             }
 
             var textSize = TextRenderer.MeasureText(codeBox.Text, codeBox.Font);
             var currentWidth = this.Width;
+
+            int w = 445 + textSize.Width;
+            if (w > WholeScreen.Width)
+            {
+                this.Left = 0;
+                this.Width = WholeScreen.Width;
+                return;
+            }
 
             var a = currentWidth - textSize.Width - 435;
             if (a < 0)
