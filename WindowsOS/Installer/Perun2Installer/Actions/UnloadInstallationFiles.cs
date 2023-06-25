@@ -105,7 +105,7 @@ namespace Perun2Installer.Actions
             sb.AppendLine("rename \"newuninstall.exe\" \"uninstall.exe\"");
             sb.AppendLine("rename \"newPerun2_Gui.exe\" \"Perun2 Gui.exe\"");
             sb.AppendLine("rename \"newPerun2_Manager.exe\" \"Perun2 Manager.exe\"");
-            sb.AppendLine("start \"\" \"Perun2 Gui.exe\"");
+            sb.AppendLine("start \"\" \"Perun2 Gui.exe\" \"*actualization*\"");
             
             return sb.ToString();
         }

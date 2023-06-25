@@ -33,11 +33,19 @@ namespace Perun2Gui
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new MainForm());
+                Application.Run(new MainForm(false));
                 return;
             }
 
             string path = args.Last().Trim();
+
+            if (path.Equals("*actualization*"))
+            {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new MainForm(true));
+                return;
+            }
 
             if (path.IsEmptyPath())
             {
@@ -135,7 +143,41 @@ namespace Perun2Gui
             Application.Run(new MainForm(location, path, code));
         }
 
+        public static void showActualizationResultPopup()
+        {
+            if (! File.Exists(Paths.GetInstance().EXE_PATH))
+            {
+                Popup.Error("Actualization has failed. File '" + Paths.GetInstance().EXE_PATH + "' not found.");
+                return;
+            }
+            
+            if (! File.Exists(Paths.GetInstance().UNINSTALL_PATH))
+            {
+                Popup.Error("Actualization has failed. File '" + Paths.GetInstance().UNINSTALL_PATH + "' not found.");
+                return;
+            }
+            
+            if (! File.Exists(Paths.GetInstance().GUI_PATH)) // this seems pointless... but let it be
+            {
+                Popup.Error("Actualization has failed. File '" + Paths.GetInstance().GUI_PATH + "' not found.");
+                return;
+            }
+            
+            if (! File.Exists(Paths.GetInstance().MANAGER_PATH))
+            {
+                Popup.Error("Actualization has failed. File '" + Paths.GetInstance().MANAGER_PATH + "' not found.");
+                return;
+            }
 
-
+            string versionString;
+            if (DataApi.GetCurrentVersion(out versionString))
+            {
+                Popup.Ok("Perun2 has been actualized successfully to version " + versionString + ".");
+            }
+            else
+            {
+                Popup.Ok("Perun2 has been actualized successfully.");
+            }
+        }
     }
 }

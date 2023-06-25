@@ -45,7 +45,7 @@ namespace Perun2Gui
 
 
         // open application from Menu Start or directly
-        public MainForm()
+        public MainForm(bool showActualizationPopup)
         {
             PreInit();
             InitializeComponent();
@@ -60,6 +60,14 @@ namespace Perun2Gui
             SaveAsEnabled = false;
 
             Init();
+
+            if (showActualizationPopup)
+            {
+                this.WindowState = FormWindowState.Minimized;
+                this.Show();
+                this.WindowState = FormWindowState.Normal;
+                Program.showActualizationResultPopup();
+            }
         }
 
         // open application inside a directory
