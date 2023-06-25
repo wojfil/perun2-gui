@@ -9,6 +9,7 @@ namespace Perun2Installer.Actions
     class Registry_Uninstaller : Action
     {
         private static readonly string UninstallRegistry = @"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Perun2";
+        private static readonly string UninstallRegistry32on64 = @"SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Perun2";
 
         public override bool Do()
         {
@@ -40,6 +41,7 @@ namespace Perun2Installer.Actions
         public override void Undo()
         {
             RegistryAction.RemoveKeyFromLocalMachine(UninstallRegistry);
+            RegistryAction.RemoveKeyFromLocalMachine(UninstallRegistry32on64);
         }
     }
 }

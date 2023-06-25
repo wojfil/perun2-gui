@@ -15,6 +15,7 @@ namespace Perun2Uninstaller.Actions
         private static readonly string GlobalScriptsRoot = "*\\Perun2";
         private static readonly string PerunFiles = "Perun2\\shell\\RunPerun2Now";
         private static readonly string UninstallInfo = @"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Perun2";
+        private static readonly string UninstallInfo32on64 = @"SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Perun2";
 
 
         public override bool Do()
@@ -26,6 +27,7 @@ namespace Perun2Uninstaller.Actions
             RemoveKeyFromClasses(GlobalScriptsRoot);
             RemoveKeyFromClasses(PerunFiles);
             RemoveKeyFromLocalMachine(UninstallInfo);
+            RemoveKeyFromLocalMachine(UninstallInfo32on64);
             return true;
         }
 
