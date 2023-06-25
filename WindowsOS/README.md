@@ -1,6 +1,6 @@
 ## How to build for Windows OS?
 
-Follow steps below. These with (*) are optional.
+To build this project, you only need WinForms installed. Follow steps below. These with (*) are optional.
 
 1. Compile executable file *perun2.exe* for Windows [from here](https://github.com/wojfil/perun2).
 2. (*) Sign this file wth your certificate.

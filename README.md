@@ -1,10 +1,7 @@
 # Perun2 GUI
 
 Here are all GUI applications of Perun2. For the main executable file of this language, go [here](https://github.com/wojfil/perun2).
-
-## Build
-
-Enter a directory with your operating system. It contains information about build.
+If you want to build the project, enter a directory with your operating system and follow instructions from *README.md* there.
 
 ## License
 
