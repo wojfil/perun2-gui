@@ -33,6 +33,8 @@ namespace Perun2Gui
         public const int GLOBAL_SCRIPT_NAME_LENGTH_LIMIT = 160;
         public const int GLOBAL_SCRIPT_ITEMS_LIMIT = 16;
 
+        public const bool ACTUALIZATIONS_ENABLED = true;
+
         public static readonly string WEBSITE_ROOT = @"https://perun2.org";
         public static readonly string VERSION_API = WEBSITE_ROOT + @"/api/win3264/version";
         public static readonly string DOCS_ADDRESS = WEBSITE_ROOT + @"/docs";

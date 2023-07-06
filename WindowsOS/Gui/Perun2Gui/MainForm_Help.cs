@@ -59,8 +59,24 @@ namespace Perun2Gui
 
         private void versionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var form = new VersionForm();
-            form.ShowDialog();
+            if (Constants.ACTUALIZATIONS_ENABLED)
+            {
+                var form = new VersionForm();
+                form.ShowDialog();
+            }
+            else
+            {
+                string version;
+
+                if (DataApi.GetCurrentVersion(out version))
+                {
+                    Popup.Ok("Your version of Perun2 is " + version + ". Actualizations are disabled.");
+                }
+                else
+                {
+                    Popup.Error("Failed to load version data.");
+                }
+            }
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
