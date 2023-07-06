@@ -50,11 +50,16 @@ namespace Perun2Installer
             this.openPerun2Box = new System.Windows.Forms.CheckBox();
             this.panelFailed = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
+            this.panelRequirements = new System.Windows.Forms.Panel();
+            this.recommendedLabel = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.labelRequirements = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.menuStartShortcutBox = new System.Windows.Forms.CheckBox();
             this.desktopShortcutBox = new System.Windows.Forms.CheckBox();
             this.label12 = new System.Windows.Forms.Label();
             this.labelHead1 = new System.Windows.Forms.Label();
-            this.panelRequirements = new System.Windows.Forms.Panel();
+            this.welcomeLabel = new System.Windows.Forms.Label();
             this.panelLicense = new System.Windows.Forms.Panel();
             this.panelInstallation = new System.Windows.Forms.Panel();
             this.panelPath = new System.Windows.Forms.Panel();
@@ -68,17 +73,12 @@ namespace Perun2Installer
             this.licenseCheckBox = new System.Windows.Forms.CheckBox();
             this.licenseBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.labelRequirements = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.cancelButton = new System.Windows.Forms.Button();
             this.bottomPanel = new System.Windows.Forms.Panel();
             this.topStripPanel = new System.Windows.Forms.Panel();
             this.topStripPanel2 = new System.Windows.Forms.Panel();
             this.logoBox_head = new System.Windows.Forms.PictureBox();
             this.topStripPanel3 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.recommendedLabel = new System.Windows.Forms.Label();
             this.panelHead.SuspendLayout();
             this.panelFinish.SuspendLayout();
             this.panelFailed.SuspendLayout();
@@ -111,7 +111,7 @@ namespace Perun2Installer
             // 
             this.panelHead.Controls.Add(this.panelFinish);
             this.panelHead.Controls.Add(this.labelHead1);
-            this.panelHead.Controls.Add(this.label1);
+            this.panelHead.Controls.Add(this.welcomeLabel);
             resources.ApplyResources(this.panelHead, "panelHead");
             this.panelHead.Name = "panelHead";
             // 
@@ -145,6 +145,35 @@ namespace Perun2Installer
             resources.ApplyResources(this.label11, "label11");
             this.label11.Name = "label11";
             // 
+            // panelRequirements
+            // 
+            this.panelRequirements.Controls.Add(this.recommendedLabel);
+            this.panelRequirements.Controls.Add(this.label5);
+            this.panelRequirements.Controls.Add(this.labelRequirements);
+            this.panelRequirements.Controls.Add(this.label3);
+            resources.ApplyResources(this.panelRequirements, "panelRequirements");
+            this.panelRequirements.Name = "panelRequirements";
+            // 
+            // recommendedLabel
+            // 
+            resources.ApplyResources(this.recommendedLabel, "recommendedLabel");
+            this.recommendedLabel.Name = "recommendedLabel";
+            // 
+            // label5
+            // 
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.Name = "label5";
+            // 
+            // labelRequirements
+            // 
+            resources.ApplyResources(this.labelRequirements, "labelRequirements");
+            this.labelRequirements.Name = "labelRequirements";
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            // 
             // menuStartShortcutBox
             // 
             resources.ApplyResources(this.menuStartShortcutBox, "menuStartShortcutBox");
@@ -169,14 +198,10 @@ namespace Perun2Installer
             resources.ApplyResources(this.labelHead1, "labelHead1");
             this.labelHead1.Name = "labelHead1";
             // 
-            // panelRequirements
+            // welcomeLabel
             // 
-            this.panelRequirements.Controls.Add(this.recommendedLabel);
-            this.panelRequirements.Controls.Add(this.label5);
-            this.panelRequirements.Controls.Add(this.labelRequirements);
-            this.panelRequirements.Controls.Add(this.label3);
-            resources.ApplyResources(this.panelRequirements, "panelRequirements");
-            this.panelRequirements.Name = "panelRequirements";
+            resources.ApplyResources(this.welcomeLabel, "welcomeLabel");
+            this.welcomeLabel.Name = "welcomeLabel";
             // 
             // panelLicense
             // 
@@ -264,21 +289,6 @@ namespace Perun2Installer
             resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
             // 
-            // labelRequirements
-            // 
-            resources.ApplyResources(this.labelRequirements, "labelRequirements");
-            this.labelRequirements.Name = "labelRequirements";
-            // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
-            // 
             // cancelButton
             // 
             resources.ApplyResources(this.cancelButton, "cancelButton");
@@ -320,16 +330,6 @@ namespace Perun2Installer
             this.topStripPanel3.BackColor = System.Drawing.Color.Silver;
             resources.ApplyResources(this.topStripPanel3, "topStripPanel3");
             this.topStripPanel3.Name = "topStripPanel3";
-            // 
-            // label5
-            // 
-            resources.ApplyResources(this.label5, "label5");
-            this.label5.Name = "label5";
-            // 
-            // recommendedLabel
-            // 
-            resources.ApplyResources(this.recommendedLabel, "recommendedLabel");
-            this.recommendedLabel.Name = "recommendedLabel";
             // 
             // MainForm
             // 
@@ -376,7 +376,7 @@ namespace Perun2Installer
         private System.Windows.Forms.Panel topStripPanel;
         private System.Windows.Forms.Panel topStripPanel2;
         private System.Windows.Forms.PictureBox logoBox_head;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label welcomeLabel;
         private System.Windows.Forms.Label labelHead1;
         private System.Windows.Forms.Panel panelRequirements;
         private System.Windows.Forms.Label labelRequirements;

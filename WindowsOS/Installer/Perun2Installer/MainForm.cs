@@ -41,6 +41,7 @@ namespace Perun2Installer
             InitPanels();
             SetDefaultLicense();
             SetDefaultInstallationPath();
+            SetFirstTexts();
         }
 
         private void InitPanels()
@@ -74,9 +75,32 @@ namespace Perun2Installer
             topStripPanel.Size = new Size(Constants.FORM_WIDTH, Constants.TOP_STRIP_HEIGHT);
             topStripPanel2.Size = new Size(Constants.FORM_WIDTH, Constants.TOP_STRIP_HEIGHT);
             topStripPanel3.Size = new Size(Constants.FORM_WIDTH, Constants.TOP_STRIP_HEIGHT);
+        }
+
+        private bool OutdatedOS()
+        {
+            var v = System.Environment.OSVersion;
+
+            if (v.Version.Major < 6)
+            {
+                return true;
+            }
+
+            return v.Version.Major == 6 && v.Version.Minor == 0;
+        }
+
+        private void SetFirstTexts()
+        {
+            if (OutdatedOS())
+            {
+                welcomeLabel.Text = "Your operating system is outdated!";
+                labelHead1.Text = "At least " + Constants.RECOMMENDED_SYSTEM + " is required.";
+                nextButton.Enabled = false;
+                cancelButton.Text = "Finish";
+                return;
+            }
 
             long space = GetDiscSpace();
-
             labelHead1.Text = "Follow these steps to install\nPerun2 " + GetVersionString() + " on your machine.";
             labelRequirements.Text = "- " + Constants.RECOMMENDED_SYSTEM + " or newer" + Environment.NewLine +
                                      "- free disc space " + SpaceToString(space);
