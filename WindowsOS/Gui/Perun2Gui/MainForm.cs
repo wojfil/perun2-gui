@@ -149,12 +149,40 @@ namespace Perun2Gui
         private string GetInitLogs()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine("Welcome to Perun2");
+            sb.AppendLine("Welcome to " + Constants.LANGUAGE_NAME);
             sb.Append(NowToString());
             sb.Append(NEW_LINE);
-            sb.Append(LINE);
 
+            if (Constants.ACTUALIZATIONS_ENABLED)
+            {
+                AppendActualizationInfo(sb);
+            }
+
+            sb.Append(LINE);
             return sb.ToString();
+        }
+
+        private void AppendActualizationInfo(StringBuilder sb)
+        {
+            string currrentVersion;
+            if (!DataApi.GetCurrentVersion(out currrentVersion))
+            {
+                return;
+            }
+
+            string latestVersion;
+            if (!DataApi.GetLatestVersion(out latestVersion))
+            {
+                return;
+            }
+
+            if (currrentVersion.Equals(latestVersion))
+            {
+                return;
+            }
+
+            sb.AppendLine("Possible actualization");
+            sb.AppendLine("(" + currrentVersion + " -> " + latestVersion + ")");
         }
 
         private string NowToString()
