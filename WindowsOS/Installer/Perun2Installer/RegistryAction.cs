@@ -70,7 +70,6 @@ namespace Perun2Installer
             catch (Exception) { }
         }
 
-
         public static void RemoveKey(string path)
         {
             try
@@ -113,6 +112,23 @@ namespace Perun2Installer
             }
         }
 
+        public static bool KeyExistsOnLocalMachine(string path)
+        {
+            bool result;
 
+            try
+            {
+                using (RegistryKey reg = Registry.LocalMachine.OpenSubKey(path, true))
+                {
+                    result = reg != null;
+                }
+            }
+            catch (Exception) 
+            {
+                result = false;
+            }
+
+            return result;
+        }
     }
 }

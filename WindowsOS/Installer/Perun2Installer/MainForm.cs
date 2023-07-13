@@ -106,10 +106,22 @@ namespace Perun2Installer
                                      "- free disc space " + SpaceToString(space);
 
             recommendedLabel.Text = "- free disc space at least " + GetRecommendedSpace(space) + " MB";
-
             pathSizeLabel.Text = "Required space: " + SpaceToString(space);
-
             licenseBox.Text = Resources.LICENSE;
+
+            if (IsAlreadyInstalled())
+            {
+                welcomeLabel.Text = "Perun2 is already installed.";
+                labelHead1.Text = "If you want to actualize it, open its GUI and enter\nTop Menu -> Help -> Version. "
+                    + Environment.NewLine + Environment.NewLine
+                    + "Multiple installations are highly discouraged.\nIt is recommended to uninstall the previous\nversion first." ;
+            }
+        }
+
+        private static bool IsAlreadyInstalled()
+        {
+            return RegistryAction.KeyExistsOnLocalMachine(Actions.Registry_Uninstaller.UninstallRegistry)
+                || RegistryAction.KeyExistsOnLocalMachine(Actions.Registry_Uninstaller.UninstallRegistry32on64);
         }
 
         public static string GetVersionString()
