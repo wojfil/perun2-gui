@@ -1,3 +1,7 @@
 bin/
 obj/
 *.suo
+Gui/.vs
+Installer/.vs
+Manager/.vs
+Uninstaller/.vs
