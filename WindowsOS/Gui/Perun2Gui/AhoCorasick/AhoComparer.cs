@@ -64,7 +64,7 @@ namespace Perun2Gui
                 "now", "today", "yesterday", "tomorrow", "desktop", "perun2", "origin", "alphabet", "ascii", "arguments",
                 "files", "recursivefiles", "directories", "recursivedirectories", "index", "this", "location", "success",
                 "archive", "compressed", "empty", "encrypted", "exists", "hidden", "isdirectory", "isfile", "readonly",
-                "access", "change", "creation", "modification", "lifetime", "size", "depth",
+                "access", "change", "creation", "modification", "lifetime", "size", "depth", "nothing", "never",
                 "drive", "extension", "fullname", "name", "parent", "path", "true", "false", "notepad", "paint", "mspaint" };
             
             Tree = new AhoTree();
