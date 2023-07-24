@@ -813,7 +813,7 @@ namespace Perun2Gui
             this.copyToolStripMenuItem_log,
             this.copyAllToolStripMenuItem});
             this.logMenuStrip.Name = "contextMenuStrip1";
-            this.logMenuStrip.Size = new System.Drawing.Size(153, 78);
+            this.logMenuStrip.Size = new System.Drawing.Size(137, 56);
             this.logMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.logMenuStrip_Opening);
             // 
             // copyToolStripMenuItem_log
@@ -821,14 +821,14 @@ namespace Perun2Gui
             this.copyToolStripMenuItem_log.Name = "copyToolStripMenuItem_log";
             this.copyToolStripMenuItem_log.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
             this.copyToolStripMenuItem_log.ShowShortcutKeys = false;
-            this.copyToolStripMenuItem_log.Size = new System.Drawing.Size(152, 26);
+            this.copyToolStripMenuItem_log.Size = new System.Drawing.Size(136, 26);
             this.copyToolStripMenuItem_log.Text = "Copy";
             this.copyToolStripMenuItem_log.Click += new System.EventHandler(this.copyToolStripMenuItem_log_Click);
             // 
             // copyAllToolStripMenuItem
             // 
             this.copyAllToolStripMenuItem.Name = "copyAllToolStripMenuItem";
-            this.copyAllToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.copyAllToolStripMenuItem.Size = new System.Drawing.Size(136, 26);
             this.copyAllToolStripMenuItem.Text = "Copy all";
             this.copyAllToolStripMenuItem.Click += new System.EventHandler(this.copyAllToolStripMenuItem_Click);
             // 
@@ -932,6 +932,7 @@ namespace Perun2Gui
         '\"',
         '\'',
         '\''};
+            this.codeBox.AutoIndent = false;
             this.codeBox.AutoIndentChars = false;
             this.codeBox.AutoIndentCharsPatterns = "^\\s*[\\w\\.]+(\\s\\w+)?\\s*(?<range>=)\\s*(?<range>[^;=]+);\n^\\s*(case|default)\\s*[^:]*(" +
     "?<range>:)\\s*(?<range>[^;]+);";

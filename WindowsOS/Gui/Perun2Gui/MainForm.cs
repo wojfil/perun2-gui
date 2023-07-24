@@ -63,10 +63,7 @@ namespace Perun2Gui
 
             if (showActualizationPopup)
             {
-                this.WindowState = FormWindowState.Minimized;
-                this.Show();
-                this.WindowState = FormWindowState.Normal;
-                Program.showActualizationResultPopup();
+                ActualizationPopup();
             }
         }
 
@@ -105,6 +102,14 @@ namespace Perun2Gui
                 SavedSettings.GetInstance().AddRecentFile(file);
             }
             catch (Exception) { }
+        }
+
+        private void ActualizationPopup()
+        {
+            this.WindowState = FormWindowState.Minimized;
+            this.Show();
+            this.WindowState = FormWindowState.Normal;
+            Program.showActualizationResultPopup();
         }
 
         private void PreInit()

@@ -304,7 +304,7 @@ namespace Perun2Gui
                 newCaret = caret + hintWord.Length + 1;
             }
             else {
-                hintWord = Hint.Substring(startLength) + (rightSpace ? " " : "");
+                hintWord = Hint.Substring(startLength) + (rightSpace || !left.EndsWith(" ") ? " " : "");
                 newCaret = caret + hintWord.Length - (HintRetreat ? 1 : 0);
             }
 
