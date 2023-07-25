@@ -33,19 +33,11 @@ namespace Perun2Gui
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new MainForm(false));
+                Application.Run(new MainForm());
                 return;
             }
 
             string path = args.Last().Trim();
-
-            if (path.Equals("*actualization*"))
-            {
-                Application.EnableVisualStyles();
-                Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new MainForm(true));
-                return;
-            }
 
             if (path.IsEmptyPath())
             {

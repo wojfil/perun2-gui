@@ -130,5 +130,26 @@ namespace Perun2Installer
 
             return result;
         }
+
+        public static string GetInstallationPath(string regPath)
+        {
+            try
+            {
+                using (RegistryKey reg = Registry.LocalMachine.OpenSubKey(regPath, true))
+                {
+                    var v = reg.GetValue("InstallLocation").ToString().EscapeQuote();
+                    if (v.Contains("\\"))
+                    {
+                        var v2 = v.Remove(v.LastIndexOf("\\"));
+                        return v2;
+                    }
+
+                }
+            }
+            catch (Exception) { }
+
+            return "";
+        }
+
     }
 }

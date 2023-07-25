@@ -11,5 +11,15 @@ namespace Perun2Installer
         {
             return "\"" + s + "\"";
         }
+
+        public static string EscapeQuote(this string s)
+        {
+            if (s.Length >= 2 && s.StartsWith("\"") && s.EndsWith("\""))
+            {
+                return s.Substring(1, s.Length - 2);
+            }
+
+            return s;
+        }
     }
 }

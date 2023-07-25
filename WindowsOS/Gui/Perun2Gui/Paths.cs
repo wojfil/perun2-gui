@@ -43,13 +43,15 @@ namespace Perun2Gui
         public const string NEW_MANAGER_NAME = "newPerun2_Manager.exe";
         public const string NEW_UNINSTALL_NAME = "newuninstall.exe";
 
+        public const string INSTALLATION_NAME = "perun2_win3264_latest.exe";
+        public string INSTALLATION_PATH;
+
         private string ROOT_PATH;
         private string BACKUPS_PATH;
         private string LANGS_PATH;
         private string SETTINGS_PATH;
         private string SCRIPTS_PATH;
 
-        // just too lazy to make getters
         public string EXE_PATH;
         public string GUI_PATH;
         public string MANAGER_PATH;
@@ -93,6 +95,8 @@ namespace Perun2Gui
                 NEW_GUI_PATH = Path.Combine(ROOT_PATH, NEW_GUI_NAME);
                 NEW_MANAGER_PATH = Path.Combine(ROOT_PATH, NEW_MANAGER_NAME);
                 NEW_UNINSTALL_PATH = Path.Combine(ROOT_PATH, NEW_UNINSTALL_NAME);
+
+                INSTALLATION_PATH = Path.Combine(ROOT_PATH, INSTALLATION_NAME);
 
                 CreateBackupsDirectory();
                 CreateScriptsDirectory();

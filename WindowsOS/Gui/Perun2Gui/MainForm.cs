@@ -19,11 +19,12 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.IO;
 using System.Windows.Forms;
 using FastColoredTextBoxNS;
 using Perun2Gui.Properties;
 using Perun2Gui.Hint;
-
+using System.Diagnostics;
 
 namespace Perun2Gui
 {
@@ -45,7 +46,7 @@ namespace Perun2Gui
 
 
         // open application from Menu Start or directly
-        public MainForm(bool showActualizationPopup)
+        public MainForm()
         {
             PreInit();
             InitializeComponent();
@@ -60,11 +61,6 @@ namespace Perun2Gui
             SaveAsEnabled = false;
 
             Init();
-
-            if (showActualizationPopup)
-            {
-                ActualizationPopup();
-            }
         }
 
         // open application inside a directory
@@ -102,14 +98,6 @@ namespace Perun2Gui
                 SavedSettings.GetInstance().AddRecentFile(file);
             }
             catch (Exception) { }
-        }
-
-        private void ActualizationPopup()
-        {
-            this.WindowState = FormWindowState.Minimized;
-            this.Show();
-            this.WindowState = FormWindowState.Normal;
-            Program.showActualizationResultPopup();
         }
 
         private void PreInit()

@@ -7,23 +7,32 @@ namespace Perun2Installer.Actions
 {
     class ActionChain
     {
+        public bool isActualization = false;
         private List<Action> Actions = new List<Action>();
 
         public ActionChain()
         {
-            Actions.Add(new CreateMainDir());
-            Actions.Add(new CreateSubdirs());
-            Actions.Add(new UnloadGlobalScripts());
+            if (!isActualization)
+            {
+                Actions.Add(new CreateMainDir());
+                Actions.Add(new CreateSubdirs());
+                Actions.Add(new UnloadGlobalScripts());
+            }
+
             Actions.Add(new UnloadInstallationFiles());
-            Actions.Add(new EnvironmentPath());
-            Actions.Add(new ExtensionAssociation());
-            Actions.Add(new Registry_RunPerun2Now());
-            Actions.Add(new Registry_GlobalScripts());
-            Actions.Add(new Registry_DirectoryHere());
-            Actions.Add(new Registry_FolderHere());
-            Actions.Add(new Registry_DirectoryDropdown());
-            Actions.Add(new Registry_FolderDropdown());
-            Actions.Add(new Registry_Uninstaller());
+
+            if (!isActualization)
+            {
+                Actions.Add(new EnvironmentPath());
+                Actions.Add(new ExtensionAssociation());
+                Actions.Add(new Registry_RunPerun2Now());
+                Actions.Add(new Registry_GlobalScripts());
+                Actions.Add(new Registry_DirectoryHere());
+                Actions.Add(new Registry_FolderHere());
+                Actions.Add(new Registry_DirectoryDropdown());
+                Actions.Add(new Registry_FolderDropdown());
+                Actions.Add(new Registry_Uninstaller());
+            }
         }
 
         // run installation actions sequentially one by one

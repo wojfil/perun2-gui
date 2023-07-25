@@ -41,7 +41,6 @@ namespace Perun2Gui
             this.Icon = Resources.perun256;
             RefreshGuiTheme();
 
-
             LoadData();
 
             oldBox.ContextMenu = new ContextMenu();
@@ -141,17 +140,11 @@ namespace Perun2Gui
 
         private bool DeleteOldFiles()
         {
-            string p1 = Paths.GetInstance().NEW_EXE_PATH;
-            string p2 = Paths.GetInstance().NEW_GUI_PATH;
-            string p3 = Paths.GetInstance().NEW_MANAGER_PATH;
-            string p4 = Paths.GetInstance().NEW_UNINSTALL_PATH;
+            string path = Paths.GetInstance().INSTALLATION_PATH;
 
             try
             {
-                if (File.Exists(p1)) { File.Delete(p1); }
-                if (File.Exists(p2)) { File.Delete(p2); }
-                if (File.Exists(p3)) { File.Delete(p3); }
-                if (File.Exists(p4)) { File.Delete(p4); }
+                if (File.Exists(path)) { File.Delete(path); }
             }
             catch (Exception)
             {
@@ -206,19 +199,14 @@ namespace Perun2Gui
         
         private void Actualize()
         {
-            // check 
             if (TooManyRunningProcesses() || !DeleteOldFiles())
             {
                 return;
             }
 
-            // download files from web
             try
             {
-                DownloadFile(Constants.ACTUALIZATION_FILE_PERUN2,     Paths.GetInstance().NEW_EXE_PATH);
-                DownloadFile(Constants.ACTUALIZATION_FILE_UNINSTALL,  Paths.GetInstance().NEW_UNINSTALL_PATH);
-                DownloadFile(Constants.ACTUALIZATION_FILE_GUI,        Paths.GetInstance().NEW_GUI_PATH);
-                DownloadFile(Constants.ACTUALIZATION_FILE_MANAGER,    Paths.GetInstance().NEW_MANAGER_PATH);
+                DownloadFile(Constants.INSTALLATION_FILE_PERUN2, Paths.GetInstance().INSTALLATION_PATH);
             }
             catch (Exception e)
             {
@@ -226,20 +214,12 @@ namespace Perun2Gui
                 return;
             }
 
-            // close this program and run a batch script that finally renames downloaded exe files
-            // why not do this here in C#?
-            // a running program cannot rename itself
-            RunActualizeBatch();
-        }
-
-        private void RunActualizeBatch()
-        {
             try
             {
                 ProcessStartInfo psi = new ProcessStartInfo("cmd.exe",
                     String.Format("/k {0} & {1} & {2}",
                         "timeout /T 2 /NOBREAK >NUL",
-                        "\"" + Paths.GetInstance().ACTUALIZE_BATCH_PATH + "\"",
+                        "\"" + Paths.GetInstance().INSTALLATION_PATH + "\"",
                         "exit"
                     )
                 );

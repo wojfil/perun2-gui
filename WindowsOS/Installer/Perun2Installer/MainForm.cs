@@ -25,6 +25,7 @@ using System.Threading;
 using Microsoft.Win32;
 using System.Reflection;
 using System.IO;
+using Perun2Installer.Actions;
 
 namespace Perun2Installer
 {
@@ -111,10 +112,15 @@ namespace Perun2Installer
 
             if (IsAlreadyInstalled())
             {
-                welcomeLabel.Text = "Perun2 is already installed.";
-                labelHead1.Text = "If you want to actualize it, open its GUI and enter\nTop Menu -> Help -> Version. "
-                    + Environment.NewLine + Environment.NewLine
-                    + "Multiple installations are highly discouraged.\nIt is recommended to uninstall the previous\nversion first." ;
+                welcomeLabel.Text = "Actualization";
+                labelHead1.Text = "Follow these steps to update\nPerun2 to version " + GetVersionString() + ".";
+
+                string path = GetInstallDirectory();
+                if (!path.Equals(""))
+                {
+                    installationActions.isActualization = true;
+                    SetInstallationPath(path);
+                }
             }
         }
 
@@ -122,6 +128,17 @@ namespace Perun2Installer
         {
             return RegistryAction.KeyExistsOnLocalMachine(Actions.Registry_Uninstaller.UninstallRegistry)
                 || RegistryAction.KeyExistsOnLocalMachine(Actions.Registry_Uninstaller.UninstallRegistry32on64);
+        }
+        private static string GetInstallDirectory()
+        {
+            if (RegistryAction.KeyExistsOnLocalMachine(Actions.Registry_Uninstaller.UninstallRegistry))
+            {
+                return RegistryAction.GetInstallationPath(Actions.Registry_Uninstaller.UninstallRegistry);
+            }
+            else
+            {
+                return RegistryAction.GetInstallationPath(Actions.Registry_Uninstaller.UninstallRegistry32on64);
+            }
         }
 
         public static string GetVersionString()
@@ -132,10 +149,10 @@ namespace Perun2Installer
         private string SpaceToString(double space)
         {
             double mb = (double)space / (1024d * 1024d);
-            int units = (int)Math.Ceiling(mb * 100d);
+            long units = (long)Math.Ceiling(mb * 100d);
 
-            int upper = units / 100;
-            int lower = units % 100;
+            long upper = units / 100;
+            long lower = units % 100;
 
             return upper + "." + lower + " MB";
         }

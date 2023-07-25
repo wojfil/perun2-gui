@@ -43,6 +43,7 @@ namespace Perun2Gui
         public static readonly string ACTUALIZATION_FILE_UNINSTALL =  WEBSITE_ROOT + @"/api/win3264/newuninstall.exe";
         public static readonly string ACTUALIZATION_FILE_GUI =        WEBSITE_ROOT + @"/api/win3264/newPerun2_Gui.exe";
         public static readonly string ACTUALIZATION_FILE_MANAGER =    WEBSITE_ROOT + @"/api/win3264/newPerun2_Manager.exe";
+        public static readonly string INSTALLATION_FILE_PERUN2 =      WEBSITE_ROOT + @"/api/win3264/perun2_win3264_latest.exe";
 
         public const string LANGUAGE_NAME = "Perun2";
         public const string PERUN2_EXTENSION = ".peru";
