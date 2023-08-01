@@ -34,6 +34,7 @@ namespace Perun2Installer
         private PageManager PageManager;
         private string LicenseKey;
         Actions.ActionChain installationActions = new Actions.ActionChain();
+        private bool AlreadyInstalled = false;
 
         public MainForm()
         {
@@ -110,7 +111,9 @@ namespace Perun2Installer
             pathSizeLabel.Text = "Required space: " + SpaceToString(space);
             licenseBox.Text = Resources.LICENSE;
 
-            if (IsAlreadyInstalled())
+            AlreadyInstalled = IsAlreadyInstalled();
+
+            if (AlreadyInstalled)
             {
                 welcomeLabel.Text = "Actualization";
                 labelHead1.Text = "Follow these steps to update\nPerun2 to version " + GetVersionString() + ".";
@@ -203,8 +206,16 @@ namespace Perun2Installer
                 PageEntered();
             }
 
-
-            if (panel == panelPath)
+            if (AlreadyInstalled && panel == panelRequirements)
+            {
+                nextButton.Text = "Install";
+            }
+            else if (AlreadyInstalled && panel == panelLicense)
+            {
+                PageManager.Next();
+                StartInstall();
+            }
+            else if (panel == panelPath)
             {
                 StartInstall();
             }
