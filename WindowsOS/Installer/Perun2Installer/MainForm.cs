@@ -122,6 +122,7 @@ namespace Perun2Installer
                 if (!path.Equals(""))
                 {
                     installationActions.isActualization = true;
+                    installationActions.InitActualization();
                     SetInstallationPath(path);
                 }
             }

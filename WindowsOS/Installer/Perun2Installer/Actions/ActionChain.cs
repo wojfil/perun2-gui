@@ -12,28 +12,33 @@ namespace Perun2Installer.Actions
 
         public ActionChain()
         {
-            if (!isActualization)
-            {
-                Actions.Add(new CreateMainDir());
-                Actions.Add(new CreateSubdirs());
-                Actions.Add(new UnloadGlobalScripts());
-            }
-
-            Actions.Add(new UnloadInstallationFiles());
-
-            if (!isActualization)
-            {
-                Actions.Add(new EnvironmentPath());
-                Actions.Add(new ExtensionAssociation());
-                Actions.Add(new Registry_RunPerun2Now());
-                Actions.Add(new Registry_GlobalScripts());
-                Actions.Add(new Registry_DirectoryHere());
-                Actions.Add(new Registry_FolderHere());
-                Actions.Add(new Registry_DirectoryDropdown());
-                Actions.Add(new Registry_FolderDropdown());
-                Actions.Add(new Registry_Uninstaller());
-            }
+            this.InitInstallation();
         }
+
+        public void InitInstallation()
+        {
+            Actions.Clear();
+            Actions.Add(new CreateMainDir());
+            Actions.Add(new CreateSubdirs());
+            Actions.Add(new UnloadGlobalScripts());
+            Actions.Add(new UnloadInstallationFiles());
+            Actions.Add(new EnvironmentPath());
+            Actions.Add(new ExtensionAssociation());
+            Actions.Add(new Registry_RunPerun2Now());
+            Actions.Add(new Registry_GlobalScripts());
+            Actions.Add(new Registry_DirectoryHere());
+            Actions.Add(new Registry_FolderHere());
+            Actions.Add(new Registry_DirectoryDropdown());
+            Actions.Add(new Registry_FolderDropdown());
+            Actions.Add(new Registry_Uninstaller());
+        }
+
+        public void InitActualization()
+        {
+            Actions.Clear();
+            Actions.Add(new UnloadInstallationFiles());
+        }
+
 
         // run installation actions sequentially one by one
         // if installation failed, undo changes
