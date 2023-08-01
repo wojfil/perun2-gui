@@ -111,8 +111,9 @@ namespace Perun2Gui.Hint
                 "change", "compressed", "modification", "lifetime", "size", "depth",
                 "drive", "extension", "fullName", "name", "parent", "path",
                 "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December",
-                "Monday", "Tuesday", "Wednesday", "Thursday", "Friday",  "Saturday", "Sunday", "true", "false", "notepad", "paint", "mspaint", "never", "nothing"
-            }); // ok
+                "Monday", "Tuesday", "Wednesday", "Thursday", "Friday",  "Saturday", "Sunday", "true", "false", "notepad", "paint", "mspaint", "never", "nothing",
+                "pendrive", "pendrives"
+            });
             A_BCEE = new HintArray(new string[] { "break", "continue", "exit", "error" });
             A_Semicolon = new HintArray(new string[] { ";" });
             A_String = new HintArray(new string[] { "''" }, HintType.Retreating);
@@ -128,7 +129,8 @@ namespace Perun2Gui.Hint
                 "access", "creation", "empty", "encrypted", "exists", "hidden", "isDirectory", "isFile", "readonly",
                 "archive", "change", "compressed", "modification", "lifetime", "size", "depth", "drive", "fullName", "name", "parent", "path",
                 "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December",
-                "Monday", "Tuesday", "Wednesday", "Thursday", "Friday",  "Saturday", "Sunday", "true", "false", "notepad", "paint", "mspaint", "never", "nothing"
+                "Monday", "Tuesday", "Wednesday", "Thursday", "Friday",  "Saturday", "Sunday", "true", "false", "notepad", "paint", "mspaint", "never", "nothing",
+                "pendrive"
             });
             A_Extensionless = new HintArray(new string[] { "extensionless" });
             A_Extension = new HintArray(new string[] { "extension" });
@@ -157,7 +159,7 @@ namespace Perun2Gui.Hint
             A_InLike = new HintArray(new string[] { "in", "not in", "like", "not like" });
             A_Equals = new HintArray(new string[] { "=" });
             A_MultiVariables = new HintArray(new string[] { "files", "alphabet", "arguments", "ascii",
-                "directories", "recursiveFiles", "recursiveDirectories"
+                "directories", "recursiveFiles", "recursiveDirectories", "pendrives"
             });
             A_Operators = new HintArray(new string[] { ",", "[", ":", "-", "+", "%", "?" });
             A_BoolFunctions = new HintArray(new string[] { "startsWith()", "anyInside()", "any()", "contains()",
