@@ -565,7 +565,7 @@ namespace Perun2Gui
             // 
             this.versionToolStripMenuItem.Name = "versionToolStripMenuItem";
             this.versionToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
-            this.versionToolStripMenuItem.Text = "Version";
+            this.versionToolStripMenuItem.Text = "Actualization";
             this.versionToolStripMenuItem.Click += new System.EventHandler(this.versionToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem

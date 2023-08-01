@@ -30,7 +30,7 @@ namespace Perun2Gui
 
             if (!File.Exists(exePath))
             {
-                logBox.AppendText("Error! The language file 'perun2.exe' is missing. To solve this problem, actualize Perun2 (Top Menu -> Help -> Version)."
+                logBox.AppendText("Error! The language file 'perun2.exe' is missing. To solve this problem, actualize Perun2 (Top Menu -> Help -> Actualization)."
                     + NEW_LINE + LINE);
                 return;
             }
