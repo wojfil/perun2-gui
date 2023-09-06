@@ -20,7 +20,6 @@ namespace Perun2Installer.Actions
             Actions.Clear();
             Actions.Add(new CreateMainDir());
             Actions.Add(new CreateSubdirs());
-            Actions.Add(new UnloadGlobalScripts());
             Actions.Add(new UnloadInstallationFiles());
             Actions.Add(new EnvironmentPath());
             Actions.Add(new ExtensionAssociation());

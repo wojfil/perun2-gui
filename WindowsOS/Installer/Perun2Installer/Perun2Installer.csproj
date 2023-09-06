@@ -94,7 +94,6 @@
     <Compile Include="Actions\Registry_RunPerun2Now.cs" />
     <Compile Include="Actions\Registry_Uninstaller.cs" />
     <Compile Include="Actions\UnloadAction.cs" />
-    <Compile Include="Actions\UnloadGlobalScripts.cs" />
     <Compile Include="Actions\UnloadInstallationFiles.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="DirectorySelectDialog.cs" />

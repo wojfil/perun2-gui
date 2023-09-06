@@ -56,9 +56,6 @@ namespace Perun2Installer
 
         public static readonly string PUBLISHER = "WojFil Games";
 
-        public static readonly string SCRIPT_DELETE_EMPTY_DIRECTORIES = "Delete empty directories.peru";
-        public static readonly string SCRIPT_SELECT_ALL = "Select all.peru";
-
         public static readonly string WEBSITE =      "http://perun2.org";
         public static readonly string WEBSITE_DOCS = "http://perun2.org//docs";
         public static readonly string REGISTRY_UNINSTALL_GUID = "{BD9E139C-380D-4775-88E1-28EE77B626AF}";
