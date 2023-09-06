@@ -180,8 +180,14 @@ namespace Perun2Installer
 
         private void backButton_Click(object sender, EventArgs e)
         {
+            Panel panel = PageManager.GetCurrentPanel();
+
             if (PageManager.HasBackPage())
             {
+                if (AlreadyInstalled && panel == panelLicense)
+                {
+                    PageManager.Back();
+                }
                 PageManager.Back();
                 PageEntered();
             }
@@ -205,12 +211,18 @@ namespace Perun2Installer
             if (PageManager.HasNextPage())
             {
                 PageManager.Next();
+
+                if (AlreadyInstalled && panel == panelHead)
+                {
+                    PageManager.Next();
+                }
+
                 PageEntered();
             }
 
             if (AlreadyInstalled && panel == panelRequirements)
             {
-                nextButton.Text = AlreadyInstalled ? "Actualize" : "Install";
+                nextButton.Text = GetFinalButtonText();
             }
             else if (AlreadyInstalled && panel == panelLicense)
             {
@@ -221,6 +233,11 @@ namespace Perun2Installer
             {
                 StartInstall();
             }
+        }
+
+        private string GetFinalButtonText()
+        {
+            return AlreadyInstalled ? "Actualize" : "Install";
         }
 
         private void cancelButton_Click(object sender, EventArgs e)
@@ -253,8 +270,14 @@ namespace Perun2Installer
                 nextButton.Enabled = hasPath;
             }
 
-            nextButton.Text = (panel == panelPath) ? "Install" : "Next";
-
+            if (AlreadyInstalled)
+            {
+                nextButton.Text = (panel == panelLicense) ? "Actualize" : "Next";
+            }
+            else
+            {
+                nextButton.Text = (panel == panelPath) ? "Install" : "Next";
+            }
         }
 
         private void licenseCheckBox_CheckedChanged(object sender, EventArgs e)
