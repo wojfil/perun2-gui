@@ -35,8 +35,8 @@ namespace Perun2Gui
             omitBox.Text =
               "-n   Iterate over all filesystem elements, no exceptions." + Environment.NewLine
             + "-s   No command log messages." + Environment.NewLine + Environment.NewLine
-            + "You can turn on these two command-line options in order to change interpreter's behavior. " + Environment.NewLine
-            + "Filesystem exceptional elements are: Perun2 own scripts files (*.peru) and version control directories (name .git or .svn). " + Environment.NewLine
+            + "You can turn on these two command-line options in order to slightly alter the behavior of the interpreter." + Environment.NewLine
+            + "Filesystem exceptional elements are Perun2 own scripts files (*.peru)." + Environment.NewLine
             + "If you want to know more about the interface of Perun2, run 'perun2 --help' in the command-line.";
         }
 
