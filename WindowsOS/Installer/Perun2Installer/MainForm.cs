@@ -117,6 +117,7 @@ namespace Perun2Installer
             {
                 welcomeLabel.Text = "Actualization";
                 labelHead1.Text = "Follow these steps to update\nPerun2 to version " + GetVersionString() + ".";
+                this.Text = "Perun2 Actualization";
 
                 string path = GetInstallDirectory();
                 if (!path.Equals(""))
@@ -209,7 +210,7 @@ namespace Perun2Installer
 
             if (AlreadyInstalled && panel == panelRequirements)
             {
-                nextButton.Text = "Install";
+                nextButton.Text = AlreadyInstalled ? "Actualize" : "Install";
             }
             else if (AlreadyInstalled && panel == panelLicense)
             {
