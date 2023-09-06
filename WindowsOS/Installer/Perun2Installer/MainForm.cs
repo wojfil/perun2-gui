@@ -126,6 +126,12 @@ namespace Perun2Installer
                     installationActions.InitActualization();
                     SetInstallationPath(path);
                 }
+
+                successTextLabel.Text = "Perun2 has been actualized sucessfully.";
+                menuStartShortcutBox.Checked = false;
+                menuStartShortcutBox.Visible = false;
+                desktopShortcutBox.Checked = false;
+                desktopShortcutBox.Visible = false;
             }
         }
 

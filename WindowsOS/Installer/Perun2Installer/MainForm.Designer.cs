@@ -57,7 +57,7 @@ namespace Perun2Installer
             this.label3 = new System.Windows.Forms.Label();
             this.menuStartShortcutBox = new System.Windows.Forms.CheckBox();
             this.desktopShortcutBox = new System.Windows.Forms.CheckBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.successTextLabel = new System.Windows.Forms.Label();
             this.labelHead1 = new System.Windows.Forms.Label();
             this.welcomeLabel = new System.Windows.Forms.Label();
             this.panelLicense = new System.Windows.Forms.Panel();
@@ -109,7 +109,6 @@ namespace Perun2Installer
             // 
             // panelHead
             // 
-            this.panelHead.Controls.Add(this.panelFinish);
             this.panelHead.Controls.Add(this.labelHead1);
             this.panelHead.Controls.Add(this.welcomeLabel);
             resources.ApplyResources(this.panelHead, "panelHead");
@@ -122,7 +121,7 @@ namespace Perun2Installer
             this.panelFinish.Controls.Add(this.panelRequirements);
             this.panelFinish.Controls.Add(this.menuStartShortcutBox);
             this.panelFinish.Controls.Add(this.desktopShortcutBox);
-            this.panelFinish.Controls.Add(this.label12);
+            this.panelFinish.Controls.Add(this.successTextLabel);
             resources.ApplyResources(this.panelFinish, "panelFinish");
             this.panelFinish.Name = "panelFinish";
             // 
@@ -188,10 +187,10 @@ namespace Perun2Installer
             this.desktopShortcutBox.Name = "desktopShortcutBox";
             this.desktopShortcutBox.UseVisualStyleBackColor = true;
             // 
-            // label12
+            // successTextLabel
             // 
-            resources.ApplyResources(this.label12, "label12");
-            this.label12.Name = "label12";
+            resources.ApplyResources(this.successTextLabel, "successTextLabel");
+            this.successTextLabel.Name = "successTextLabel";
             // 
             // labelHead1
             // 
@@ -336,6 +335,7 @@ namespace Perun2Installer
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.panelFinish);
             this.Controls.Add(this.panelLicense);
             this.Controls.Add(this.topStripPanel3);
             this.Controls.Add(this.topStripPanel2);
@@ -396,7 +396,7 @@ namespace Perun2Installer
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panelFinish;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label successTextLabel;
         private System.Windows.Forms.CheckBox menuStartShortcutBox;
         private System.Windows.Forms.CheckBox desktopShortcutBox;
         private System.Windows.Forms.Panel panelFailed;

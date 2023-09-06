@@ -177,6 +177,87 @@
   <data name="&gt;&gt;backButton.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="labelHead1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelHead1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="labelHead1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>45, 120</value>
+  </data>
+  <data name="labelHead1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 21</value>
+  </data>
+  <data name="labelHead1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="labelHead1.Text" xml:space="preserve">
+    <value>Follow these steps to install...</value>
+  </data>
+  <data name="&gt;&gt;labelHead1.Name" xml:space="preserve">
+    <value>labelHead1</value>
+  </data>
+  <data name="&gt;&gt;labelHead1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelHead1.Parent" xml:space="preserve">
+    <value>panelHead</value>
+  </data>
+  <data name="&gt;&gt;labelHead1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="welcomeLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="welcomeLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14pt</value>
+  </data>
+  <data name="welcomeLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>45, 50</value>
+  </data>
+  <data name="welcomeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>326, 25</value>
+  </data>
+  <data name="welcomeLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="welcomeLabel.Text" xml:space="preserve">
+    <value>Welcome to the Perun2 Setup Wizard</value>
+  </data>
+  <data name="&gt;&gt;welcomeLabel.Name" xml:space="preserve">
+    <value>welcomeLabel</value>
+  </data>
+  <data name="&gt;&gt;welcomeLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;welcomeLabel.Parent" xml:space="preserve">
+    <value>panelHead</value>
+  </data>
+  <data name="&gt;&gt;welcomeLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panelHead.Location" type="System.Drawing.Point, System.Drawing">
+    <value>180, 8</value>
+  </data>
+  <data name="panelHead.Size" type="System.Drawing.Size, System.Drawing">
+    <value>460, 379</value>
+  </data>
+  <data name="panelHead.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;panelHead.Name" xml:space="preserve">
+    <value>panelHead</value>
+  </data>
+  <data name="&gt;&gt;panelHead.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelHead.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelHead.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
   <data name="openPerun2Box.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -391,7 +472,7 @@
     <value>3</value>
   </data>
   <data name="panelRequirements.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 9</value>
+    <value>359, 64</value>
   </data>
   <data name="panelRequirements.Size" type="System.Drawing.Size, System.Drawing">
     <value>460, 379</value>
@@ -477,41 +558,41 @@
   <data name="&gt;&gt;desktopShortcutBox.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="label12.AutoSize" type="System.Boolean, mscorlib">
+  <data name="successTextLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label12.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="successTextLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt</value>
   </data>
-  <data name="label12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="successTextLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="successTextLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>45, 110</value>
   </data>
-  <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="successTextLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>269, 21</value>
   </data>
-  <data name="label12.TabIndex" type="System.Int32, mscorlib">
+  <data name="successTextLabel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="label12.Text" xml:space="preserve">
+  <data name="successTextLabel.Text" xml:space="preserve">
     <value>Perun2 has been installed sucessfully.</value>
   </data>
-  <data name="&gt;&gt;label12.Name" xml:space="preserve">
-    <value>label12</value>
+  <data name="&gt;&gt;successTextLabel.Name" xml:space="preserve">
+    <value>successTextLabel</value>
   </data>
-  <data name="&gt;&gt;label12.Type" xml:space="preserve">
+  <data name="&gt;&gt;successTextLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label12.Parent" xml:space="preserve">
+  <data name="&gt;&gt;successTextLabel.Parent" xml:space="preserve">
     <value>panelFinish</value>
   </data>
-  <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;successTextLabel.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
   <data name="panelFinish.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 3</value>
+    <value>45, 22</value>
   </data>
   <data name="panelFinish.Size" type="System.Drawing.Size, System.Drawing">
     <value>460, 379</value>
@@ -526,91 +607,10 @@
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;panelFinish.Parent" xml:space="preserve">
-    <value>panelHead</value>
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;panelFinish.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="labelHead1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelHead1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt</value>
-  </data>
-  <data name="labelHead1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>45, 120</value>
-  </data>
-  <data name="labelHead1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>209, 21</value>
-  </data>
-  <data name="labelHead1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="labelHead1.Text" xml:space="preserve">
-    <value>Follow these steps to install...</value>
-  </data>
-  <data name="&gt;&gt;labelHead1.Name" xml:space="preserve">
-    <value>labelHead1</value>
-  </data>
-  <data name="&gt;&gt;labelHead1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelHead1.Parent" xml:space="preserve">
-    <value>panelHead</value>
-  </data>
-  <data name="&gt;&gt;labelHead1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="welcomeLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="welcomeLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 14pt</value>
-  </data>
-  <data name="welcomeLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>45, 50</value>
-  </data>
-  <data name="welcomeLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>326, 25</value>
-  </data>
-  <data name="welcomeLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="welcomeLabel.Text" xml:space="preserve">
-    <value>Welcome to the Perun2 Setup Wizard</value>
-  </data>
-  <data name="&gt;&gt;welcomeLabel.Name" xml:space="preserve">
-    <value>welcomeLabel</value>
-  </data>
-  <data name="&gt;&gt;welcomeLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;welcomeLabel.Parent" xml:space="preserve">
-    <value>panelHead</value>
-  </data>
-  <data name="&gt;&gt;welcomeLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="panelHead.Location" type="System.Drawing.Point, System.Drawing">
-    <value>180, 8</value>
-  </data>
-  <data name="panelHead.Size" type="System.Drawing.Size, System.Drawing">
-    <value>460, 379</value>
-  </data>
-  <data name="panelHead.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;panelHead.Name" xml:space="preserve">
-    <value>panelHead</value>
-  </data>
-  <data name="&gt;&gt;panelHead.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelHead.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panelHead.ZOrder" xml:space="preserve">
-    <value>6</value>
   </data>
   <data name="selectLocationButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>System</value>
@@ -979,7 +979,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panelLicense.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="cancelButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt</value>
@@ -1027,7 +1027,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;bottomPanel.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="topStripPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 1</value>
@@ -1048,7 +1048,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;topStripPanel.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="topStripPanel2.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 3</value>
@@ -1069,7 +1069,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;topStripPanel2.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="logoBox_head.Location" type="System.Drawing.Point, System.Drawing">
     <value>45, 90</value>
@@ -1093,7 +1093,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;logoBox_head.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="topStripPanel3.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 6</value>
@@ -1114,7 +1114,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;topStripPanel3.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
