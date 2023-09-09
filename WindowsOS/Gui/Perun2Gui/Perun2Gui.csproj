@@ -326,7 +326,6 @@
     <Content Include="FastColoredTextBox\FastColoredTextBox.csproj" />
     <None Include="Resources\perunlogo.png" />
     <None Include="Resources\perun256.ico" />
-    <None Include="Resources\logo.png" />
     <None Include="Resources\LICENSE.txt" />
     <None Include="Resources\filesign2.png" />
     <None Include="Resources\locsign2.png" />
