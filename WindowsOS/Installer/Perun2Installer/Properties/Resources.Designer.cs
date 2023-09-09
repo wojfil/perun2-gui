@@ -61,16 +61,6 @@ namespace Perun2Installer.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] Delete_empty_directories {
-            get {
-                object obj = ResourceManager.GetObject("Delete_empty_directories", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to GNU GENERAL PUBLIC LICENSE
         ///Version 3, 29 June 2007
         ///
@@ -136,16 +126,6 @@ namespace Perun2Installer.Properties {
             get {
                 object obj = ResourceManager.GetObject("perunlogo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] Select_all {
-            get {
-                object obj = ResourceManager.GetObject("Select_all", resourceCulture);
-                return ((byte[])(obj));
             }
         }
         

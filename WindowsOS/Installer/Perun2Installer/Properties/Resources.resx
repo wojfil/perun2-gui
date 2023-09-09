@@ -136,13 +136,7 @@
   <data name="uninstall" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\uninstall.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Delete_empty_directories" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Delete empty directories.peru;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="perun2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\perun2.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Select_all" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Select all.peru;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

@@ -173,9 +173,7 @@ namespace Perun2Installer
             return Properties.Resources.perun2.LongLength
                 + Properties.Resources.Perun2Gui.LongLength
                 + Properties.Resources.Perun2Manager.LongLength
-                + Properties.Resources.uninstall.LongLength
-                + Properties.Resources.Delete_empty_directories.LongLength
-                + Properties.Resources.Select_all.LongLength;
+                + Properties.Resources.uninstall.LongLength;
         }
 
         private long GetRecommendedSpace(long space)
