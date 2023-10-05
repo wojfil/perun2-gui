@@ -62,6 +62,7 @@ namespace Perun2Gui
             int line = 0;
             int finalId = len - 1;
             WordType recentWordType = WordType.Null;
+            bool closed = false;
 
 
             for (int i = 0; i < len; i++)
@@ -104,6 +105,7 @@ namespace Perun2Gui
                                 WordEnd(out recentWordType, ref i, col, line);
                             }
                             Comparer.Reset();
+                            closed = true;
                         }
                         else if (prev == '/' && ch == '*')
                         {
@@ -111,6 +113,7 @@ namespace Perun2Gui
                             startLine = line;
                             mode = HighlightMode.CommentMulti;
                             Comparer.Reset();
+                            closed = true;
                         }
                         else if (System.Char.IsLetterOrDigit(ch))
                         {
@@ -170,6 +173,7 @@ namespace Perun2Gui
                             mode = HighlightMode.Normal;
                             Range rng = new Range(codeBox, startCol - 1, startLine, col + 1, line);
                             rng.SetStyle(CommentStyle);
+                            closed = true;
                         }
                         break;
                     }
@@ -185,7 +189,15 @@ namespace Perun2Gui
                     col++;
                 }
 
-                prev = ch;
+                if (closed)
+                {
+                    closed = false;
+                    prev = ' ';
+                }
+                else
+                {
+                    prev = ch;
+                }
             }
 
             if (mode != HighlightMode.Normal)
