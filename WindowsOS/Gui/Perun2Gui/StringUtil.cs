@@ -182,9 +182,19 @@ namespace Perun2Gui
                 return str.Substring(length - amount);
             }
         }
+        public static string[] Add(this string[] arr, string[] newValues)
+        {
+            return arr.Concat(newValues).ToArray();
+        }
 
+        public static string[] ToLower(this string[] values)
+        {
+            for (int i = 0; i < values.Length; i++)
+            {
+                values[i] = values[i].ToLower();
+            }
 
-
-
+            return values;
+        }
     }
 }

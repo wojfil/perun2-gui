@@ -60,13 +60,13 @@ namespace Perun2Gui
                 "year", "month", "week", "weekday", "date", "day", "hour", "minute", "second",
                 "years", "months", "weeks", "days", "hours", "minutes", "seconds" };
 
-            string[] VARIABLE_WORDS = {
+            string[] VARIABLE_WORDS = new string[] {
                 "now", "today", "yesterday", "tomorrow", "desktop", "perun2", "origin", "alphabet", "ascii", "arguments",
                 "files", "recursivefiles", "directories", "recursivedirectories", "index", "this", "location", "success",
                 "archive", "compressed", "empty", "encrypted", "exists", "hidden", "isdirectory", "isfile", "readonly",
                 "access", "change", "creation", "modification", "lifetime", "size", "depth", "nothing", "never",
-                "drive", "extension", "fullname", "name", "parent", "path", "true", "false", "notepad", "paint", "mspaint",
-                "pendrive", "pendrives" };
+                "drive", "extension", "fullname", "name", "parent", "path", "true", "false",
+                "pendrive", "pendrives" }.Add(ConstantsKeywords.PROGRAMS).ToLower();
             
             Tree = new AhoTree();
             Tree.AddWords(CARDINAL_WORDS, WordType.Cardinal);
