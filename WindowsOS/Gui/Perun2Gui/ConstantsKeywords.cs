@@ -8,6 +8,12 @@ namespace Perun2Gui
 {
     static class ConstantsKeywords
     {
-        public static string[] PROGRAMS = new string[] { "notepad", "paint", "msPaint" };
+        public static string[] PROGRAMS = new string[] {
+            "7zip", "acrobat", "acrobatReader", "adobeAcrobat", "adobeAcrobatReader",
+            "audacity", "firefox", "mozillaFirefox", "gimp", "notepad", "notepadPlusPlus", 
+            "openOffice", "paint", "msPaint", "photoshop", "adobePhotoshop", "sumatra", 
+            "sumatraPdf", "sumatraPdfReader", "vlc", "vlcMediaPlayer", "winrar", "word", 
+            "msWord", "microsoftWord"
+        };
     }
 }
