@@ -112,7 +112,7 @@ namespace Perun2Gui.Hint
                 "drive", "extension", "fullName", "name", "parent", "path",
                 "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December",
                 "Monday", "Tuesday", "Wednesday", "Thursday", "Friday",  "Saturday", "Sunday", "true", "false", "never", "nothing",
-                "pendrive", "pendrives"
+                "pendrive", "pendrives", "downloads"
             }.Add(ConstantsKeywords.PROGRAMS));
             A_BCEE = new HintArray(new string[] { "break", "continue", "exit", "error" });
             A_Semicolon = new HintArray(new string[] { ";" });
@@ -130,7 +130,7 @@ namespace Perun2Gui.Hint
                 "archive", "change", "compressed", "modification", "lifetime", "size", "depth", "drive", "fullName", "name", "parent", "path",
                 "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December",
                 "Monday", "Tuesday", "Wednesday", "Thursday", "Friday",  "Saturday", "Sunday", "true", "false", "never", "nothing",
-                "pendrive"
+                "pendrive", "downloads"
             }.Add(ConstantsKeywords.PROGRAMS));
             A_Extensionless = new HintArray(new string[] { "extensionless" });
             A_Extension = new HintArray(new string[] { "extension" });
