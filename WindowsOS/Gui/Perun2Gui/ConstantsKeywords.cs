@@ -10,7 +10,7 @@ namespace Perun2Gui
     {
         public static string[] PROGRAMS = new string[] {
             "7zip", "acrobat", "acrobatReader", "adobeAcrobat", "adobeAcrobatReader",
-            "audacity", "firefox", "mozillaFirefox", "gimp", "notepad", "notepadPlusPlus", 
+            "audacity", "firefox", "mozillaFirefox", "gimp", "inkscape", "notepad", "notepadPlusPlus", 
             "openOffice", "paint", "msPaint", "photoshop", "adobePhotoshop", "sumatra", 
             "sumatraPdf", "sumatraPdfReader", "vlc", "vlcMediaPlayer", "winrar", "word", 
             "msWord", "microsoftWord"
