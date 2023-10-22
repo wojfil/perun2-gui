@@ -345,8 +345,8 @@ namespace Perun2Gui.Hint
             {
                 return CheckMatch(A_Extension)
                     || CheckMatch(A_Not)
-                    || CheckMatch(A_DirectoryFunctions)
                     || CheckMatch(A_AllAttrVariables)
+                    || CheckMatch(A_DirectoryFunctions)
                     || CheckMatch(A_AllVariables)
                     || CheckMatch(A_Functions);
             }
