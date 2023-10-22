@@ -304,8 +304,14 @@ namespace Perun2Gui
                 newCaret = caret + hintWord.Length + 1;
             }
             else {
-                hintWord = Hint.Substring(startLength) + (rightSpace || !left.EndsWith(" ") ? " " : "");
+                bool space = rightSpace || !left.EndsWith(" ");
+                hintWord = Hint.Substring(startLength) + (space ? " " : "");
                 newCaret = caret + hintWord.Length - (HintRetreat ? 1 : 0);
+
+                if (HintRetreat && Hint.EndsWith(")"))
+                {
+                    newCaret--;
+                }
             }
 
             codeBox.Text = left + hintWord + right;
