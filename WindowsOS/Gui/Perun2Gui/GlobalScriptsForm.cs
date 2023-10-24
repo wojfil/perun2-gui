@@ -64,7 +64,7 @@ namespace Perun2Gui
             try
             {
                 File.Create(ScriptPath).Dispose();
-                CreateRegistryElement(ScriptName);
+                RefreshRegistryItems();
             }
             catch (Exception)
             {
@@ -81,13 +81,71 @@ namespace Perun2Gui
             return Path.Combine(Paths.GetInstance().GetScriptsPath(), name) + Constants.PERUN2_EXTENSION;
         }
 
-        private void CreateRegistryElement(string name)
+        private void EnsureScriptsDirectoryExists()
         {
-            int id = CountRegistryKeys();
-            AddItem(name, id);
+            var path = Paths.GetInstance().GetScriptsPath();
+            if (!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
         }
 
-        private void AddItem(string name, int id)
+
+        private void RefreshRegistryItems()
+        {
+            EnsureScriptsDirectoryExists();
+
+            var keys = GetRegistryKeys();
+            var keyNames = keys.TrimPrefix(Constants.KEYNAME_TOTAL_PREFIX_LENGTH);
+            var files = Filesystem.GetGlobalScriptFiles();
+
+            if (keyNames.EqualsToList(files))
+            {
+                return;
+                // if registry keys are the same as script files
+                // there is nothing to do
+                // just escape from here
+            }
+
+            ClearAndSetNewKeys(keys, files);
+        }
+        private List<string> GetRegistryKeys()
+        {
+            List<string> values = new List<string>();
+
+            using (RegistryKey MyReg = Registry.ClassesRoot.OpenSubKey(Constants.REGISTRY_GLOBAL_SCRIPTS_ROOT))
+            {
+                var subKeys = MyReg.GetSubKeyNames();
+
+                foreach (string s in subKeys)
+                {
+                    if (IsGlobalScriptKey(s))
+                    {
+                        values.Add(s);
+                    }
+                }
+            }
+
+            values.Sort();
+            return values;
+        }
+
+        private void ClearAndSetNewKeys(List<string> oldKeys, List<string> newNames)
+        {
+            foreach (var o in oldKeys)
+            {
+                DeleteRegistryItem(o);
+            }
+
+            int i = 0;
+            foreach (var n in newNames)
+            {
+                AddRegistryItem(n, i);
+                i++;
+            }
+        }
+
+        private void AddRegistryItem(string name, int id)
         {
             string regName = GetKeyName(name, id);
             string MenuName = Constants.REGISTRY_GLOBAL_SCRIPTS_ROOT + "\\" + regName;
@@ -115,6 +173,29 @@ namespace Perun2Gui
                 Popup.Error(ex.ToString());
             }
         }
+        public static void DeleteRegistryItem(string name)
+        {
+            string MenuName = Constants.REGISTRY_GLOBAL_SCRIPTS_ROOT + "\\" + name;
+            string Command = MenuName + Constants.REGISTRY_COMMAND;
+
+            try
+            {
+                using (RegistryKey reg = Registry.ClassesRoot.OpenSubKey(Command))
+                {
+                    Registry.ClassesRoot.DeleteSubKey(Command);
+                }
+
+                using (RegistryKey reg2 = Registry.ClassesRoot.OpenSubKey(MenuName))
+                {
+                    Registry.ClassesRoot.DeleteSubKey(MenuName);
+                }
+            }
+            catch (Exception ex)
+            {
+                Popup.Error(ex.ToString());
+            }
+        }
+
 
         private string GetKeyName(string name, int id)
         {

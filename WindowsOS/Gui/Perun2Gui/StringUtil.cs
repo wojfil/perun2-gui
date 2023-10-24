@@ -196,5 +196,29 @@ namespace Perun2Gui
 
             return values;
         }
+
+        public static bool EqualsToList<T>(this List<T> list, List<T> other)
+        {
+            if (list.Count() != other.Count())
+            {
+                return false;
+            }
+
+            for (int i = 0; i < list.Count(); i++)
+            {
+                if (!list[i].Equals(other[i]))
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        public static List<string> TrimPrefix(this List<string> list, int length)
+        {
+            return list.Select(x => x.Substring(length)).ToList();
+        }
+
     }
 }
