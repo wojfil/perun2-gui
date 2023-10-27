@@ -71,7 +71,7 @@ namespace Perun2Installer.Properties {
         ///Preamble
         ///The GNU General Public License is a free, copyleft license for software and other kinds of works.
         ///
-        ///The licenses for most software and other practical works are designed to take away your freedom to share and change the works. By contrast, the GNU General Public [rest of string was truncated]&quot;;.
+        ///The licenses for most software and other practical works are designed to take away your freedom to share and change the works. By contrast, the GNU Gene [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string LICENSE {
             get {
@@ -95,6 +95,16 @@ namespace Perun2Installer.Properties {
         internal static System.Drawing.Icon perun256 {
             get {
                 object obj = ResourceManager.GetObject("perun256", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon perun256_2 {
+            get {
+                object obj = ResourceManager.GetObject("perun256_2", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
             }
         }

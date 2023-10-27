@@ -64,7 +64,7 @@ namespace Perun2Installer
 
         private void InitControls()
         {
-            this.Icon = Resources.perun256;
+            this.Icon = Resources.perun256_2;
 
             topStripPanel.BackColor = Constants.TOP_STRIP_COLOR;
             topStripPanel2.BackColor = Constants.TOP_STRIP_COLOR_2;

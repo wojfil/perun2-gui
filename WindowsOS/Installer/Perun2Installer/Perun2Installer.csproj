@@ -52,7 +52,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Resources\perun256.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\perun256_2.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
@@ -199,6 +199,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\perun2.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\perun256_2.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
