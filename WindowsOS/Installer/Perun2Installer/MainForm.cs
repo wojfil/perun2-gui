@@ -154,7 +154,10 @@ namespace Perun2Installer
 
         public static string GetVersionString()
         {
-            return Application.ProductVersion.Substring(0, Application.ProductVersion.Length - 2);
+            if (Application.ProductVersion.EndsWith(".0"))
+                return Application.ProductVersion.Substring(0, Application.ProductVersion.Length - 2);
+
+            return Application.ProductVersion;
         }
 
         private string SpaceToString(double space)
