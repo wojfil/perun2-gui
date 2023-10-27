@@ -36,6 +36,7 @@ namespace Perun2Installer.Actions
         {
             Actions.Clear();
             Actions.Add(new UnloadInstallationFiles());
+            Actions.Add(new Registry_Uninstaller());
         }
 
 
