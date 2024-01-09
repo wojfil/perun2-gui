@@ -103,7 +103,8 @@ namespace Perun2Gui.Hint
                 "isUpper()", "join()", "length()", "last()", "left()", "letters()", "lower()", "monthName()", "max()", "median()",
                 "min()", "numbers()", "newYear()", "number()", "path()", "parent()", "power()", "replace()","random()",
                 "repeat()", "reverse()", "right()", "round()", "roman()", "substring()", "sign()", "size()", "split()", "sqrt()", "findText()",
-                "startsWith()", "string()", "sum()", "trim()", "truncate()", "time()", "upper()", "words()", "weekDayName()", "shiftMonth()", "shiftWeekDay()" }, HintType.Retreating);
+                "startsWith()", "string()", "sum()", "trim()", "truncate()", "time()", "upper()", "words()", "weekDayName()", "shiftMonth()", 
+                "shiftWeekDay()", "isNaN()", "isNever()", "clock()" }, HintType.Retreating);
             A_AllVariables = new HintArray(new string[] {
                 "now", "today", "yesterday", "tomorrow", "desktop", "Perun2", "origin", "access",  "alphabet", "ascii", "arguments",
                 "files", "recursiveFiles", "directories", "recursiveDirectories", "index", "this", "location", "success",
@@ -164,7 +165,7 @@ namespace Perun2Gui.Hint
             A_Operators = new HintArray(new string[] { ",", "[", ":", "-", "+", "%", "?" });
             A_BoolFunctions = new HintArray(new string[] { "startsWith()", "anyInside()", "any()", "contains()",
                 "endsWith()", "empty()", "existsInside()", "exists()", "existInside()", "exist()", "hidden()", "isDigit()", "isBinary()", "isHex()",
-                "isLetter()", "isLower()", "isNumber()", "isUpper()", "random()", "findText()" }, HintType.Retreating);
+                "isLetter()", "isLower()", "isNumber()", "isUpper()", "random()", "findText()", "isNaN()", "isNever()" }, HintType.Retreating);
             A_Limit = new HintArray(new string[] { "limit" });
             A_Brackets = new HintArray(new string[] { "()" }, HintType.Retreating);
             A_CurlyBrackets = new HintArray(new string[] { "{}" }, HintType.Retreating);
