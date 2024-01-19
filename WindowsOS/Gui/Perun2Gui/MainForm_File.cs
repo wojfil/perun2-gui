@@ -388,7 +388,7 @@ namespace Perun2Gui
             form.ShowDialog();
             if (form.DialogResult == DialogResult.OK)
             {
-                SetSourceFile(form.ScriptPath, codeBox.Text, true);
+                SetSourceFile(form.ScriptPath, codeBox.Text, false);
                 SaveToCurrentFile();
             }
         }
