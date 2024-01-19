@@ -55,7 +55,7 @@ namespace Perun2Gui
             this.logoBox.Image = global::Perun2Gui.Properties.Resources.perunlogo;
             this.logoBox.Location = new System.Drawing.Point(23, 22);
             this.logoBox.Name = "logoBox";
-            this.logoBox.Size = new System.Drawing.Size(65, 65);
+            this.logoBox.Size = new System.Drawing.Size(76, 75);
             this.logoBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.logoBox.TabIndex = 28;
             this.logoBox.TabStop = false;
