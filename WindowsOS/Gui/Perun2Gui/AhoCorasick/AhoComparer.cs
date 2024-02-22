@@ -51,7 +51,7 @@ namespace Perun2Gui
             string[] USUAL_WORDS = {
                 "and", "or", "xor", "not", "in", "like", "else", "if",
                 "inside", "times", "while", "every", "final", "limit", "order", "skip", "where", "as",
-                "by", "to", "extensionless", "with", "asc", "desc", "break", "continue" };
+                "by", "to", "extensionless", "with", "asc", "desc", "break", "continue", "resembles" };
 
             string[] TIME_WORDS = {
                 "january", "february", "march", "april", "may", "june", 
