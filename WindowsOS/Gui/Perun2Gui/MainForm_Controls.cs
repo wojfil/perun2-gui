@@ -106,9 +106,9 @@ namespace Perun2Gui
                 {
                     RunStop();
                 }
-                else if(codeBox.Text.Length != 0)
+                else if (codeBox.Text.Length != 0)
                 {
-                    RunStart();
+                    RunStart(ExecutionMode.Run);
                 }
             }
         }

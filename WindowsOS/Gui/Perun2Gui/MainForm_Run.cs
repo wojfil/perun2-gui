@@ -45,6 +45,7 @@ namespace Perun2Gui
         private object SyncGate = new object();
         private Process Process;
 
+        private static readonly string CHECK_FLAG = "-m";
         private static readonly string NOOMIT_FLAG = "-gn";
         private static readonly string SILENT_FLAG = "-gs";
         private static readonly string NOOMIT_SILENT_FLAG = "-gns";
@@ -97,7 +98,7 @@ namespace Perun2Gui
             }
         }
 
-        private void RunStart()
+        private void RunStart(ExecutionMode mode)
         {
             if (Running || Stopped)
                 return;
@@ -134,7 +135,7 @@ namespace Perun2Gui
                 }
             }
 
-            Run();
+            Run(mode);
         }
 
         private void SetBackup(string code)
@@ -180,12 +181,18 @@ namespace Perun2Gui
             return String.Equals(s1, s2, StringComparison.OrdinalIgnoreCase);
         }
 
-        private string GetRunnerArgs()
+        private string GetRunnerArgs(ExecutionMode mode)
         {
             StringBuilder sb = new StringBuilder();
 
             bool noomit = SavedSettings.GetInstance().GetNoOmit();
             bool silent = SavedSettings.GetInstance().GetSilent();
+
+            if (mode == ExecutionMode.CheckCorrectness)
+            {
+                sb.Append(CHECK_FLAG);
+                sb.Append(' ');
+            }
 
             if (noomit && silent)
             {
@@ -226,12 +233,17 @@ namespace Perun2Gui
 
         private void runToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RunStart();
+            RunStart(ExecutionMode.Run);
         }
 
         private void stopToolStripMenuItem_Click(object sender, EventArgs e)
         {
             RunStop();
+        }
+
+        private void checkToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RunStart(ExecutionMode.CheckCorrectness);
         }
 
         private void RefreshNoOmit()
@@ -296,6 +308,7 @@ namespace Perun2Gui
 
             runToolStripMenuItem.Enabled = false;
             stopToolStripMenuItem.Enabled = true;
+            checkToolStripMenuItem.Enabled = false;
 
             newToolStripMenuItem.Enabled = false;
             relocateToolStripMenuItem.Enabled = false;
@@ -339,6 +352,7 @@ namespace Perun2Gui
         {
             runToolStripMenuItem.Enabled = true;
             stopToolStripMenuItem.Enabled = false;
+            checkToolStripMenuItem.Enabled = true;
 
             newToolStripMenuItem.Enabled = true;
             relocateToolStripMenuItem.Enabled = true;

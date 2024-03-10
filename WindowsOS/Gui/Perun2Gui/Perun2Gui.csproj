@@ -98,6 +98,7 @@
     <Compile Include="Constants.cs" />
     <Compile Include="ConstantsKeywords.cs" />
     <Compile Include="DirectorySelectDialog.cs" />
+    <Compile Include="ExecutionMode.cs" />
     <Compile Include="FastColoredTextBox\AutocompleteItem.cs" />
     <Compile Include="FastColoredTextBox\AutocompleteMenu.cs">
       <SubType>Component</SubType>

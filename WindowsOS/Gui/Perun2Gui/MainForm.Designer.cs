@@ -138,6 +138,7 @@ namespace Perun2Gui
             this.hintLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.logBackgroundWorker = new System.ComponentModel.BackgroundWorker();
             this.codeBox = new FastColoredTextBoxNS.FastColoredTextBox();
+            this.checkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.topMenuStrip.SuspendLayout();
             this.codeMenuStrip.SuspendLayout();
             this.fileMenuStrip.SuspendLayout();
@@ -430,6 +431,7 @@ namespace Perun2Gui
             this.codeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.runToolStripMenuItem,
             this.stopToolStripMenuItem,
+            this.checkToolStripMenuItem,
             this.toolStripSeparator14,
             this.omitPeruFilesToolStripMenuItem,
             this.flagSToolStripMenuItem,
@@ -966,6 +968,13 @@ namespace Perun2Gui
             this.codeBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.codeBox_KeyDown);
             this.codeBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.codeBox_MouseUp);
             // 
+            // checkToolStripMenuItem
+            // 
+            this.checkToolStripMenuItem.Name = "checkToolStripMenuItem";
+            this.checkToolStripMenuItem.Size = new System.Drawing.Size(211, 26);
+            this.checkToolStripMenuItem.Text = "Check correctness";
+            this.checkToolStripMenuItem.Click += new System.EventHandler(this.checkToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1106,6 +1115,7 @@ namespace Perun2Gui
         private System.Windows.Forms.ToolStripMenuItem turnIntoGlobalScriptToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem globalScriptsToolStripMenuItem;
         private System.ComponentModel.BackgroundWorker logBackgroundWorker;
+        private System.Windows.Forms.ToolStripMenuItem checkToolStripMenuItem;
     }
 }
 

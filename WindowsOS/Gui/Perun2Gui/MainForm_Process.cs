@@ -19,7 +19,7 @@ namespace Perun2Gui
         private string FinalLogLine = "";
 
 
-        private void Run()
+        private void Run(ExecutionMode mode)
         {
             if (logBackgroundWorker.IsBusy)
             {
@@ -60,7 +60,7 @@ namespace Perun2Gui
 
             Process = new Process();
             Process.StartInfo.WorkingDirectory = LocationString;
-            Process.StartInfo.Arguments = GetRunnerArgs();
+            Process.StartInfo.Arguments = GetRunnerArgs(mode);
             Process.StartInfo.FileName = exePath;
             Process.StartInfo.CreateNoWindow = true;
             Process.StartInfo.UseShellExecute = false;
