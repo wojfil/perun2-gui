@@ -45,13 +45,14 @@ namespace Perun2Gui
                 "copy", "create", "createfile", "createdirectory",
                 "createfiles", "createdirectories", "delete", "drop", "hide", "lock", "move",
                 "open", "reaccess", "rechange", "recreate", "remodify", "rename", "select",
-                "unhide", "unlock", "force", "stack", "print", "run", "sleep", "exit", "error"
+                "unhide", "unlock", "force", "stack", "print", "run", "sleep", "exit", "error", "popup"
             };
 
             string[] USUAL_WORDS = {
                 "and", "or", "xor", "not", "in", "like", "else", "if",
                 "inside", "times", "while", "every", "final", "limit", "order", "skip", "where", "as",
-                "by", "to", "extensionless", "with", "asc", "desc", "break", "continue", "resembles" };
+                "by", "to", "extensionless", "with", "asc", "desc", "break", "continue", "resembles", 
+                "regexp", "foreach", "between" };
 
             string[] TIME_WORDS = {
                 "january", "february", "march", "april", "may", "june", 

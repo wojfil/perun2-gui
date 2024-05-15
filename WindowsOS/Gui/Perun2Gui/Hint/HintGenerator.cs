@@ -60,8 +60,8 @@ namespace Perun2Gui.Hint
         private HintArray A_DaysOfTheWeek;
         private HintArray A_RecentYears;
         private HintArray A_Plus;
-        private HintArray A_LikeInResembles;
-        private HintArray A_InLikeResembles;
+        private HintArray A_BoolOperator_FirstLike;
+        private HintArray A_BoolOperator_FirstIn;
         private HintArray A_Equals;
         private HintArray A_MultiVariables;
         private HintArray A_Operators;
@@ -92,7 +92,7 @@ namespace Perun2Gui.Hint
             A_CommandsSF = new HintArray(new string[] { "copy", "create", "createDirectory", "createFile", "createDirectories", "createFiles", "move", "rename" });
             A_Commands = new HintArray(new string[] { "print", "copy", "create", "createDirectory", "createFile", "createDirectories", "createFiles",
                 "delete", "drop", "hide", "lock", "move", "open", 
-                "select", "sleep", "rename", "recreate", "remodify", "reaccess", "rechange", "run", "unhide", "unlock", "inside", "if", "while", "else" });
+                "select", "sleep", "rename", "recreate", "remodify", "reaccess", "rechange", "run", "unhide", "unlock", "inside", "if", "while", "else", "foreach", "popup" });
             A_MultiCoreVariables = new HintArray(new string[] { "files", "directories", "recursiveFiles", "recursiveDirectories" });
             A_Functions = new HintArray(new string[] { "substring()", "anyInside()", "after()", "absolute()", "afterDigits()", "afterLetters()", 
                 "any()", "average()", "before()", "beforeDigits()", "beforeLetters()", "binary()", "contains()", "capitalize()", "ceil()",
@@ -156,8 +156,10 @@ namespace Perun2Gui.Hint
             A_PeriodSingle = new HintArray(new string[] { "day", "year", "week", "hour", "month", "minute", "second" });
             A_PeriodMulti = new HintArray(new string[] { "days", "years", "weeks", "hours", "months", "minutes", "seconds" });
             A_Plus = new HintArray(new string[] { "+" });
-            A_LikeInResembles = new HintArray(new string[] { "like", "not like", "in", "not in", "resembles", "not resembles" });
-            A_InLikeResembles = new HintArray(new string[] { "in", "not in", "like", "not like", "resembles", "not resembles" });
+            A_BoolOperator_FirstLike = new HintArray(new string[] { "like", "not like", "in", "not in", "resembles", "not resembles",
+                "between", "not between", "regexp", "not regexp" });
+            A_BoolOperator_FirstIn = new HintArray(new string[] { "in", "not in", "like", "not like", "resembles", "not resembles",
+                "between", "not between", "regexp", "not regexp" });
             A_Equals = new HintArray(new string[] { "=" });
             A_MultiVariables = new HintArray(new string[] { "files", "alphabet", "arguments", "ascii",
                 "directories", "recursiveFiles", "recursiveDirectories", "pendrives"
@@ -260,7 +262,7 @@ namespace Perun2Gui.Hint
                     || CheckMatch(A_MultiCoreVariables)
                     || CheckMatch(A_StackForce)
                     || CheckMatch(A_AllAttrVariables)
-                    || CheckMatch(A_Functions) 
+                    || CheckMatch(A_Functions)
                     || CheckMatch(A_AllVariables);
             }
             else if (prev.Equals("stack") || prev.Equals("force"))
@@ -287,6 +289,10 @@ namespace Perun2Gui.Hint
                     || CheckMatch(A_AllAttrVariables)
                     || CheckMatch(A_Functions)
                     || CheckMatch(A_AllVariables);
+            }
+            else if (prev.Equals("foreach"))
+            {
+                return CheckMatch(A_MultiCoreVariables);
             }
             else if (A_CoreCommandsTo.ContainsValue(prev))
             {
@@ -402,14 +408,14 @@ namespace Perun2Gui.Hint
             else if (prev.Equals("extension"))
             {
                 return CheckMatch(A_Equals)
-                    || CheckMatch(A_InLikeResembles)
+                    || CheckMatch(A_BoolOperator_FirstIn)
                     || CheckMatch(A_AndOrXor)
                     || CheckMatch(A_AscDesc)
                     || CheckMatch(A_TAFW);
             }
             else if (prev.Equals("name") || prev.Equals("fullname"))
             {
-                return CheckMatch(A_LikeInResembles)
+                return CheckMatch(A_BoolOperator_FirstLike)
                     || CheckMatch(A_AndOrXor)
                     || CheckMatch(A_AscDesc)
                     || CheckMatch(A_TAFW);
@@ -419,7 +425,7 @@ namespace Perun2Gui.Hint
                 return CheckMatch(A_Equals)
                     || CheckMatch(A_AndOrXor)
                     || CheckMatch(A_AscDesc)
-                    || CheckMatch(A_LikeInResembles)
+                    || CheckMatch(A_BoolOperator_FirstLike)
                     || CheckMatch(A_TAFW);
             }
             else if (A_MultiVariables.ContainsValue(prev))
@@ -492,7 +498,7 @@ namespace Perun2Gui.Hint
                     || CheckMatch(A_Not)
                     || CheckMatch(A_AllVariables);
             }
-            else if (prev.Equals("or") || prev.Equals("xor") || 
+            else if (prev.Equals("or") || prev.Equals("xor") ||
                 prev.Equals("and") || prev.Equals("if") || prev.Equals("while"))
             {
                 return CheckMatch(A_AllAttrVariables)
@@ -511,7 +517,7 @@ namespace Perun2Gui.Hint
             else if (A_AllVariables.ContainsValue(prev))
             {
                 return CheckMatch(A_Plus)
-                    || CheckMatch(A_LikeInResembles)
+                    || CheckMatch(A_BoolOperator_FirstLike)
                     || CheckMatch(A_AndOrXor)
                     || CheckMatch(A_AscDesc)
                     || CheckMatch(A_TAFW);
@@ -522,7 +528,8 @@ namespace Perun2Gui.Hint
                     || CheckMatch(A_Filters)
                     || CheckMatch(A_TAFW);
             }
-            else if (prev.Equals("like") || prev.Equals("resembles"))
+            else if (prev.Equals("like") || prev.Equals("resembles") 
+                || prev.Equals("between") || prev.Equals("popup") || prev.Equals("regexp"))
             {
                 return CheckMatch(A_String);
             }
@@ -595,7 +602,7 @@ namespace Perun2Gui.Hint
                     || CheckMatch(A_AscDesc)
                     || CheckMatch(A_Filters)
                     || CheckMatch(A_TAFW)
-                    || CheckMatch(A_LikeInResembles);
+                    || CheckMatch(A_BoolOperator_FirstLike);
             }
 
             return false;
