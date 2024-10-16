@@ -47,18 +47,20 @@ namespace Perun2Manager
             this.renameButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
             this.namePanel = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.fileImageBox = new System.Windows.Forms.PictureBox();
             this.namePanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileImageBox)).BeginInit();
             this.SuspendLayout();
             // 
             // nameBox
             // 
+            this.nameBox.BackColor = System.Drawing.SystemColors.Control;
             this.nameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.nameBox.Font = new System.Drawing.Font("Consolas", 14F);
             this.nameBox.Location = new System.Drawing.Point(36, 5);
             this.nameBox.Name = "nameBox";
             this.nameBox.ReadOnly = true;
+            this.nameBox.ShortcutsEnabled = false;
             this.nameBox.Size = new System.Drawing.Size(361, 22);
             this.nameBox.TabIndex = 0;
             // 
@@ -97,22 +99,23 @@ namespace Perun2Manager
             // 
             // namePanel
             // 
-            this.namePanel.Controls.Add(this.pictureBox1);
+            this.namePanel.Controls.Add(this.fileImageBox);
             this.namePanel.Controls.Add(this.nameBox);
-            this.namePanel.Location = new System.Drawing.Point(7, 4);
+            this.namePanel.Location = new System.Drawing.Point(7, 3);
             this.namePanel.Name = "namePanel";
-            this.namePanel.Size = new System.Drawing.Size(402, 32);
+            this.namePanel.Size = new System.Drawing.Size(402, 34);
             this.namePanel.TabIndex = 4;
             // 
-            // pictureBox1
+            // fileImageBox
             // 
-            this.pictureBox1.Image = global::Perun2Manager.Properties.Resources.filesign2;
-            this.pictureBox1.InitialImage = global::Perun2Manager.Properties.Resources.filesign2;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.fileImageBox.BackColor = System.Drawing.Color.Transparent;
+            this.fileImageBox.Image = global::Perun2Manager.Properties.Resources.filesign2;
+            this.fileImageBox.InitialImage = global::Perun2Manager.Properties.Resources.filesign2;
+            this.fileImageBox.Location = new System.Drawing.Point(6, 6);
+            this.fileImageBox.Name = "fileImageBox";
+            this.fileImageBox.Size = new System.Drawing.Size(20, 20);
+            this.fileImageBox.TabIndex = 1;
+            this.fileImageBox.TabStop = false;
             // 
             // ManagerRow
             // 
@@ -126,7 +129,7 @@ namespace Perun2Manager
             this.Size = new System.Drawing.Size(804, 40);
             this.namePanel.ResumeLayout(false);
             this.namePanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileImageBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -138,6 +141,6 @@ namespace Perun2Manager
         private System.Windows.Forms.Button renameButton;
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Panel namePanel;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox fileImageBox;
     }
 }

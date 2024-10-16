@@ -39,21 +39,24 @@ namespace Perun2Gui
         {
             InitializeComponent();
             this.Icon = Resources.perun256;
-            RefreshGuiTheme();
 
             LoadData();
 
             oldBox.ContextMenu = new ContextMenu();
             newBox.ContextMenu = new ContextMenu();
+            DarkMode();
         }
 
-        private void RefreshGuiTheme()
+        private void DarkMode()
         {
-            this.BackColor = Constants.COLOR_FORMBACK_DAY;
-            inputPanel.BackColor = Constants.COLOR_TEXTBACK_DAY;
-            oldBox.BackColor = Constants.COLOR_TEXTBACK_DAY;
-            outputPanel.BackColor = Constants.COLOR_TEXTBACK_DAY;
-            newBox.BackColor = Constants.COLOR_TEXTBACK_DAY;
+            _ = new DarkModeCS(this);
+            this.oldBox.BorderStyle = BorderStyle.None;
+            this.oldPanel.BackColor = this.oldBox.BackColor;
+            this.newBox.BorderStyle = BorderStyle.None;
+            this.newPanel.BackColor = this.newBox.BackColor;
+
+            this.label1.BackColor = Color.FromArgb(30, 30, 30);
+            this.label2.BackColor = Color.FromArgb(30, 30, 30);
         }
 
         private void LoadData()

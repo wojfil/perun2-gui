@@ -35,7 +35,8 @@ namespace Perun2Manager
 
         private void Init()
         {
-            InitStyle();
+            this.Icon = Resources.perun256;
+            DarkMode();
             pathBox.Text = StringUtil.PathAbbreviation(Paths.GetInstance().GetScriptsPath(), Constants.PATH_ABBREVIATION_LENGTH);
             UnselectAll();
             RefreshAll();
@@ -46,14 +47,16 @@ namespace Perun2Manager
             label1.Select();
         }
 
-        private void InitStyle()
+        private void DarkMode()
         {
-            this.BackColor = Constants.COLOR_FORMBACK_DAY;
-            this.outerPanel.BackColor = Constants.COLOR_FORMBACK_DAY;
-            this.mainPanel.BackColor = Constants.COLOR_FORMBACK_DAY;
-            this.pathPanel.BackColor = Constants.COLOR_TEXTBACK_DAY;
-            this.pathBox.BackColor = Constants.COLOR_TEXTBACK_DAY;
-            this.Icon = Resources.perun256;
+            _ = new DarkModeCS(this);
+
+            this.pathBox.BorderStyle = BorderStyle.None;
+            this.pathPanel.BackColor = this.pathBox.BackColor;
+            this.mainPanel.BackColor = Color.FromArgb(30, 30, 30);
+            this.outerPanel.BackColor = Color.FromArgb(30, 30, 30);
+            this.fileImageBox.BackColor = Color.Transparent;
+            this.tablePanel.BackColor = Color.FromArgb(30, 30, 30);
         }
 
         void AddRow(string name)
@@ -62,6 +65,14 @@ namespace Perun2Manager
             ManagerRow mr = new ManagerRow(name, id, this);
             tablePanel.Controls.Add(mr);
             tablePanel.SetRow(mr, id);
+
+            mr.BackColor = Color.Transparent;
+            mr.GetFileImage().BackColor = Color.Transparent;
+
+
+            mr.GetNameBox().BorderStyle = BorderStyle.None;
+            mr.GetNamePanel().BackColor = mr.GetNameBox().BackColor;
+
         }
 
         void ClearAndSetNewRows(List<string> names)
@@ -155,7 +166,15 @@ namespace Perun2Manager
             
             foreach (var file in Filesystem.GetGlobalScriptFiles())
             {
-                Filesystem.OpenScriptInGUI(file);
+                try
+                {
+                    Filesystem.OpenScriptInGUI(file);
+                }
+                catch (Exception)
+                {
+                    Popup.Error("Something wrong happened and file '" + file + Constants.PERUN2_EXTENSION + "' could not be opened.");
+                    return;
+                }
             }
         }
     }

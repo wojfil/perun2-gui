@@ -26,10 +26,6 @@ namespace Perun2Gui
             "September", "October", "November", "December" };
         public static string[] WEEK_DAY_NAMES = new string[] { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday",  "Saturday", "Sunday" };
 
-        public static readonly Color COLOR_FORMBACK_DAY = Color.FromArgb(235, 235, 235);
-        public static readonly Color COLOR_TEXTBACK_DAY = Color.FromArgb(251, 251, 251);
-        public static readonly Color COLOR_TEXT_SELECTION = Color.FromArgb(0, 128, 128, 128);
-
         public const int GLOBAL_SCRIPT_NAME_LENGTH_LIMIT = 160;
         public const int GLOBAL_SCRIPT_ITEMS_LIMIT = 16;
 

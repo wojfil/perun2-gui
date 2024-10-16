@@ -30,16 +30,16 @@ namespace Perun2Gui
         {
             InitializeComponent();
             LoadLicenseText();
-            RefreshGuiTheme();
+            DarkMode();
             this.Icon = Resources.perun256;
             licenseBox.ContextMenu = new ContextMenu();
         }
 
-        private void RefreshGuiTheme()
+        private void DarkMode()
         {
-            this.BackColor = Constants.COLOR_FORMBACK_DAY;
-            licenseBox.BackColor = Constants.COLOR_TEXTBACK_DAY;
-            licensePanel.BackColor = Constants.COLOR_TEXTBACK_DAY;
+            _ = new DarkModeCS(this);
+            this.licenseBox.BorderStyle = BorderStyle.None;
+            this.licensePanel.BackColor = this.licenseBox.BackColor;
         }
 
         private void LoadLicenseText()

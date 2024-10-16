@@ -43,25 +43,25 @@ namespace Perun2Gui
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VersionForm));
-            this.outputPanel = new System.Windows.Forms.Panel();
+            this.newPanel = new System.Windows.Forms.Panel();
             this.newBox = new System.Windows.Forms.TextBox();
-            this.inputPanel = new System.Windows.Forms.Panel();
+            this.oldPanel = new System.Windows.Forms.Panel();
             this.oldBox = new System.Windows.Forms.TextBox();
             this.cancelButton = new System.Windows.Forms.Button();
             this.actualizeButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.outputPanel.SuspendLayout();
-            this.inputPanel.SuspendLayout();
+            this.newPanel.SuspendLayout();
+            this.oldPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // outputPanel
+            // newPanel
             // 
-            this.outputPanel.Controls.Add(this.newBox);
-            this.outputPanel.Location = new System.Drawing.Point(136, 61);
-            this.outputPanel.Name = "outputPanel";
-            this.outputPanel.Size = new System.Drawing.Size(134, 28);
-            this.outputPanel.TabIndex = 13;
+            this.newPanel.Controls.Add(this.newBox);
+            this.newPanel.Location = new System.Drawing.Point(136, 61);
+            this.newPanel.Name = "newPanel";
+            this.newPanel.Size = new System.Drawing.Size(134, 28);
+            this.newPanel.TabIndex = 13;
             // 
             // newBox
             // 
@@ -76,13 +76,13 @@ namespace Perun2Gui
             this.newBox.TabIndex = 15;
             this.newBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // inputPanel
+            // oldPanel
             // 
-            this.inputPanel.Controls.Add(this.oldBox);
-            this.inputPanel.Location = new System.Drawing.Point(136, 24);
-            this.inputPanel.Name = "inputPanel";
-            this.inputPanel.Size = new System.Drawing.Size(134, 28);
-            this.inputPanel.TabIndex = 12;
+            this.oldPanel.Controls.Add(this.oldBox);
+            this.oldPanel.Location = new System.Drawing.Point(136, 24);
+            this.oldPanel.Name = "oldPanel";
+            this.oldPanel.Size = new System.Drawing.Size(134, 28);
+            this.oldPanel.TabIndex = 12;
             // 
             // oldBox
             // 
@@ -102,7 +102,7 @@ namespace Perun2Gui
             this.cancelButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.cancelButton.Location = new System.Drawing.Point(151, 127);
             this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(124, 37);
+            this.cancelButton.Size = new System.Drawing.Size(124, 35);
             this.cancelButton.TabIndex = 11;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
@@ -113,7 +113,7 @@ namespace Perun2Gui
             this.actualizeButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.actualizeButton.Location = new System.Drawing.Point(21, 127);
             this.actualizeButton.Name = "actualizeButton";
-            this.actualizeButton.Size = new System.Drawing.Size(124, 37);
+            this.actualizeButton.Size = new System.Drawing.Size(124, 35);
             this.actualizeButton.TabIndex = 10;
             this.actualizeButton.Text = "Actualize";
             this.actualizeButton.UseVisualStyleBackColor = true;
@@ -143,9 +143,10 @@ namespace Perun2Gui
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Perun2Gui.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(294, 177);
-            this.Controls.Add(this.outputPanel);
-            this.Controls.Add(this.inputPanel);
+            this.Controls.Add(this.newPanel);
+            this.Controls.Add(this.oldPanel);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.actualizeButton);
             this.Controls.Add(this.label2);
@@ -157,10 +158,10 @@ namespace Perun2Gui
             this.Name = "VersionForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Perun2 Version";
-            this.outputPanel.ResumeLayout(false);
-            this.outputPanel.PerformLayout();
-            this.inputPanel.ResumeLayout(false);
-            this.inputPanel.PerformLayout();
+            this.newPanel.ResumeLayout(false);
+            this.newPanel.PerformLayout();
+            this.oldPanel.ResumeLayout(false);
+            this.oldPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,8 +169,8 @@ namespace Perun2Gui
 
         #endregion
 
-        private System.Windows.Forms.Panel outputPanel;
-        private System.Windows.Forms.Panel inputPanel;
+        private System.Windows.Forms.Panel newPanel;
+        private System.Windows.Forms.Panel oldPanel;
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Button actualizeButton;
         private System.Windows.Forms.Label label2;

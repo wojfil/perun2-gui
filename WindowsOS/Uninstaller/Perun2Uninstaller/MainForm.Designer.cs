@@ -42,33 +42,30 @@ namespace Perun2Uninstaller
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.bottomPanel = new System.Windows.Forms.Panel();
             this.cancelButton = new System.Windows.Forms.Button();
             this.uninstallButton = new System.Windows.Forms.Button();
             this.backButton = new System.Windows.Forms.Button();
-            this.topStripPanel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.topStripPanel2 = new System.Windows.Forms.Panel();
-            this.topStripPanel3 = new System.Windows.Forms.Panel();
             this.logoBox = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.bottomPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // bottomPanel
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.cancelButton);
-            this.panel1.Controls.Add(this.uninstallButton);
-            this.panel1.Controls.Add(this.backButton);
-            this.panel1.Location = new System.Drawing.Point(-5, 288);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(644, 64);
-            this.panel1.TabIndex = 0;
+            this.bottomPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.bottomPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bottomPanel.Controls.Add(this.cancelButton);
+            this.bottomPanel.Controls.Add(this.uninstallButton);
+            this.bottomPanel.Controls.Add(this.backButton);
+            this.bottomPanel.Location = new System.Drawing.Point(-5, 288);
+            this.bottomPanel.Name = "bottomPanel";
+            this.bottomPanel.Size = new System.Drawing.Size(644, 64);
+            this.bottomPanel.TabIndex = 0;
             // 
             // cancelButton
             // 
@@ -103,14 +100,6 @@ namespace Perun2Uninstaller
             this.backButton.Text = "Back";
             this.backButton.UseVisualStyleBackColor = true;
             // 
-            // topStripPanel1
-            // 
-            this.topStripPanel1.BackColor = System.Drawing.Color.Gray;
-            this.topStripPanel1.Location = new System.Drawing.Point(0, 0);
-            this.topStripPanel1.Name = "topStripPanel1";
-            this.topStripPanel1.Size = new System.Drawing.Size(653, 4);
-            this.topStripPanel1.TabIndex = 1;
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Black;
@@ -119,24 +108,9 @@ namespace Perun2Uninstaller
             this.panel3.Size = new System.Drawing.Size(653, 1);
             this.panel3.TabIndex = 2;
             // 
-            // topStripPanel2
-            // 
-            this.topStripPanel2.BackColor = System.Drawing.Color.Gainsboro;
-            this.topStripPanel2.Location = new System.Drawing.Point(0, 4);
-            this.topStripPanel2.Name = "topStripPanel2";
-            this.topStripPanel2.Size = new System.Drawing.Size(653, 4);
-            this.topStripPanel2.TabIndex = 2;
-            // 
-            // topStripPanel3
-            // 
-            this.topStripPanel3.BackColor = System.Drawing.Color.DarkGray;
-            this.topStripPanel3.Location = new System.Drawing.Point(0, 8);
-            this.topStripPanel3.Name = "topStripPanel3";
-            this.topStripPanel3.Size = new System.Drawing.Size(653, 4);
-            this.topStripPanel3.TabIndex = 3;
-            // 
             // logoBox
             // 
+            this.logoBox.BackColor = System.Drawing.Color.Transparent;
             this.logoBox.Image = global::Perun2Uninstaller.Properties.Resources.perunlogo;
             this.logoBox.Location = new System.Drawing.Point(45, 90);
             this.logoBox.Name = "logoBox";
@@ -180,22 +154,20 @@ namespace Perun2Uninstaller
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::Perun2Uninstaller.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(614, 339);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.logoBox);
-            this.Controls.Add(this.topStripPanel3);
-            this.Controls.Add(this.topStripPanel2);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.topStripPanel1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.bottomPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Uninstall Perun2";
-            this.panel1.ResumeLayout(false);
+            this.bottomPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logoBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -204,11 +176,8 @@ namespace Perun2Uninstaller
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel topStripPanel1;
+        private System.Windows.Forms.Panel bottomPanel;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel topStripPanel2;
-        private System.Windows.Forms.Panel topStripPanel3;
         private System.Windows.Forms.PictureBox logoBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

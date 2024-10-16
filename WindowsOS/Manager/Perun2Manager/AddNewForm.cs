@@ -33,15 +33,15 @@ namespace Perun2Manager
         {
             MainForm = mainForm;
             InitializeComponent();
-            InitStyle();
+            this.Icon = Resources.perun256;
+            DarkMode();
         }
 
-        private void InitStyle()
+        private void DarkMode()
         {
-            BackColor = Constants.COLOR_FORMBACK_DAY;
-            this.namePanel.BackColor = Color.White;
-            this.nameBox.BackColor = Color.White;
-            this.Icon = Resources.perun256;
+            _ = new DarkModeCS(this);
+            this.nameBox.BorderStyle = BorderStyle.None;
+            this.namePanel.BackColor = this.nameBox.BackColor;
         }
 
         private void okButton_Click(object sender, EventArgs e)

@@ -96,6 +96,7 @@
     <Compile Include="Actions\UnloadAction.cs" />
     <Compile Include="Actions\UnloadInstallationFiles.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="DarkModeCS.cs" />
     <Compile Include="DirectorySelectDialog.cs" />
     <Compile Include="EnvVariable.cs" />
     <Compile Include="Extensions.cs" />
@@ -113,6 +114,7 @@
     <Compile Include="MainForm_Install.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Messenger.cs" />
     <Compile Include="PageManager.cs" />
     <Compile Include="Paths.cs" />
     <Compile Include="Popup.cs" />
@@ -202,6 +204,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\perun256_2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

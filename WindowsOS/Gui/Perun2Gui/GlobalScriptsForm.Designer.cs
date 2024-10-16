@@ -94,16 +94,17 @@ namespace Perun2Gui
             // 
             this.topLabel.AutoSize = true;
             this.topLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.topLabel.Location = new System.Drawing.Point(90, 21);
+            this.topLabel.Location = new System.Drawing.Point(90, 16);
             this.topLabel.Name = "topLabel";
             this.topLabel.Size = new System.Drawing.Size(285, 21);
             this.topLabel.TabIndex = 8;
             this.topLabel.Text = "Enter a descriptive name for your script.";
             // 
-            // AddNewForm
+            // GlobalScriptsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Perun2Gui.Properties.Resources.background;
             this.CancelButton = this.cancelButton;
             this.ClientSize = new System.Drawing.Size(468, 143);
             this.Controls.Add(this.topLabel);
@@ -113,7 +114,7 @@ namespace Perun2Gui
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "AddNewForm";
+            this.Name = "GlobalScriptsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Add new";
             this.namePanel.ResumeLayout(false);

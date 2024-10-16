@@ -40,14 +40,16 @@ namespace Perun2Gui
             MainForm = mainForm;
             InitializeComponent();
             this.Icon = Resources.perun256;
-            InitStyle();
+            DarkMode();
         }
 
-        private void InitStyle()
+        private void DarkMode()
         {
-            BackColor = Constants.COLOR_FORMBACK_DAY;
-            this.namePanel.BackColor = Color.White;
-            this.nameBox.BackColor = Color.White;
+            _ = new DarkModeCS(this);
+            this.nameBox.BorderStyle = BorderStyle.None;
+            this.namePanel.BackColor = this.nameBox.BackColor;
+
+            this.topLabel.BackColor = Color.FromArgb(30, 30, 30);
         }
 
         private void okButton_Click(object sender, EventArgs e)

@@ -26,12 +26,12 @@ namespace Perun2Gui
     public partial class MainForm : Form
     {
 
-        private static readonly Style CommentStyle = new TextStyle(Brushes.Green, null, FontStyle.Italic);
-        private static readonly Style CardinalStyle = new TextStyle(Brushes.Black, null, FontStyle.Bold);
-        private static readonly Style UsualStyle = new TextStyle(Brushes.Blue, null, FontStyle.Regular);
-        private static readonly Style InnerVariablesStyle = new TextStyle(Brushes.DarkViolet, null, FontStyle.Regular);
-        private static readonly Style StringStyle = new TextStyle(Brushes.Brown, null, FontStyle.Regular);
-        private static readonly Style TimeStyle = new TextStyle(Brushes.Crimson, null, FontStyle.Regular);
+        private static readonly Style CommentStyle = new TextStyle(new SolidBrush(Color.FromArgb(0, 160, 0)), null, FontStyle.Italic);
+        private static readonly Style CardinalStyle = new TextStyle(new SolidBrush(Color.FromArgb(255, 69, 0)), null, FontStyle.Bold);
+        private static readonly Style UsualStyle = new TextStyle(new SolidBrush(Color.FromArgb(30, 160, 240)), null, FontStyle.Regular);
+        private static readonly Style InnerVariablesStyle = new TextStyle(new SolidBrush(Color.FromArgb(255, 196, 0)), null, FontStyle.Regular);
+        private static readonly Style StringStyle = new TextStyle(new SolidBrush(Color.FromArgb(206, 147, 110)), null, FontStyle.Regular);
+        private static readonly Style TimeStyle = new TextStyle(new SolidBrush(Color.FromArgb(236, 56, 92)), null, FontStyle.Regular);
 
         private AhoComparer Comparer;
 

@@ -22,6 +22,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Perun2Manager
 {
@@ -38,18 +39,32 @@ namespace Perun2Manager
             this.nameBox.Text = name + Constants.PERUN2_EXTENSION;
             this.Id = id;
             this.MainForm = mainForm;
-            InitStyle();
+
         }
 
-        private void InitStyle()
+        public System.Windows.Forms.PictureBox GetFileImage()
         {
-            this.namePanel.BackColor = Color.White;
-            this.nameBox.BackColor = Color.White;
+            return fileImageBox;
+        }
+        public System.Windows.Forms.TextBox GetNameBox()
+        {
+            return nameBox;
+        }
+        public System.Windows.Forms.Panel GetNamePanel()
+        {
+            return namePanel;
         }
 
         private void editButton_Click(object sender, EventArgs e)
         {
-            Filesystem.OpenScriptInGUI(RowName);
+            try
+            {
+                Filesystem.OpenScriptInGUI(RowName);
+            }
+            catch (Exception) {
+                Popup.Error("Something wrong happened and this script file could not be opened.");
+                return;
+            }
         }
 
         private void renameButton_Click(object sender, EventArgs e)

@@ -24,12 +24,12 @@ namespace Perun2Uninstaller
     {
         public static void Error(string message)
         {
-            MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            Perun2Uninstaller.Messenger.MessageBox(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         public static void Ok(string message)
         {
-            MessageBox.Show(message, "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Perun2Uninstaller.Messenger.MessageBox(message, "", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
     }

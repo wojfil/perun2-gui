@@ -129,18 +129,6 @@
   <metadata name="locationMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>404, 17</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="locPictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAAAd0SU1FB+UKHRQeMfwugzsAAAEXSURBVDhPY/j9+/d/auKRbOCaJf04MbIGQhjF
-        wP9v1yHwnaT//5/1kGwobgOBhoHxST64oegY2SAYRjUQZADIsKtOCAOxYaAlkzvKMQwDYewuBGrauaYb
-        jLev6vq/eVnH//WL2/6vmt/8f9msxv8Lp9b/nzux5v/Mvqr/U7srUQzHaeCG5X1gl4BdC8IgNjYMlEP2
-        PqaXgXjjil4IH6oBAyMZBsIEDYQbBtMEZf857ocwFIthmAYCNYFoFANx4GMzGcCYoIHrlnRhaEbGMINg
-        GNkwEEYxEN1l6JqXNUJwYTjD/xhvpf9TZy/Cb2B/Q9r/9sqE/9V54f/lJEVQsJgQ339NJWk4W0KYD8Mw
-        EIYbSC084gz8/R8AXpJ2gTckKMIAAAAASUVORK5CYII=
-</value>
-  </data>
   <metadata name="logMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>672, 17</value>
   </metadata>

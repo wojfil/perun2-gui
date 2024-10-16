@@ -48,7 +48,7 @@ namespace Perun2Manager
             this.mainPanel = new System.Windows.Forms.Panel();
             this.outerPanel = new System.Windows.Forms.Panel();
             this.pathPanel = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.fileImageBox = new System.Windows.Forms.PictureBox();
             this.pathBox = new System.Windows.Forms.TextBox();
             this.pathMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.enterPathToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,14 +57,14 @@ namespace Perun2Manager
             this.mainPanel.SuspendLayout();
             this.outerPanel.SuspendLayout();
             this.pathPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileImageBox)).BeginInit();
             this.pathMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // addNewButton
             // 
             this.addNewButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.addNewButton.Location = new System.Drawing.Point(12, 12);
+            this.addNewButton.Location = new System.Drawing.Point(26, 12);
             this.addNewButton.Name = "addNewButton";
             this.addNewButton.Size = new System.Drawing.Size(120, 35);
             this.addNewButton.TabIndex = 2;
@@ -94,36 +94,38 @@ namespace Perun2Manager
             this.mainPanel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.mainPanel.Location = new System.Drawing.Point(2, 2);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(838, 327);
+            this.mainPanel.Size = new System.Drawing.Size(833, 327);
             this.mainPanel.TabIndex = 4;
             // 
             // outerPanel
             // 
+            this.outerPanel.AutoScroll = true;
             this.outerPanel.BackColor = System.Drawing.SystemColors.Control;
             this.outerPanel.Controls.Add(this.mainPanel);
-            this.outerPanel.Location = new System.Drawing.Point(12, 53);
+            this.outerPanel.Location = new System.Drawing.Point(12, 56);
             this.outerPanel.Name = "outerPanel";
-            this.outerPanel.Size = new System.Drawing.Size(842, 331);
+            this.outerPanel.Size = new System.Drawing.Size(837, 331);
             this.outerPanel.TabIndex = 6;
             // 
             // pathPanel
             // 
-            this.pathPanel.Controls.Add(this.pictureBox1);
+            this.pathPanel.Controls.Add(this.fileImageBox);
             this.pathPanel.Controls.Add(this.pathBox);
-            this.pathPanel.Location = new System.Drawing.Point(143, 13);
+            this.pathPanel.Location = new System.Drawing.Point(157, 13);
             this.pathPanel.Name = "pathPanel";
-            this.pathPanel.Size = new System.Drawing.Size(398, 32);
+            this.pathPanel.Size = new System.Drawing.Size(398, 34);
             this.pathPanel.TabIndex = 7;
             // 
-            // pictureBox1
+            // fileImageBox
             // 
-            this.pictureBox1.Image = global::Perun2Manager.Properties.Resources.locsign2;
-            this.pictureBox1.InitialImage = global::Perun2Manager.Properties.Resources.locsign2;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.fileImageBox.BackColor = System.Drawing.Color.Transparent;
+            this.fileImageBox.Image = global::Perun2Manager.Properties.Resources.locsign2;
+            this.fileImageBox.InitialImage = global::Perun2Manager.Properties.Resources.locsign2;
+            this.fileImageBox.Location = new System.Drawing.Point(6, 6);
+            this.fileImageBox.Name = "fileImageBox";
+            this.fileImageBox.Size = new System.Drawing.Size(20, 20);
+            this.fileImageBox.TabIndex = 1;
+            this.fileImageBox.TabStop = false;
             // 
             // pathBox
             // 
@@ -161,7 +163,7 @@ namespace Perun2Manager
             // seeAllButton
             // 
             this.seeAllButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.seeAllButton.Location = new System.Drawing.Point(734, 12);
+            this.seeAllButton.Location = new System.Drawing.Point(702, 12);
             this.seeAllButton.Name = "seeAllButton";
             this.seeAllButton.Size = new System.Drawing.Size(120, 35);
             this.seeAllButton.TabIndex = 10;
@@ -173,7 +175,8 @@ namespace Perun2Manager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(867, 393);
+            this.BackgroundImage = global::Perun2Manager.Properties.Resources.background;
+            this.ClientSize = new System.Drawing.Size(862, 396);
             this.Controls.Add(this.seeAllButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pathPanel);
@@ -189,7 +192,7 @@ namespace Perun2Manager
             this.outerPanel.ResumeLayout(false);
             this.pathPanel.ResumeLayout(false);
             this.pathPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileImageBox)).EndInit();
             this.pathMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -203,7 +206,7 @@ namespace Perun2Manager
         private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.Panel outerPanel;
         private System.Windows.Forms.Panel pathPanel;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox fileImageBox;
         private System.Windows.Forms.TextBox pathBox;
         private System.Windows.Forms.ContextMenuStrip pathMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem enterPathToolStripMenuItem;

@@ -32,15 +32,20 @@ namespace Perun2Uninstaller
         public MainForm()
         {
             InitializeComponent();
-            SetGraphics();
+            this.Icon = Resources.perun256;
+            DarkMode();
         }
 
-        private void SetGraphics()
+        private void DarkMode()
         {
-            topStripPanel1.BackColor = Color.FromArgb(150, 150, 150);
-            topStripPanel2.BackColor = Color.FromArgb(200, 200, 200);
-            topStripPanel3.BackColor = Color.FromArgb(230, 230, 230);
-            this.Icon = Resources.perun256;
+            _ = new DarkModeCS(this);
+            this.logoBox.BackColor = Color.Transparent;
+            this.bottomPanel.BackColor = Color.FromArgb(30, 30, 30);
+            this.bottomPanel.BorderStyle = BorderStyle.FixedSingle;
+
+            this.label1.BackColor = Color.FromArgb(30, 30, 30);
+            this.label2.BackColor = Color.FromArgb(30, 30, 30);
+            this.label3.BackColor = Color.FromArgb(30, 30, 30);
         }
 
         private void uninstallButton_Click(object sender, EventArgs e)

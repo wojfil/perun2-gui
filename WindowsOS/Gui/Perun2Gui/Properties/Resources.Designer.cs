@@ -63,6 +63,16 @@ namespace Perun2Gui.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap background {
+            get {
+                object obj = ResourceManager.GetObject("background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap filesign2 {
             get {
                 object obj = ResourceManager.GetObject("filesign2", resourceCulture);
@@ -81,7 +91,7 @@ namespace Perun2Gui.Properties {
         ///Preamble
         ///The GNU General Public License is a free, copyleft license for software and other kinds of works.
         ///
-        ///The licenses for most software and other practical works are designed to take away your freedom to share and change the works. By contrast, the GNU Gene [rest of string was truncated]&quot;;.
+        ///The licenses for most software and other practical works are designed to take away your freedom to share and change the works. By contrast, the GNU General Public [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string license {
             get {

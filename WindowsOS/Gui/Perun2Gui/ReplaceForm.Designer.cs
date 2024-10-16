@@ -79,7 +79,7 @@ namespace Perun2Gui
             this.replaceAllButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.replaceAllButton.Location = new System.Drawing.Point(62, 127);
             this.replaceAllButton.Name = "replaceAllButton";
-            this.replaceAllButton.Size = new System.Drawing.Size(124, 37);
+            this.replaceAllButton.Size = new System.Drawing.Size(124, 35);
             this.replaceAllButton.TabIndex = 4;
             this.replaceAllButton.Text = "Replace All";
             this.replaceAllButton.UseVisualStyleBackColor = true;
@@ -90,7 +90,7 @@ namespace Perun2Gui
             this.cancelButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.cancelButton.Location = new System.Drawing.Point(192, 127);
             this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(124, 37);
+            this.cancelButton.Size = new System.Drawing.Size(124, 35);
             this.cancelButton.TabIndex = 5;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
@@ -140,7 +140,8 @@ namespace Perun2Gui
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(368, 179);
+            this.BackgroundImage = global::Perun2Gui.Properties.Resources.background;
+            this.ClientSize = new System.Drawing.Size(368, 177);
             this.Controls.Add(this.outputPanel);
             this.Controls.Add(this.inputPanel);
             this.Controls.Add(this.cancelButton);

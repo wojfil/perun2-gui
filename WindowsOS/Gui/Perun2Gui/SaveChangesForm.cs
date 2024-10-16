@@ -34,6 +34,7 @@ namespace Perun2Gui
             _MainForm = mainForm;
             InitializeComponent();
             this.Icon = Resources.perun256;
+            DarkMode();
         }
 
         private void saveButton_Click(object sender, EventArgs e)
@@ -51,6 +52,12 @@ namespace Perun2Gui
         {
             this.CancelledExit = true;
             this.Close();
+        }
+
+        private void DarkMode()
+        {
+            _ = new DarkModeCS(this);
+            this.mainLabel.BackColor = Color.FromArgb(30, 30, 30);
         }
 
         public bool IsExitCancelled()

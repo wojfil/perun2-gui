@@ -395,9 +395,16 @@ namespace Perun2Gui
 
         private void globalScriptsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ProcessStartInfo startInfo = new ProcessStartInfo();
-            startInfo.FileName = Paths.GetInstance().GetManagerPath();
-            Process.Start(startInfo);
+            try
+            {
+                ProcessStartInfo startInfo = new ProcessStartInfo();
+                startInfo.FileName = Paths.GetInstance().GetManagerPath();
+                Process.Start(startInfo);
+            }
+            catch 
+            {
+                Popup.Error("Something went wrong and the manager of global scripts could not be opened. Actualize Perun2.");
+            }
         }
 
         private void fileToolStripMenuItem_DropDownOpening(object sender, EventArgs e)

@@ -24,7 +24,6 @@ using System.Windows.Forms;
 using FastColoredTextBoxNS;
 using Perun2Gui.Properties;
 using Perun2Gui.Hint;
-using System.Diagnostics;
 
 namespace Perun2Gui
 {
@@ -123,14 +122,29 @@ namespace Perun2Gui
             InitLogs();
             RefreshNoOmit();
             RefreshLineCol();
-
-            RefreshGuiTheme(); 
             RefreshFlagsLabel();
             omitPeruFilesToolStripMenuItem.Checked = SavedSettings.GetInstance().GetNoOmit();
             flagSToolStripMenuItem.Checked = SavedSettings.GetInstance().GetSilent();
 
             logBackgroundWorker.DoWork += (sender, e) => WorkerStart();
             logBackgroundWorker.RunWorkerCompleted += (sender, e) => WorkerFinish();
+
+            DarkMode();
+        }
+
+        private void DarkMode()
+        {
+            _ = new DarkModeCS(this);
+            this.logBox.BorderStyle = BorderStyle.None;
+            this.locationBox.BorderStyle = BorderStyle.None;
+            this.fileBox.BorderStyle = BorderStyle.None;
+            this.locationPanel.BackColor = this.locationBox.BackColor;
+            this.filePanel.BackColor = this.fileBox.BackColor;
+            this.logPanel.BackColor = this.logBox.BackColor;
+            this.locPictureBox.BackColor = Color.Transparent;
+            this.filePictureBox.BackColor = Color.Transparent;
+            this.codeBox.CaretColor = Color.White;
+            this.codeBox.CaretBlinking = false;
         }
 
         private void InitLogs()
@@ -247,5 +261,6 @@ namespace Perun2Gui
         {
             SetNullHint();
         }
+
     }
 }

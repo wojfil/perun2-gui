@@ -76,6 +76,7 @@
     <Compile Include="Actions\DeleteEnvironmentPath.cs" />
     <Compile Include="Actions\DeleteRegistryKeys.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="DarkModeCS.cs" />
     <Compile Include="EnvVariable.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -86,6 +87,7 @@
     <Compile Include="MainForm_Uninstall.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Messenger.cs" />
     <Compile Include="Paths.cs" />
     <Compile Include="Popup.cs" />
     <Compile Include="Program.cs" />
@@ -120,6 +122,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\perunlogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

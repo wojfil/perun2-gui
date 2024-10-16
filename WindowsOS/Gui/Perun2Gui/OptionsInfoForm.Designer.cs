@@ -74,7 +74,7 @@ namespace Perun2Gui
             this.okButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.okButton.Location = new System.Drawing.Point(437, 240);
             this.okButton.Name = "okButton";
-            this.okButton.Size = new System.Drawing.Size(124, 37);
+            this.okButton.Size = new System.Drawing.Size(124, 35);
             this.okButton.TabIndex = 15;
             this.okButton.Text = "Ok";
             this.okButton.UseVisualStyleBackColor = true;
@@ -84,7 +84,8 @@ namespace Perun2Gui
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(573, 289);
+            this.BackgroundImage = global::Perun2Gui.Properties.Resources.background;
+            this.ClientSize = new System.Drawing.Size(573, 287);
             this.Controls.Add(this.omitPanel);
             this.Controls.Add(this.okButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

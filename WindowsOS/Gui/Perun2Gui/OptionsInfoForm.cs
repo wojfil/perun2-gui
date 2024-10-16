@@ -30,21 +30,21 @@ namespace Perun2Gui
         {
             InitializeComponent();
             this.Icon = Resources.perun256;
-            RefreshGuiTheme();
+            DarkMode();
 
             omitBox.Text =
-              "-n   Iterate over all filesystem elements, no exceptions." + Environment.NewLine
+              "-n   Iterate all filesystem elements, no exceptions." + Environment.NewLine
             + "-s   No command log messages." + Environment.NewLine + Environment.NewLine
-            + "You can turn on these two command-line options in order to slightly alter the behavior of the interpreter." + Environment.NewLine
+            + "You can turn on these two command-line options in order to slightly alter the interpreter's behavior." + Environment.NewLine
             + "Filesystem exceptional elements are Perun2 own scripts files (*.peru)." + Environment.NewLine
             + "If you want to know more about the interface of Perun2, run 'perun2 --help' in the command-line.";
         }
 
-        private void RefreshGuiTheme()
+        private void DarkMode()
         {
-            this.BackColor = Constants.COLOR_FORMBACK_DAY;
-            omitBox.BackColor = Constants.COLOR_TEXTBACK_DAY;
-            omitPanel.BackColor = Constants.COLOR_TEXTBACK_DAY;
+            _ = new DarkModeCS(this);
+            this.omitBox.BorderStyle = BorderStyle.None;
+            this.omitPanel.BackColor = this.omitBox.BackColor;
         }
 
         private void OmitInfoForm_Load(object sender, EventArgs e)

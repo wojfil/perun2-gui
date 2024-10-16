@@ -97,6 +97,7 @@
     <Compile Include="Connection.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="ConstantsKeywords.cs" />
+    <Compile Include="DarkModeCS.cs" />
     <Compile Include="DirectorySelectDialog.cs" />
     <Compile Include="ExecutionMode.cs" />
     <Compile Include="FastColoredTextBox\AutocompleteItem.cs" />
@@ -220,6 +221,7 @@
     <Compile Include="MainForm_View.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Messenger.cs" />
     <Compile Include="OptionsInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -326,6 +328,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FastColoredTextBox\FastColoredTextBox.csproj" />
+    <None Include="Resources\background.png" />
     <None Include="Resources\perunlogo.png" />
     <None Include="Resources\perun256.ico" />
     <None Include="Resources\LICENSE.txt" />

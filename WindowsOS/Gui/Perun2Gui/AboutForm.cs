@@ -33,7 +33,7 @@ namespace Perun2Gui
             infoBox.ContextMenu = new ContextMenu();
 
             LoadInfoText();
-            RefreshGuiTheme();
+            DarkMode();
         }
 
         private void LoadInfoText()
@@ -54,11 +54,12 @@ namespace Perun2Gui
                 + "GNU General Public License v3.0";
         }
 
-        private void RefreshGuiTheme()
+        private void DarkMode()
         {
-            this.BackColor = Constants.COLOR_FORMBACK_DAY;
-            infoPanel.BackColor = Constants.COLOR_TEXTBACK_DAY;
-            infoBox.BackColor = Constants.COLOR_TEXTBACK_DAY;
+            _ = new DarkModeCS(this);
+            this.infoBox.BorderStyle = BorderStyle.None;
+            this.infoPanel.BackColor = this.infoBox.BackColor;
+            this.logoBox.BackColor = Color.Transparent;
         }
 
         private void okButton_Click(object sender, EventArgs e)

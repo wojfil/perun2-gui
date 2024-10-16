@@ -177,6 +177,261 @@
   <data name="&gt;&gt;backButton.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="selectLocationButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>System</value>
+  </data>
+  <data name="selectLocationButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="selectLocationButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="selectLocationButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>50, 169</value>
+  </data>
+  <data name="selectLocationButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 29</value>
+  </data>
+  <data name="selectLocationButton.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="selectLocationButton.Text" xml:space="preserve">
+    <value>..</value>
+  </data>
+  <data name="&gt;&gt;selectLocationButton.Name" xml:space="preserve">
+    <value>selectLocationButton</value>
+  </data>
+  <data name="&gt;&gt;selectLocationButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;selectLocationButton.Parent" xml:space="preserve">
+    <value>panelPath</value>
+  </data>
+  <data name="&gt;&gt;selectLocationButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pathBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11.25pt</value>
+  </data>
+  <data name="pathBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>84, 170</value>
+  </data>
+  <data name="pathBox.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="pathBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>311, 27</value>
+  </data>
+  <data name="pathBox.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;pathBox.Name" xml:space="preserve">
+    <value>pathBox</value>
+  </data>
+  <data name="&gt;&gt;pathBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pathBox.Parent" xml:space="preserve">
+    <value>panelPath</value>
+  </data>
+  <data name="&gt;&gt;pathBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pathSizeLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="pathSizeLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="pathSizeLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pathSizeLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>45, 210</value>
+  </data>
+  <data name="pathSizeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 21</value>
+  </data>
+  <data name="pathSizeLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="pathSizeLabel.Text" xml:space="preserve">
+    <value>Requirements:</value>
+  </data>
+  <data name="&gt;&gt;pathSizeLabel.Name" xml:space="preserve">
+    <value>pathSizeLabel</value>
+  </data>
+  <data name="&gt;&gt;pathSizeLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pathSizeLabel.Parent" xml:space="preserve">
+    <value>panelPath</value>
+  </data>
+  <data name="&gt;&gt;pathSizeLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14pt</value>
+  </data>
+  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>45, 50</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 25</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Installation path</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>panelPath</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="panelPath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>377, 75</value>
+  </data>
+  <data name="panelPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>460, 379</value>
+  </data>
+  <data name="panelPath.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;panelPath.Name" xml:space="preserve">
+    <value>panelPath</value>
+  </data>
+  <data name="&gt;&gt;panelPath.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelPath.Parent" xml:space="preserve">
+    <value>panelHead</value>
+  </data>
+  <data name="&gt;&gt;panelPath.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label9.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="label9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>42, 178</value>
+  </data>
+  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>310, 21</value>
+  </data>
+  <data name="label9.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>Please wait while Perun2 is being installed...</value>
+  </data>
+  <data name="&gt;&gt;label9.Name" xml:space="preserve">
+    <value>label9</value>
+  </data>
+  <data name="&gt;&gt;label9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
+    <value>panelInstallation</value>
+  </data>
+  <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="installationProgressBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>45, 210</value>
+  </data>
+  <data name="installationProgressBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>350, 23</value>
+  </data>
+  <data name="installationProgressBar.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;installationProgressBar.Name" xml:space="preserve">
+    <value>installationProgressBar</value>
+  </data>
+  <data name="&gt;&gt;installationProgressBar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;installationProgressBar.Parent" xml:space="preserve">
+    <value>panelInstallation</value>
+  </data>
+  <data name="&gt;&gt;installationProgressBar.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label10.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14pt</value>
+  </data>
+  <data name="label10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>45, 50</value>
+  </data>
+  <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 25</value>
+  </data>
+  <data name="label10.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>Installation</value>
+  </data>
+  <data name="&gt;&gt;label10.Name" xml:space="preserve">
+    <value>label10</value>
+  </data>
+  <data name="&gt;&gt;label10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label10.Parent" xml:space="preserve">
+    <value>panelInstallation</value>
+  </data>
+  <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="panelInstallation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>385, 93</value>
+  </data>
+  <data name="panelInstallation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>460, 379</value>
+  </data>
+  <data name="panelInstallation.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;panelInstallation.Name" xml:space="preserve">
+    <value>panelInstallation</value>
+  </data>
+  <data name="&gt;&gt;panelInstallation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelInstallation.Parent" xml:space="preserve">
+    <value>panelHead</value>
+  </data>
+  <data name="&gt;&gt;panelInstallation.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="labelHead1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -205,7 +460,7 @@
     <value>panelHead</value>
   </data>
   <data name="&gt;&gt;labelHead1.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="welcomeLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -235,7 +490,7 @@
     <value>panelHead</value>
   </data>
   <data name="&gt;&gt;welcomeLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="panelHead.Location" type="System.Drawing.Point, System.Drawing">
     <value>180, 8</value>
@@ -256,7 +511,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panelHead.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>3</value>
   </data>
   <data name="openPerun2Box.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -290,6 +545,141 @@
   </data>
   <data name="&gt;&gt;openPerun2Box.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="licenseBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="licenseBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="licenseBox.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="licenseBox.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="licenseBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>355, 208</value>
+  </data>
+  <data name="licenseBox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;licenseBox.Name" xml:space="preserve">
+    <value>licenseBox</value>
+  </data>
+  <data name="&gt;&gt;licenseBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;licenseBox.Parent" xml:space="preserve">
+    <value>licensePanel</value>
+  </data>
+  <data name="&gt;&gt;licenseBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="licensePanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>50, 106</value>
+  </data>
+  <data name="licensePanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>363, 216</value>
+  </data>
+  <data name="licensePanel.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;licensePanel.Name" xml:space="preserve">
+    <value>licensePanel</value>
+  </data>
+  <data name="&gt;&gt;licensePanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;licensePanel.Parent" xml:space="preserve">
+    <value>panelLicense</value>
+  </data>
+  <data name="&gt;&gt;licensePanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="licenseCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="licenseCheckBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="licenseCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>56, 326</value>
+  </data>
+  <data name="licenseCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 25</value>
+  </data>
+  <data name="licenseCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="licenseCheckBox.Text" xml:space="preserve">
+    <value>I agree with license terms</value>
+  </data>
+  <data name="&gt;&gt;licenseCheckBox.Name" xml:space="preserve">
+    <value>licenseCheckBox</value>
+  </data>
+  <data name="&gt;&gt;licenseCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;licenseCheckBox.Parent" xml:space="preserve">
+    <value>panelLicense</value>
+  </data>
+  <data name="&gt;&gt;licenseCheckBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14pt</value>
+  </data>
+  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>45, 50</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 25</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>License</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>panelLicense</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="panelLicense.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 14</value>
+  </data>
+  <data name="panelLicense.Size" type="System.Drawing.Size, System.Drawing">
+    <value>460, 379</value>
+  </data>
+  <data name="panelLicense.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;panelLicense.Name" xml:space="preserve">
+    <value>panelLicense</value>
+  </data>
+  <data name="&gt;&gt;panelLicense.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelLicense.Parent" xml:space="preserve">
+    <value>panelFinish</value>
+  </data>
+  <data name="&gt;&gt;panelLicense.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="label11.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -343,7 +733,7 @@
     <value>panelFinish</value>
   </data>
   <data name="&gt;&gt;panelFailed.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="recommendedLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -490,7 +880,7 @@
     <value>panelFinish</value>
   </data>
   <data name="&gt;&gt;panelRequirements.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="menuStartShortcutBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -523,7 +913,7 @@
     <value>panelFinish</value>
   </data>
   <data name="&gt;&gt;menuStartShortcutBox.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="desktopShortcutBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -556,7 +946,7 @@
     <value>panelFinish</value>
   </data>
   <data name="&gt;&gt;desktopShortcutBox.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="successTextLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -589,7 +979,7 @@
     <value>panelFinish</value>
   </data>
   <data name="&gt;&gt;successTextLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="panelFinish.Location" type="System.Drawing.Point, System.Drawing">
     <value>45, 22</value>
@@ -611,375 +1001,6 @@
   </data>
   <data name="&gt;&gt;panelFinish.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="selectLocationButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>System</value>
-  </data>
-  <data name="selectLocationButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt</value>
-  </data>
-  <data name="selectLocationButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="selectLocationButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>50, 169</value>
-  </data>
-  <data name="selectLocationButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 29</value>
-  </data>
-  <data name="selectLocationButton.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="selectLocationButton.Text" xml:space="preserve">
-    <value>..</value>
-  </data>
-  <data name="&gt;&gt;selectLocationButton.Name" xml:space="preserve">
-    <value>selectLocationButton</value>
-  </data>
-  <data name="&gt;&gt;selectLocationButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;selectLocationButton.Parent" xml:space="preserve">
-    <value>panelPath</value>
-  </data>
-  <data name="&gt;&gt;selectLocationButton.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="pathBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 11.25pt</value>
-  </data>
-  <data name="pathBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>84, 170</value>
-  </data>
-  <data name="pathBox.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
-    <value>Vertical</value>
-  </data>
-  <data name="pathBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>311, 27</value>
-  </data>
-  <data name="pathBox.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;pathBox.Name" xml:space="preserve">
-    <value>pathBox</value>
-  </data>
-  <data name="&gt;&gt;pathBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pathBox.Parent" xml:space="preserve">
-    <value>panelPath</value>
-  </data>
-  <data name="&gt;&gt;pathBox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="pathSizeLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="pathSizeLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt</value>
-  </data>
-  <data name="pathSizeLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="pathSizeLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>45, 210</value>
-  </data>
-  <data name="pathSizeLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 21</value>
-  </data>
-  <data name="pathSizeLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="pathSizeLabel.Text" xml:space="preserve">
-    <value>Requirements:</value>
-  </data>
-  <data name="&gt;&gt;pathSizeLabel.Name" xml:space="preserve">
-    <value>pathSizeLabel</value>
-  </data>
-  <data name="&gt;&gt;pathSizeLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pathSizeLabel.Parent" xml:space="preserve">
-    <value>panelPath</value>
-  </data>
-  <data name="&gt;&gt;pathSizeLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 14pt</value>
-  </data>
-  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>45, 50</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 25</value>
-  </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Installation path</value>
-  </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>panelPath</value>
-  </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="panelPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>40, 18</value>
-  </data>
-  <data name="panelPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>460, 379</value>
-  </data>
-  <data name="panelPath.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;panelPath.Name" xml:space="preserve">
-    <value>panelPath</value>
-  </data>
-  <data name="&gt;&gt;panelPath.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelPath.Parent" xml:space="preserve">
-    <value>panelInstallation</value>
-  </data>
-  <data name="&gt;&gt;panelPath.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label9.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label9.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt</value>
-  </data>
-  <data name="label9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>42, 178</value>
-  </data>
-  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>310, 21</value>
-  </data>
-  <data name="label9.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="label9.Text" xml:space="preserve">
-    <value>Please wait while Perun2 is being installed...</value>
-  </data>
-  <data name="&gt;&gt;label9.Name" xml:space="preserve">
-    <value>label9</value>
-  </data>
-  <data name="&gt;&gt;label9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
-    <value>panelInstallation</value>
-  </data>
-  <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="installationProgressBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>45, 210</value>
-  </data>
-  <data name="installationProgressBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>350, 23</value>
-  </data>
-  <data name="installationProgressBar.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;installationProgressBar.Name" xml:space="preserve">
-    <value>installationProgressBar</value>
-  </data>
-  <data name="&gt;&gt;installationProgressBar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;installationProgressBar.Parent" xml:space="preserve">
-    <value>panelInstallation</value>
-  </data>
-  <data name="&gt;&gt;installationProgressBar.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="label10.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label10.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 14pt</value>
-  </data>
-  <data name="label10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>45, 50</value>
-  </data>
-  <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 25</value>
-  </data>
-  <data name="label10.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="label10.Text" xml:space="preserve">
-    <value>Installation</value>
-  </data>
-  <data name="&gt;&gt;label10.Name" xml:space="preserve">
-    <value>label10</value>
-  </data>
-  <data name="&gt;&gt;label10.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label10.Parent" xml:space="preserve">
-    <value>panelInstallation</value>
-  </data>
-  <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="panelInstallation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 22</value>
-  </data>
-  <data name="panelInstallation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>460, 379</value>
-  </data>
-  <data name="panelInstallation.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;panelInstallation.Name" xml:space="preserve">
-    <value>panelInstallation</value>
-  </data>
-  <data name="&gt;&gt;panelInstallation.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelInstallation.Parent" xml:space="preserve">
-    <value>panelLicense</value>
-  </data>
-  <data name="&gt;&gt;panelInstallation.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="licenseCheckBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="licenseCheckBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt</value>
-  </data>
-  <data name="licenseCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>56, 326</value>
-  </data>
-  <data name="licenseCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>205, 25</value>
-  </data>
-  <data name="licenseCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="licenseCheckBox.Text" xml:space="preserve">
-    <value>I agree with license terms</value>
-  </data>
-  <data name="&gt;&gt;licenseCheckBox.Name" xml:space="preserve">
-    <value>licenseCheckBox</value>
-  </data>
-  <data name="&gt;&gt;licenseCheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;licenseCheckBox.Parent" xml:space="preserve">
-    <value>panelLicense</value>
-  </data>
-  <data name="&gt;&gt;licenseCheckBox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="licenseBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9.75pt</value>
-  </data>
-  <data name="licenseBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>50, 110</value>
-  </data>
-  <data name="licenseBox.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="licenseBox.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
-    <value>Vertical</value>
-  </data>
-  <data name="licenseBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>363, 210</value>
-  </data>
-  <data name="licenseBox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;licenseBox.Name" xml:space="preserve">
-    <value>licenseBox</value>
-  </data>
-  <data name="&gt;&gt;licenseBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;licenseBox.Parent" xml:space="preserve">
-    <value>panelLicense</value>
-  </data>
-  <data name="&gt;&gt;licenseBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 14pt</value>
-  </data>
-  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>45, 50</value>
-  </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 25</value>
-  </data>
-  <data name="label4.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>License</value>
-  </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
-  </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>panelLicense</value>
-  </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="panelLicense.Location" type="System.Drawing.Point, System.Drawing">
-    <value>34, 330</value>
-  </data>
-  <data name="panelLicense.Size" type="System.Drawing.Size, System.Drawing">
-    <value>460, 379</value>
-  </data>
-  <data name="panelLicense.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;panelLicense.Name" xml:space="preserve">
-    <value>panelLicense</value>
-  </data>
-  <data name="&gt;&gt;panelLicense.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelLicense.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panelLicense.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="cancelButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt</value>
@@ -1027,49 +1048,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;bottomPanel.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="topStripPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 1</value>
-  </data>
-  <data name="topStripPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>727, 4</value>
-  </data>
-  <data name="topStripPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;topStripPanel.Name" xml:space="preserve">
-    <value>topStripPanel</value>
-  </data>
-  <data name="&gt;&gt;topStripPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;topStripPanel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;topStripPanel.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="topStripPanel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 3</value>
-  </data>
-  <data name="topStripPanel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>727, 4</value>
-  </data>
-  <data name="topStripPanel2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;topStripPanel2.Name" xml:space="preserve">
-    <value>topStripPanel2</value>
-  </data>
-  <data name="&gt;&gt;topStripPanel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;topStripPanel2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;topStripPanel2.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="logoBox_head.Location" type="System.Drawing.Point, System.Drawing">
     <value>45, 90</value>
@@ -1093,28 +1072,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;logoBox_head.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="topStripPanel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 6</value>
-  </data>
-  <data name="topStripPanel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>727, 4</value>
-  </data>
-  <data name="topStripPanel3.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;topStripPanel3.Name" xml:space="preserve">
-    <value>topStripPanel3</value>
-  </data>
-  <data name="&gt;&gt;topStripPanel3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;topStripPanel3.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;topStripPanel3.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

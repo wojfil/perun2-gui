@@ -52,28 +52,6 @@ namespace Perun2Gui
                 return;
 
             SavedSettings.GetInstance().SetGuiTheme(guiTheme);
-            RefreshGuiTheme();
-        }
-
-        private void RefreshGuiTheme()
-        {
-            GuiTheme theme = SavedSettings.GetInstance().GetGuiTheme();
-
-            switch (theme)
-            {
-                case GuiTheme.Day:
-                {
-                    this.BackColor = Constants.COLOR_FORMBACK_DAY;
-
-                    locationBox.BackColor = Constants.COLOR_TEXTBACK_DAY;
-                    locationPanel.BackColor = Constants.COLOR_TEXTBACK_DAY;
-                    fileBox.BackColor = Constants.COLOR_TEXTBACK_DAY;
-                    filePanel.BackColor = Constants.COLOR_TEXTBACK_DAY;
-                    logBox.BackColor = Constants.COLOR_TEXTBACK_DAY;
-                    logPanel.BackColor = Constants.COLOR_TEXTBACK_DAY;
-                    break;
-                }
-            }
         }
 
         private void fitScreenToolStripMenuItem_Click(object sender, EventArgs e)

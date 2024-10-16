@@ -52,6 +52,7 @@ namespace Perun2Gui
             // 
             // logoBox
             // 
+            this.logoBox.BackColor = System.Drawing.Color.Transparent;
             this.logoBox.Image = global::Perun2Gui.Properties.Resources.perunlogo;
             this.logoBox.Location = new System.Drawing.Point(23, 22);
             this.logoBox.Name = "logoBox";
@@ -65,7 +66,7 @@ namespace Perun2Gui
             this.okButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.okButton.Location = new System.Drawing.Point(291, 108);
             this.okButton.Name = "okButton";
-            this.okButton.Size = new System.Drawing.Size(124, 37);
+            this.okButton.Size = new System.Drawing.Size(124, 35);
             this.okButton.TabIndex = 25;
             this.okButton.Text = "Ok";
             this.okButton.UseVisualStyleBackColor = true;
@@ -75,9 +76,9 @@ namespace Perun2Gui
             // 
             this.infoPanel.BackColor = System.Drawing.Color.White;
             this.infoPanel.Controls.Add(this.infoBox);
-            this.infoPanel.Location = new System.Drawing.Point(105, 20);
+            this.infoPanel.Location = new System.Drawing.Point(115, 20);
             this.infoPanel.Name = "infoPanel";
-            this.infoPanel.Size = new System.Drawing.Size(309, 68);
+            this.infoPanel.Size = new System.Drawing.Size(299, 68);
             this.infoPanel.TabIndex = 31;
             // 
             // infoBox
@@ -88,14 +89,15 @@ namespace Perun2Gui
             this.infoBox.Multiline = true;
             this.infoBox.Name = "infoBox";
             this.infoBox.ReadOnly = true;
-            this.infoBox.Size = new System.Drawing.Size(301, 60);
+            this.infoBox.Size = new System.Drawing.Size(291, 60);
             this.infoBox.TabIndex = 13;
             // 
             // AboutForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(435, 163);
+            this.BackgroundImage = global::Perun2Gui.Properties.Resources.background;
+            this.ClientSize = new System.Drawing.Size(435, 161);
             this.Controls.Add(this.infoPanel);
             this.Controls.Add(this.logoBox);
             this.Controls.Add(this.okButton);
@@ -119,6 +121,5 @@ namespace Perun2Gui
         private System.Windows.Forms.Button okButton;
         private System.Windows.Forms.Panel infoPanel;
         private System.Windows.Forms.TextBox infoBox;
-
     }
 }

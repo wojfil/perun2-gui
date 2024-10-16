@@ -94,7 +94,7 @@ namespace Perun2Manager
             // 
             this.topLabel.AutoSize = true;
             this.topLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.topLabel.Location = new System.Drawing.Point(90, 21);
+            this.topLabel.Location = new System.Drawing.Point(90, 16);
             this.topLabel.Name = "topLabel";
             this.topLabel.Size = new System.Drawing.Size(285, 21);
             this.topLabel.TabIndex = 8;
@@ -104,6 +104,7 @@ namespace Perun2Manager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Perun2Manager.Properties.Resources.background;
             this.CancelButton = this.cancelButton;
             this.ClientSize = new System.Drawing.Size(468, 143);
             this.Controls.Add(this.topLabel);

@@ -80,6 +80,7 @@ namespace Perun2Gui
             this.codeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.runToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator14 = new System.Windows.Forms.ToolStripSeparator();
             this.omitPeruFilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.flagSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -138,7 +139,6 @@ namespace Perun2Gui
             this.hintLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.logBackgroundWorker = new System.ComponentModel.BackgroundWorker();
             this.codeBox = new FastColoredTextBoxNS.FastColoredTextBox();
-            this.checkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.topMenuStrip.SuspendLayout();
             this.codeMenuStrip.SuspendLayout();
             this.fileMenuStrip.SuspendLayout();
@@ -155,6 +155,7 @@ namespace Perun2Gui
             // 
             // topMenuStrip
             // 
+            this.topMenuStrip.BackColor = System.Drawing.SystemColors.Control;
             this.topMenuStrip.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.topMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
@@ -330,6 +331,7 @@ namespace Perun2Gui
             // 
             // undoToolStripMenuItem
             // 
+            this.undoToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
             this.undoToolStripMenuItem.Name = "undoToolStripMenuItem";
             this.undoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
             this.undoToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
@@ -456,6 +458,13 @@ namespace Perun2Gui
             this.stopToolStripMenuItem.Size = new System.Drawing.Size(211, 26);
             this.stopToolStripMenuItem.Text = "Stop";
             this.stopToolStripMenuItem.Click += new System.EventHandler(this.stopToolStripMenuItem_Click);
+            // 
+            // checkToolStripMenuItem
+            // 
+            this.checkToolStripMenuItem.Name = "checkToolStripMenuItem";
+            this.checkToolStripMenuItem.Size = new System.Drawing.Size(211, 26);
+            this.checkToolStripMenuItem.Text = "Check correctness";
+            this.checkToolStripMenuItem.Click += new System.EventHandler(this.checkToolStripMenuItem_Click);
             // 
             // toolStripSeparator14
             // 
@@ -765,7 +774,7 @@ namespace Perun2Gui
             // 
             // locPictureBox
             // 
-            this.locPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("locPictureBox.Image")));
+            this.locPictureBox.Image = global::Perun2Gui.Properties.Resources.locsign2;
             this.locPictureBox.Location = new System.Drawing.Point(5, 4);
             this.locPictureBox.Name = "locPictureBox";
             this.locPictureBox.Size = new System.Drawing.Size(20, 20);
@@ -940,22 +949,24 @@ namespace Perun2Gui
     "?<range>:)\\s*(?<range>[^;]+);";
             this.codeBox.AutoScrollMinSize = new System.Drawing.Size(37, 28);
             this.codeBox.BackBrush = null;
+            this.codeBox.CaretColor = System.Drawing.Color.White;
             this.codeBox.CharHeight = 28;
             this.codeBox.CharWidth = 13;
             this.codeBox.ContextMenuStrip = this.codeMenuStrip;
             this.codeBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.codeBox.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
             this.codeBox.Font = new System.Drawing.Font("Consolas", 18F);
+            this.codeBox.ForeColor = System.Drawing.SystemColors.Control;
             this.codeBox.Hotkeys = resources.GetString("codeBox.Hotkeys");
-            this.codeBox.IndentBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.codeBox.IndentBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.codeBox.IsReplaceMode = false;
-            this.codeBox.LineNumberColor = System.Drawing.Color.Gray;
+            this.codeBox.LineNumberColor = System.Drawing.Color.White;
             this.codeBox.Location = new System.Drawing.Point(12, 81);
             this.codeBox.Name = "codeBox";
             this.codeBox.Paddings = new System.Windows.Forms.Padding(0);
-            this.codeBox.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.codeBox.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
             this.codeBox.ServiceColors = null;
-            this.codeBox.ServiceLinesColor = System.Drawing.Color.LightGray;
+            this.codeBox.ServiceLinesColor = System.Drawing.Color.Black;
             this.codeBox.Size = new System.Drawing.Size(491, 353);
             this.codeBox.TabIndex = 5;
             this.codeBox.TabLength = 0;
@@ -968,18 +979,12 @@ namespace Perun2Gui
             this.codeBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.codeBox_KeyDown);
             this.codeBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.codeBox_MouseUp);
             // 
-            // checkToolStripMenuItem
-            // 
-            this.checkToolStripMenuItem.Name = "checkToolStripMenuItem";
-            this.checkToolStripMenuItem.Size = new System.Drawing.Size(211, 26);
-            this.checkToolStripMenuItem.Text = "Check correctness";
-            this.checkToolStripMenuItem.Click += new System.EventHandler(this.checkToolStripMenuItem_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.BackgroundImage = global::Perun2Gui.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(871, 468);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.filePanel);
@@ -988,6 +993,7 @@ namespace Perun2Gui
             this.Controls.Add(this.logPanel);
             this.Controls.Add(this.codeBox);
             this.Controls.Add(this.topMenuStrip);
+            this.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.MainMenuStrip = this.topMenuStrip;
             this.MinimumSize = new System.Drawing.Size(887, 507);
             this.Name = "MainForm";

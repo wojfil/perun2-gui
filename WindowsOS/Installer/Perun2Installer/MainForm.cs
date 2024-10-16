@@ -26,6 +26,7 @@ using Microsoft.Win32;
 using System.Reflection;
 using System.IO;
 using Perun2Installer.Actions;
+using System.Reflection.Emit;
 
 namespace Perun2Installer
 {
@@ -39,7 +40,8 @@ namespace Perun2Installer
         public MainForm()
         {
             InitializeComponent();
-            InitControls();
+            this.Icon = Resources.perun256;
+            DarkMode();
             InitPanels();
             SetDefaultLicense();
             SetDefaultInstallationPath();
@@ -62,21 +64,43 @@ namespace Perun2Installer
             PageManager.RefreshVisibility();
         }
 
-        private void InitControls()
+        private void DarkMode()
         {
-            this.Icon = Resources.perun256_2;
+            _ = new DarkModeCS(this);
+            bottomPanel.BackColor = Color.FromArgb(30, 30, 30);
+            bottomPanel.BorderStyle = BorderStyle.FixedSingle;
 
-            topStripPanel.BackColor = Constants.TOP_STRIP_COLOR;
-            topStripPanel2.BackColor = Constants.TOP_STRIP_COLOR_2;
-            topStripPanel3.BackColor = Constants.TOP_STRIP_COLOR_3;
+            logoBox_head.BackColor = Color.Transparent;
 
-            topStripPanel.Location = new Point(0, 0);
-            topStripPanel2.Location = new Point(0, Constants.TOP_STRIP_HEIGHT);
-            topStripPanel3.Location = new Point(0, 2 * Constants.TOP_STRIP_HEIGHT);
+            panelHead.BackColor = Color.Transparent;
+            panelRequirements.BackColor = Color.Transparent;
+            panelLicense.BackColor = Color.Transparent;
+            panelPath.BackColor = Color.Transparent;
+            panelInstallation.BackColor = Color.Transparent;
+            panelFinish.BackColor = Color.Transparent;
+            panelFailed.BackColor = Color.Transparent;
 
-            topStripPanel.Size = new Size(Constants.FORM_WIDTH, Constants.TOP_STRIP_HEIGHT);
-            topStripPanel2.Size = new Size(Constants.FORM_WIDTH, Constants.TOP_STRIP_HEIGHT);
-            topStripPanel3.Size = new Size(Constants.FORM_WIDTH, Constants.TOP_STRIP_HEIGHT);
+            welcomeLabel.BackColor = Color.FromArgb(30, 30, 30);
+            labelHead1.BackColor = Color.FromArgb(30, 30, 30);
+            labelRequirements.BackColor = Color.FromArgb(30, 30, 30);
+            label3.BackColor = Color.FromArgb(30, 30, 30);
+            label4.BackColor = Color.FromArgb(30, 30, 30);
+            label2.BackColor = Color.FromArgb(30, 30, 30);
+            pathSizeLabel.BackColor = Color.FromArgb(30, 30, 30);
+            label10.BackColor = Color.FromArgb(30, 30, 30);
+            label9.BackColor = Color.FromArgb(30, 30, 30);
+            successTextLabel.BackColor = Color.FromArgb(30, 30, 30);
+            label11.BackColor = Color.FromArgb(30, 30, 30);
+            label5.BackColor = Color.FromArgb(30, 30, 30);
+            recommendedLabel.BackColor = Color.FromArgb(30, 30, 30);
+
+            licenseCheckBox.BackColor = Color.FromArgb(30, 30, 30);
+            menuStartShortcutBox.BackColor = Color.FromArgb(30, 30, 30);
+            desktopShortcutBox.BackColor = Color.FromArgb(30, 30, 30);
+            openPerun2Box.BackColor = Color.FromArgb(30, 30, 30);
+
+            licenseBox.BorderStyle = BorderStyle.None;
+            licensePanel.BackColor = licenseBox.BackColor;
         }
 
         private bool OutdatedOS()

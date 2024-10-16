@@ -38,7 +38,7 @@ namespace Perun2Gui
             inputBox.Text = replaceInput;
             outputBox.Text = replaceOutput;
             RefreshEnableness();
-            RefreshGuiTheme();
+            DarkMode();
 
             inputBox.Select();
             if (!inputBox.Text.Equals(String.Empty))
@@ -71,7 +71,6 @@ namespace Perun2Gui
         {
             replaceAllButton.Enabled = 
                    !inputBox.Text.Equals(String.Empty)
-                && !outputBox.Text.Equals(String.Empty)
                 && !inputBox.Text.Equals(outputBox.Text);
         }
 
@@ -112,13 +111,16 @@ namespace Perun2Gui
             this.Close();
         }
 
-        private void RefreshGuiTheme()
+        private void DarkMode()
         {
-            this.BackColor = Constants.COLOR_FORMBACK_DAY;
-            inputPanel.BackColor = Color.White;
-            inputBox.BackColor = Color.White;
-            outputPanel.BackColor = Color.White;
-            outputBox.BackColor = Color.White;
+            _ = new DarkModeCS(this);
+            this.inputBox.BackColor = Color.FromArgb(55, 55, 55);
+            this.inputPanel.BackColor = Color.FromArgb(55, 55, 55);
+            this.outputBox.BackColor = Color.FromArgb(55, 55, 55);
+            this.outputPanel.BackColor = Color.FromArgb(55, 55, 55);
+
+            this.label1.BackColor = Color.FromArgb(30, 30, 30);
+            this.label2.BackColor = Color.FromArgb(30, 30, 30);
         }
     }
 }
