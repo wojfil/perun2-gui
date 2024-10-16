@@ -67,7 +67,9 @@ namespace Perun2Gui
                 "archive", "compressed", "empty", "encrypted", "exists", "hidden", "isdirectory", "isfile", "readonly",
                 "access", "change", "creation", "modification", "lifetime", "size", "depth", "nothing", "never",
                 "drive", "extension", "fullname", "name", "parent", "path", "true", "false",
-                "pendrive", "pendrives", "downloads", "nan" }.Add(ConstantsKeywords.PROGRAMS).ToLower();
+                "pendrive", "pendrives", "downloads", "nan", 
+                "images", "videos", "recursiveimages", "recursivevideos",
+                "isimage", "isvideo", "width", "height", "duration"}.Add(ConstantsKeywords.PROGRAMS).ToLower();
             
             Tree = new AhoTree();
             Tree.AddWords(CARDINAL_WORDS, WordType.Cardinal);

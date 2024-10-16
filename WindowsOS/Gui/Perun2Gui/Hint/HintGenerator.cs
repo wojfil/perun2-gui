@@ -113,7 +113,8 @@ namespace Perun2Gui.Hint
                 "drive", "extension", "fullName", "name", "parent", "path",
                 "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December",
                 "Monday", "Tuesday", "Wednesday", "Thursday", "Friday",  "Saturday", "Sunday", "true", "false", "never", "nothing",
-                "pendrive", "pendrives", "downloads", "NaN"
+                "pendrive", "pendrives", "downloads", "NaN", "images", "videos", "recursiveImages", "recursiveVideos",
+                "isImage", "isVideo", "width", "height", "duration"
             }.Add(ConstantsKeywords.PROGRAMS));
             A_BCEE = new HintArray(new string[] { "break", "continue", "exit", "error" });
             A_Semicolon = new HintArray(new string[] { ";" });
@@ -131,7 +132,7 @@ namespace Perun2Gui.Hint
                 "archive", "change", "compressed", "modification", "lifetime", "size", "depth", "drive", "fullName", "name", "parent", "path",
                 "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December",
                 "Monday", "Tuesday", "Wednesday", "Thursday", "Friday",  "Saturday", "Sunday", "true", "false", "never", "nothing",
-                "pendrive", "downloads", "NaN"
+                "pendrive", "downloads", "NaN", "isImage", "isVideo", "width", "height", "duration"
             }.Add(ConstantsKeywords.PROGRAMS));
             A_Extensionless = new HintArray(new string[] { "extensionless" });
             A_Extension = new HintArray(new string[] { "extension" });
@@ -140,11 +141,13 @@ namespace Perun2Gui.Hint
                 "extension", "index", "this", "location", "success",
                 "access", "creation", "empty", "encrypted", "exists", "hidden", "isDirectory", "isFile", "readonly",
                 "archive", "change", "compressed", "modification", "lifetime", "size", "depth",
-                "drive", "fullName", "name", "parent", "path"
+                "drive", "fullName", "name", "parent", "path", 
+                "isImage", "isVideo", "width", "height", "duration"
             });
             A_Not = new HintArray(new string[] { "not" });
             A_BoolAttrVariables = new HintArray(new string[] { "empty", "archive", "compressed", "encrypted", "exists",
-                "hidden", "isFile", "isDirectory", "readonly", "success", "true", "false" });
+                "hidden", "isFile", "isDirectory", "readonly", "success", "true", "false",
+                "isImage", "isVideo" });
             A_One = new HintArray(new string[] { "1" });
             A_By = new HintArray(new string[] { "by" });
             A_Filters = new HintArray(new string[] { "where", "every", "limit", "order by", "skip", "final" });
@@ -162,7 +165,8 @@ namespace Perun2Gui.Hint
                 "between", "not between", "regexp", "not regexp" });
             A_Equals = new HintArray(new string[] { "=" });
             A_MultiVariables = new HintArray(new string[] { "files", "alphabet", "arguments", "ascii",
-                "directories", "recursiveFiles", "recursiveDirectories", "pendrives"
+                "directories", "recursiveFiles", "recursiveDirectories", "pendrives",
+                "images", "videos", "recursiveImages", "recursiveVideos"
             });
             A_Operators = new HintArray(new string[] { ",", "[", ":", "-", "+", "%", "?" });
             A_BoolFunctions = new HintArray(new string[] { "startsWith()", "anyInside()", "any()", "contains()",
