@@ -91,7 +91,7 @@ namespace Perun2Installer
             // 
             // nextButton
             // 
-            this.nextButton.BackColor = System.Drawing.SystemColors.Control;
+            this.nextButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.nextButton.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
             this.nextButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             resources.ApplyResources(this.nextButton, "nextButton");
@@ -101,9 +101,10 @@ namespace Perun2Installer
             // 
             // backButton
             // 
+            this.backButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             resources.ApplyResources(this.backButton, "backButton");
             this.backButton.Name = "backButton";
-            this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.UseVisualStyleBackColor = false;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // panelHead
@@ -216,7 +217,7 @@ namespace Perun2Installer
             // 
             // licensePanel
             // 
-            this.licensePanel.BackColor = System.Drawing.SystemColors.Control;
+            this.licensePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.licensePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.licensePanel.Controls.Add(this.licenseBox);
             resources.ApplyResources(this.licensePanel, "licensePanel");
@@ -224,6 +225,7 @@ namespace Perun2Installer
             // 
             // licenseBox
             // 
+            this.licenseBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             resources.ApplyResources(this.licenseBox, "licenseBox");
             this.licenseBox.Name = "licenseBox";
             this.licenseBox.ReadOnly = true;
@@ -303,14 +305,15 @@ namespace Perun2Installer
             // 
             // cancelButton
             // 
+            this.cancelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             resources.ApplyResources(this.cancelButton, "cancelButton");
             this.cancelButton.Name = "cancelButton";
-            this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.UseVisualStyleBackColor = false;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // bottomPanel
             // 
-            this.bottomPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.bottomPanel.BackColor = System.Drawing.SystemColors.ControlDark;
             this.bottomPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.bottomPanel.Controls.Add(this.backButton);
             this.bottomPanel.Controls.Add(this.cancelButton);
@@ -329,7 +332,7 @@ namespace Perun2Installer
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.BackgroundImage = global::Perun2Installer.Properties.Resources.background;
             this.Controls.Add(this.panelFinish);
             this.Controls.Add(this.logoBox_head);

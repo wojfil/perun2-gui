@@ -50,7 +50,7 @@ namespace Perun2Gui
             // 
             // omitPanel
             // 
-            this.omitPanel.BackColor = System.Drawing.Color.White;
+            this.omitPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.omitPanel.Controls.Add(this.omitBox);
             this.omitPanel.Location = new System.Drawing.Point(12, 12);
             this.omitPanel.Name = "omitPanel";
@@ -59,6 +59,7 @@ namespace Perun2Gui
             // 
             // omitBox
             // 
+            this.omitBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.omitBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.omitBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.omitBox.Location = new System.Drawing.Point(4, 4);
@@ -84,6 +85,7 @@ namespace Perun2Gui
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.BackgroundImage = global::Perun2Gui.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(573, 287);
             this.Controls.Add(this.omitPanel);

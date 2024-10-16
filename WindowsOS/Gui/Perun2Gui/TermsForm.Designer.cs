@@ -50,17 +50,19 @@ namespace Perun2Gui
             // 
             // okButton
             // 
+            this.okButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.okButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.okButton.Location = new System.Drawing.Point(437, 540);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(124, 35);
             this.okButton.TabIndex = 12;
             this.okButton.Text = "Ok";
-            this.okButton.UseVisualStyleBackColor = true;
+            this.okButton.UseVisualStyleBackColor = false;
             this.okButton.Click += new System.EventHandler(this.okButton_Click);
             // 
             // licenseBox
             // 
+            this.licenseBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.licenseBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.licenseBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.licenseBox.Location = new System.Drawing.Point(4, 4);
@@ -73,7 +75,7 @@ namespace Perun2Gui
             // 
             // licensePanel
             // 
-            this.licensePanel.BackColor = System.Drawing.Color.White;
+            this.licensePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.licensePanel.Controls.Add(this.licenseBox);
             this.licensePanel.Location = new System.Drawing.Point(12, 12);
             this.licensePanel.Name = "licensePanel";
@@ -84,6 +86,7 @@ namespace Perun2Gui
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.BackgroundImage = global::Perun2Gui.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(573, 587);
             this.Controls.Add(this.licensePanel);

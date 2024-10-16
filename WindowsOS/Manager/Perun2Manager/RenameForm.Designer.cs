@@ -52,6 +52,7 @@ namespace Perun2Manager
             // 
             // namePanel
             // 
+            this.namePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.namePanel.Controls.Add(this.nameBox);
             this.namePanel.Location = new System.Drawing.Point(35, 45);
             this.namePanel.Name = "namePanel";
@@ -60,6 +61,7 @@ namespace Perun2Manager
             // 
             // nameBox
             // 
+            this.nameBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.nameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.nameBox.Font = new System.Drawing.Font("Consolas", 14F);
             this.nameBox.Location = new System.Drawing.Point(13, 5);
@@ -69,6 +71,7 @@ namespace Perun2Manager
             // 
             // cancelButton
             // 
+            this.cancelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.cancelButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.cancelButton.Location = new System.Drawing.Point(233, 95);
@@ -76,18 +79,19 @@ namespace Perun2Manager
             this.cancelButton.Size = new System.Drawing.Size(120, 35);
             this.cancelButton.TabIndex = 7;
             this.cancelButton.Text = "Cancel";
-            this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.UseVisualStyleBackColor = false;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // okButton
             // 
+            this.okButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.okButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.okButton.Location = new System.Drawing.Point(107, 95);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(120, 35);
             this.okButton.TabIndex = 6;
             this.okButton.Text = "Ok";
-            this.okButton.UseVisualStyleBackColor = true;
+            this.okButton.UseVisualStyleBackColor = false;
             this.okButton.Click += new System.EventHandler(this.okButton_Click);
             // 
             // topLabel
@@ -104,6 +108,7 @@ namespace Perun2Manager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.BackgroundImage = global::Perun2Manager.Properties.Resources.background;
             this.CancelButton = this.cancelButton;
             this.ClientSize = new System.Drawing.Size(468, 143);

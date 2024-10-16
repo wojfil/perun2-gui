@@ -65,7 +65,7 @@ namespace Perun2Gui
             // 
             // newBox
             // 
-            this.newBox.BackColor = System.Drawing.Color.White;
+            this.newBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.newBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.newBox.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.newBox.ForeColor = System.Drawing.Color.Black;
@@ -86,7 +86,7 @@ namespace Perun2Gui
             // 
             // oldBox
             // 
-            this.oldBox.BackColor = System.Drawing.Color.White;
+            this.oldBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.oldBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.oldBox.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.oldBox.ForeColor = System.Drawing.Color.Black;
@@ -143,6 +143,7 @@ namespace Perun2Gui
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.BackgroundImage = global::Perun2Gui.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(294, 177);
             this.Controls.Add(this.newPanel);

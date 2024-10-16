@@ -155,7 +155,7 @@ namespace Perun2Gui
             // 
             // topMenuStrip
             // 
-            this.topMenuStrip.BackColor = System.Drawing.SystemColors.Control;
+            this.topMenuStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.topMenuStrip.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.topMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
@@ -665,6 +665,7 @@ namespace Perun2Gui
             // runButton
             // 
             this.runButton.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.runButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.runButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.runButton.Location = new System.Drawing.Point(11, 40);
             this.runButton.Name = "runButton";
@@ -676,7 +677,7 @@ namespace Perun2Gui
             // 
             // fileBox
             // 
-            this.fileBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.fileBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.fileBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fileBox.ContextMenuStrip = this.fileMenuStrip;
             this.fileBox.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -727,7 +728,7 @@ namespace Perun2Gui
             // 
             // locationBox
             // 
-            this.locationBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.locationBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.locationBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.locationBox.ContextMenuStrip = this.locationMenuStrip;
             this.locationBox.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -764,7 +765,7 @@ namespace Perun2Gui
             // 
             // locationPanel
             // 
-            this.locationPanel.BackColor = System.Drawing.Color.White;
+            this.locationPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.locationPanel.Controls.Add(this.locationBox);
             this.locationPanel.Controls.Add(this.locPictureBox);
             this.locationPanel.Location = new System.Drawing.Point(107, 41);
@@ -784,7 +785,7 @@ namespace Perun2Gui
             // 
             // filePanel
             // 
-            this.filePanel.BackColor = System.Drawing.Color.White;
+            this.filePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.filePanel.Controls.Add(this.fileBox);
             this.filePanel.Controls.Add(this.filePictureBox);
             this.filePanel.Location = new System.Drawing.Point(489, 41);
@@ -804,7 +805,7 @@ namespace Perun2Gui
             // 
             // logBox
             // 
-            this.logBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.logBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.logBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.logBox.ContextMenuStrip = this.logMenuStrip;
             this.logBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -949,6 +950,7 @@ namespace Perun2Gui
     "?<range>:)\\s*(?<range>[^;]+);";
             this.codeBox.AutoScrollMinSize = new System.Drawing.Size(37, 28);
             this.codeBox.BackBrush = null;
+            this.codeBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.codeBox.CaretColor = System.Drawing.Color.White;
             this.codeBox.CharHeight = 28;
             this.codeBox.CharWidth = 13;
@@ -983,7 +985,7 @@ namespace Perun2Gui
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.BackgroundImage = global::Perun2Gui.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(871, 468);
             this.Controls.Add(this.statusStrip1);

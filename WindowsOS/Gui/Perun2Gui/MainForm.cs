@@ -256,11 +256,12 @@ namespace Perun2Gui
                 e.Cancel = true;
             }
         }
-        
-        private void topMenuStrip_MenuActivate(object sender, EventArgs e)
-        {
-            SetNullHint();
-        }
+
+       private void topMenuStrip_MenuActivate(object sender, EventArgs e)
+       {
+           SetNullHint();
+       }
+
 
     }
 }

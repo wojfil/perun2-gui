@@ -63,18 +63,20 @@ namespace Perun2Manager
             // 
             // addNewButton
             // 
+            this.addNewButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.addNewButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.addNewButton.Location = new System.Drawing.Point(26, 12);
             this.addNewButton.Name = "addNewButton";
             this.addNewButton.Size = new System.Drawing.Size(120, 35);
             this.addNewButton.TabIndex = 2;
             this.addNewButton.Text = "Add new";
-            this.addNewButton.UseVisualStyleBackColor = true;
+            this.addNewButton.UseVisualStyleBackColor = false;
             this.addNewButton.Click += new System.EventHandler(this.addNewButton_Click);
             // 
             // tablePanel
             // 
             this.tablePanel.AutoSize = true;
+            this.tablePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.tablePanel.ColumnCount = 1;
             this.tablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -89,7 +91,7 @@ namespace Perun2Manager
             // mainPanel
             // 
             this.mainPanel.AutoScroll = true;
-            this.mainPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.mainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.mainPanel.Controls.Add(this.tablePanel);
             this.mainPanel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.mainPanel.Location = new System.Drawing.Point(2, 2);
@@ -109,6 +111,7 @@ namespace Perun2Manager
             // 
             // pathPanel
             // 
+            this.pathPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.pathPanel.Controls.Add(this.fileImageBox);
             this.pathPanel.Controls.Add(this.pathBox);
             this.pathPanel.Location = new System.Drawing.Point(157, 13);
@@ -129,6 +132,7 @@ namespace Perun2Manager
             // 
             // pathBox
             // 
+            this.pathBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.pathBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.pathBox.ContextMenuStrip = this.pathMenuStrip;
             this.pathBox.Font = new System.Drawing.Font("Consolas", 14F);
@@ -162,19 +166,21 @@ namespace Perun2Manager
             // 
             // seeAllButton
             // 
+            this.seeAllButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.seeAllButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.seeAllButton.Location = new System.Drawing.Point(702, 12);
             this.seeAllButton.Name = "seeAllButton";
             this.seeAllButton.Size = new System.Drawing.Size(120, 35);
             this.seeAllButton.TabIndex = 10;
             this.seeAllButton.Text = "See all";
-            this.seeAllButton.UseVisualStyleBackColor = true;
+            this.seeAllButton.UseVisualStyleBackColor = false;
             this.seeAllButton.Click += new System.EventHandler(this.seeAllButton_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.BackgroundImage = global::Perun2Manager.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(862, 396);
             this.Controls.Add(this.seeAllButton);

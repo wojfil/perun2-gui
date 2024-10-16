@@ -60,6 +60,7 @@ namespace Perun2Gui
             // 
             // nameBox
             // 
+            this.nameBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.nameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.nameBox.Font = new System.Drawing.Font("Consolas", 14F);
             this.nameBox.Location = new System.Drawing.Point(13, 5);
@@ -104,6 +105,7 @@ namespace Perun2Gui
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.BackgroundImage = global::Perun2Gui.Properties.Resources.background;
             this.CancelButton = this.cancelButton;
             this.ClientSize = new System.Drawing.Size(468, 143);

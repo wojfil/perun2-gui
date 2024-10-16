@@ -57,7 +57,7 @@ namespace Perun2Uninstaller
             // 
             // bottomPanel
             // 
-            this.bottomPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.bottomPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.bottomPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.bottomPanel.Controls.Add(this.cancelButton);
             this.bottomPanel.Controls.Add(this.uninstallButton);
@@ -69,28 +69,31 @@ namespace Perun2Uninstaller
             // 
             // cancelButton
             // 
+            this.cancelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.cancelButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.cancelButton.Location = new System.Drawing.Point(492, 11);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(120, 30);
             this.cancelButton.TabIndex = 8;
             this.cancelButton.Text = "Cancel";
-            this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.UseVisualStyleBackColor = false;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // uninstallButton
             // 
+            this.uninstallButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.uninstallButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.uninstallButton.Location = new System.Drawing.Point(323, 11);
             this.uninstallButton.Name = "uninstallButton";
             this.uninstallButton.Size = new System.Drawing.Size(120, 30);
             this.uninstallButton.TabIndex = 1;
             this.uninstallButton.Text = "Uninstall";
-            this.uninstallButton.UseVisualStyleBackColor = true;
+            this.uninstallButton.UseVisualStyleBackColor = false;
             this.uninstallButton.Click += new System.EventHandler(this.uninstallButton_Click);
             // 
             // backButton
             // 
+            this.backButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.backButton.Enabled = false;
             this.backButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.backButton.Location = new System.Drawing.Point(197, 11);
@@ -98,7 +101,7 @@ namespace Perun2Uninstaller
             this.backButton.Size = new System.Drawing.Size(120, 30);
             this.backButton.TabIndex = 0;
             this.backButton.Text = "Back";
-            this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
@@ -153,7 +156,7 @@ namespace Perun2Uninstaller
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.BackgroundImage = global::Perun2Uninstaller.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(614, 339);
             this.Controls.Add(this.label3);
