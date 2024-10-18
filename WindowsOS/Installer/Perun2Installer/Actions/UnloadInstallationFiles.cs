@@ -22,14 +22,14 @@ namespace Perun2Installer.Actions
                 string settings = Path.Combine(intallation, Constants.FILE_SETTINGS);
                 string icon = Path.Combine(intallation, Constants.FILE_ICON);
 
-                string dll_avcodec = Path.Combine(intallation, "avcodec - 61.dll");
-                string dll_avdevice = Path.Combine(intallation, "avdevice - 61.dll");
-                string dll_avfilter = Path.Combine(intallation, "avfilter - 10.dll");
-                string dll_avformat = Path.Combine(intallation, "avformat - 61.dll");
-                string dll_avutil = Path.Combine(intallation, "avutil - 59.dll");
-                string dll_postproc = Path.Combine(intallation, "postproc - 58.dll");
-                string dll_swresample = Path.Combine(intallation, "swresample - 5.dll");
-                string dll_swscale = Path.Combine(intallation, "swscale - 8.dll");
+                string dll_avcodec = Path.Combine(intallation, "avcodec-61.dll");
+                string dll_avdevice = Path.Combine(intallation, "avdevice-61.dll");
+                string dll_avfilter = Path.Combine(intallation, "avfilter-10.dll");
+                string dll_avformat = Path.Combine(intallation, "avformat-61.dll");
+                string dll_avutil = Path.Combine(intallation, "avutil-59.dll");
+                string dll_postproc = Path.Combine(intallation, "postproc-58.dll");
+                string dll_swresample = Path.Combine(intallation, "swresample-5.dll");
+                string dll_swscale = Path.Combine(intallation, "swscale-8.dll");
 
                 DeleteFileIfExists(gui);
                 DeleteFileIfExists(manager);
