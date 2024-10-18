@@ -200,7 +200,15 @@ namespace Perun2Installer
             return Properties.Resources.perun2.LongLength
                 + Properties.Resources.Perun2Gui.LongLength
                 + Properties.Resources.Perun2Manager.LongLength
-                + Properties.Resources.uninstall.LongLength;
+                + Properties.Resources.uninstall.LongLength
+                + Properties.Resources.avcodec_61.LongLength
+                + Properties.Resources.avdevice_61.LongLength
+                + Properties.Resources.avfilter_10.LongLength
+                + Properties.Resources.avformat_61.LongLength
+                + Properties.Resources.avutil_59.LongLength
+                + Properties.Resources.postproc_58.LongLength
+                + Properties.Resources.swresample_5.LongLength
+                + Properties.Resources.swscale_8.LongLength;
         }
 
         private long GetRecommendedSpace(long space)
