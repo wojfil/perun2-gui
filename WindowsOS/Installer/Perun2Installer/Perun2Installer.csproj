@@ -208,6 +208,30 @@
   <ItemGroup>
     <None Include="Resources\background.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avcodec-61.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avdevice-61.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avfilter-10.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avformat-61.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avutil-59.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\postproc-58.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\swresample-5.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\swscale-8.dll" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

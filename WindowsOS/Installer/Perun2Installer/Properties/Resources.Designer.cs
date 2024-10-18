@@ -61,6 +61,56 @@ namespace Perun2Installer.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] avcodec_61 {
+            get {
+                object obj = ResourceManager.GetObject("avcodec_61", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] avdevice_61 {
+            get {
+                object obj = ResourceManager.GetObject("avdevice_61", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] avfilter_10 {
+            get {
+                object obj = ResourceManager.GetObject("avfilter_10", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] avformat_61 {
+            get {
+                object obj = ResourceManager.GetObject("avformat_61", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] avutil_59 {
+            get {
+                object obj = ResourceManager.GetObject("avutil_59", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap background {
@@ -136,6 +186,36 @@ namespace Perun2Installer.Properties {
             get {
                 object obj = ResourceManager.GetObject("perunlogo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] postproc_58 {
+            get {
+                object obj = ResourceManager.GetObject("postproc_58", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] swresample_5 {
+            get {
+                object obj = ResourceManager.GetObject("swresample_5", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] swscale_8 {
+            get {
+                object obj = ResourceManager.GetObject("swscale_8", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
