@@ -93,7 +93,9 @@ namespace Perun2Gui.Hint
             A_Commands = new HintArray(new string[] { "print", "copy", "create", "createDirectory", "createFile", "createDirectories", "createFiles",
                 "delete", "drop", "hide", "lock", "move", "open", 
                 "select", "sleep", "rename", "recreate", "remodify", "reaccess", "rechange", "run", "unhide", "unlock", "inside", "if", "while", "else", "foreach", "popup" });
-            A_MultiCoreVariables = new HintArray(new string[] { "files", "directories", "recursiveFiles", "recursiveDirectories" });
+            A_MultiCoreVariables = new HintArray(new string[] { "files", "directories", "recursiveFiles", "recursiveDirectories",
+                "images", "videos", "recursiveImages", "recursiveVideos"
+            });
             A_Functions = new HintArray(new string[] { "substring()", "anyInside()", "after()", "absolute()", "afterDigits()", "afterLetters()", 
                 "any()", "average()", "before()", "beforeDigits()", "beforeLetters()", "binary()", "contains()", "capitalize()", "ceil()",
                 "characters()", "christmas()", "concatenate()", "countInside()", "count()", "digits()",
