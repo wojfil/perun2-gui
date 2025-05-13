@@ -205,6 +205,9 @@
     <Compile Include="MainForm_Hint.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MainForm_Log.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MainForm_Process.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -386,12 +386,6 @@ namespace Perun2Gui
             MousePressed = false;
         }
 
-        private void logMenuStrip_Opening(object sender, CancelEventArgs e)
-        {
-            copyToolStripMenuItem_log.Enabled = ResizeEnabled && logBox.SelectionLength != 0;
-            copyAllToolStripMenuItem.Enabled = ResizeEnabled && logBox.Text.Any();
-        }
-
         private void copyToolStripMenuItem_log_Click(object sender, EventArgs e)
         {
             lock (SyncGate) 
