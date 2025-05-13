@@ -181,6 +181,7 @@
     <Compile Include="Hint\HintArray.cs" />
     <Compile Include="Hint\HintType.cs" />
     <Compile Include="History\History.cs" />
+    <Compile Include="LogsSelectionState.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
