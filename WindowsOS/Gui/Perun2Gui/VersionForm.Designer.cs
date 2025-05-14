@@ -99,6 +99,7 @@ namespace Perun2Gui
             // 
             // cancelButton
             // 
+            this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.cancelButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.cancelButton.Location = new System.Drawing.Point(151, 127);
             this.cancelButton.Name = "cancelButton";
@@ -141,10 +142,12 @@ namespace Perun2Gui
             // 
             // VersionForm
             // 
+            this.AcceptButton = this.actualizeButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.BackgroundImage = global::Perun2Gui.Properties.Resources.background;
+            this.CancelButton = this.cancelButton;
             this.ClientSize = new System.Drawing.Size(294, 177);
             this.Controls.Add(this.newPanel);
             this.Controls.Add(this.oldPanel);
