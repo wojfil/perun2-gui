@@ -122,5 +122,15 @@ namespace Perun2Gui
             this.label1.BackColor = Color.FromArgb(30, 30, 30);
             this.label2.BackColor = Color.FromArgb(30, 30, 30);
         }
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Escape)
+            {
+                this.Close();
+                return true;
+            }
+
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
     }
 }
