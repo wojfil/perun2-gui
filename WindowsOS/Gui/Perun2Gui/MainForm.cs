@@ -261,7 +261,5 @@ namespace Perun2Gui
        {
            SetNullHint();
        }
-
-
     }
 }

@@ -47,6 +47,12 @@ namespace Perun2Gui
             }
         }
 
+        string[] GetSelectedLogLines()
+        {
+            return logBox.SelectedText.Split(new[] { "\r\n", "\n" }, 
+                StringSplitOptions.None);
+        }
+
         private LogsSelectionState GetLogSelectionState()
         {
             if (logBox.SelectionLength == 0)
@@ -54,15 +60,29 @@ namespace Perun2Gui
                 return LogsSelectionState.None;
             }
 
-            string[] lines = logBox.SelectedText.Split(new[] { "\r\n", "\n" }, 
-                StringSplitOptions.None);
+            string[] lines = GetSelectedLogLines();
 
-            // todo
-
-
-
-            return LogsSelectionState.None;
+            return lines.Length == 1
+                ? LogsSelectionState.OneFile
+                : LogsSelectionState.ManyFiles;
         }
 
+        private void showThemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void openThemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new OpenConfirmForm(14);
+            form.ShowDialog();
+
+            if (form.DialogResult != DialogResult.OK)
+            {
+                return;
+            }
+
+            
+        }
     }
 }

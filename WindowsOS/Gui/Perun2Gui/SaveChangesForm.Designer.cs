@@ -42,22 +42,11 @@ namespace Perun2Gui
         /// </summary>
         private void InitializeComponent()
         {
-            this.discardButton = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
             this.mainLabel = new System.Windows.Forms.Label();
             this.cancelButton = new System.Windows.Forms.Button();
+            this.discardButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // discardButton
-            // 
-            this.discardButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.discardButton.Location = new System.Drawing.Point(156, 76);
-            this.discardButton.Name = "discardButton";
-            this.discardButton.Size = new System.Drawing.Size(124, 37);
-            this.discardButton.TabIndex = 7;
-            this.discardButton.Text = "Discard";
-            this.discardButton.UseVisualStyleBackColor = true;
-            this.discardButton.Click += new System.EventHandler(this.discardButton_Click);
             // 
             // saveButton
             // 
@@ -91,6 +80,17 @@ namespace Perun2Gui
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
+            // discardButton
+            // 
+            this.discardButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.discardButton.Location = new System.Drawing.Point(156, 76);
+            this.discardButton.Name = "discardButton";
+            this.discardButton.Size = new System.Drawing.Size(124, 37);
+            this.discardButton.TabIndex = 7;
+            this.discardButton.Text = "Discard";
+            this.discardButton.UseVisualStyleBackColor = true;
+            this.discardButton.Click += new System.EventHandler(this.discardButton_Click);
+            // 
             // SaveChangesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -107,17 +107,16 @@ namespace Perun2Gui
             this.MinimizeBox = false;
             this.Name = "SaveChangesForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Exit";
+            this.Text = "Save changes";
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button discardButton;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.Label mainLabel;
         private System.Windows.Forms.Button cancelButton;
+        private System.Windows.Forms.Button discardButton;
     }
 }

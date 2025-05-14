@@ -126,6 +126,9 @@ namespace Perun2Gui
             this.logMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.copyToolStripMenuItem_log = new System.Windows.Forms.ToolStripMenuItem();
             this.copyAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator16 = new System.Windows.Forms.ToolStripSeparator();
+            this.showThemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openThemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logPanel = new System.Windows.Forms.Panel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lineLabel = new System.Windows.Forms.ToolStripStatusLabel();
@@ -139,9 +142,6 @@ namespace Perun2Gui
             this.hintLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.logBackgroundWorker = new System.ComponentModel.BackgroundWorker();
             this.codeBox = new FastColoredTextBoxNS.FastColoredTextBox();
-            this.toolStripSeparator16 = new System.Windows.Forms.ToolStripSeparator();
-            this.showThemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.openThemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.topMenuStrip.SuspendLayout();
             this.codeMenuStrip.SuspendLayout();
             this.fileMenuStrip.SuspendLayout();
@@ -850,6 +850,25 @@ namespace Perun2Gui
             this.copyAllToolStripMenuItem.Text = "Copy all text";
             this.copyAllToolStripMenuItem.Click += new System.EventHandler(this.copyAllToolStripMenuItem_Click);
             // 
+            // toolStripSeparator16
+            // 
+            this.toolStripSeparator16.Name = "toolStripSeparator16";
+            this.toolStripSeparator16.Size = new System.Drawing.Size(234, 6);
+            // 
+            // showThemToolStripMenuItem
+            // 
+            this.showThemToolStripMenuItem.Name = "showThemToolStripMenuItem";
+            this.showThemToolStripMenuItem.Size = new System.Drawing.Size(237, 26);
+            this.showThemToolStripMenuItem.Text = "Show them in Explorer";
+            this.showThemToolStripMenuItem.Click += new System.EventHandler(this.showThemToolStripMenuItem_Click);
+            // 
+            // openThemToolStripMenuItem
+            // 
+            this.openThemToolStripMenuItem.Name = "openThemToolStripMenuItem";
+            this.openThemToolStripMenuItem.Size = new System.Drawing.Size(237, 26);
+            this.openThemToolStripMenuItem.Text = "Open them";
+            this.openThemToolStripMenuItem.Click += new System.EventHandler(this.openThemToolStripMenuItem_Click);
+            // 
             // logPanel
             // 
             this.logPanel.Controls.Add(this.logBox);
@@ -986,23 +1005,6 @@ namespace Perun2Gui
             this.codeBox.KeyPressing += new System.Windows.Forms.KeyPressEventHandler(this.codeBox_KeyPressing);
             this.codeBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.codeBox_KeyDown);
             this.codeBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.codeBox_MouseUp);
-            // 
-            // toolStripSeparator16
-            // 
-            this.toolStripSeparator16.Name = "toolStripSeparator16";
-            this.toolStripSeparator16.Size = new System.Drawing.Size(234, 6);
-            // 
-            // showThemToolStripMenuItem
-            // 
-            this.showThemToolStripMenuItem.Name = "showThemToolStripMenuItem";
-            this.showThemToolStripMenuItem.Size = new System.Drawing.Size(237, 26);
-            this.showThemToolStripMenuItem.Text = "Show them in Explorer";
-            // 
-            // openThemToolStripMenuItem
-            // 
-            this.openThemToolStripMenuItem.Name = "openThemToolStripMenuItem";
-            this.openThemToolStripMenuItem.Size = new System.Drawing.Size(237, 26);
-            this.openThemToolStripMenuItem.Text = "Open them";
             // 
             // MainForm
             // 
