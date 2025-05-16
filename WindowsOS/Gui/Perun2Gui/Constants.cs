@@ -29,6 +29,9 @@ namespace Perun2Gui
         public const int GLOBAL_SCRIPT_NAME_LENGTH_LIMIT = 160;
         public const int GLOBAL_SCRIPT_ITEMS_LIMIT = 16;
 
+        // if the action is to open 10 or more files, ask user for confirmation
+        public const int A_LOT_TO_OPEN_THREHOLD = 10;
+
         public const bool ACTUALIZATIONS_ENABLED = true;
 
         public static readonly string WEBSITE_ROOT = @"https://perun2.org";

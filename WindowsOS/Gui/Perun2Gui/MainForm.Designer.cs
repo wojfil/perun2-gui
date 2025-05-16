@@ -831,7 +831,7 @@ namespace Perun2Gui
             this.showThemToolStripMenuItem,
             this.openThemToolStripMenuItem});
             this.logMenuStrip.Name = "contextMenuStrip1";
-            this.logMenuStrip.Size = new System.Drawing.Size(238, 136);
+            this.logMenuStrip.Size = new System.Drawing.Size(198, 136);
             this.logMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.logMenuStrip_Opening);
             // 
             // copyToolStripMenuItem_log
@@ -839,34 +839,34 @@ namespace Perun2Gui
             this.copyToolStripMenuItem_log.Name = "copyToolStripMenuItem_log";
             this.copyToolStripMenuItem_log.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
             this.copyToolStripMenuItem_log.ShowShortcutKeys = false;
-            this.copyToolStripMenuItem_log.Size = new System.Drawing.Size(237, 26);
+            this.copyToolStripMenuItem_log.Size = new System.Drawing.Size(197, 26);
             this.copyToolStripMenuItem_log.Text = "Copy text";
             this.copyToolStripMenuItem_log.Click += new System.EventHandler(this.copyToolStripMenuItem_log_Click);
             // 
             // copyAllToolStripMenuItem
             // 
             this.copyAllToolStripMenuItem.Name = "copyAllToolStripMenuItem";
-            this.copyAllToolStripMenuItem.Size = new System.Drawing.Size(237, 26);
+            this.copyAllToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
             this.copyAllToolStripMenuItem.Text = "Copy all text";
             this.copyAllToolStripMenuItem.Click += new System.EventHandler(this.copyAllToolStripMenuItem_Click);
             // 
             // toolStripSeparator16
             // 
             this.toolStripSeparator16.Name = "toolStripSeparator16";
-            this.toolStripSeparator16.Size = new System.Drawing.Size(234, 6);
+            this.toolStripSeparator16.Size = new System.Drawing.Size(194, 6);
             // 
             // showThemToolStripMenuItem
             // 
             this.showThemToolStripMenuItem.Name = "showThemToolStripMenuItem";
-            this.showThemToolStripMenuItem.Size = new System.Drawing.Size(237, 26);
-            this.showThemToolStripMenuItem.Text = "Show them in Explorer";
+            this.showThemToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
+            this.showThemToolStripMenuItem.Text = "Show in Explorer";
             this.showThemToolStripMenuItem.Click += new System.EventHandler(this.showThemToolStripMenuItem_Click);
             // 
             // openThemToolStripMenuItem
             // 
             this.openThemToolStripMenuItem.Name = "openThemToolStripMenuItem";
-            this.openThemToolStripMenuItem.Size = new System.Drawing.Size(237, 26);
-            this.openThemToolStripMenuItem.Text = "Open them";
+            this.openThemToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
+            this.openThemToolStripMenuItem.Text = "Open";
             this.openThemToolStripMenuItem.Click += new System.EventHandler(this.openThemToolStripMenuItem_Click);
             // 
             // logPanel
