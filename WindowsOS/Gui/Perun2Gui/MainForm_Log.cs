@@ -46,7 +46,7 @@ namespace Perun2Gui
             return c == '\n' || c == '\r';
         }
 
-        string[] GetSelected()
+        string[] SelectedLogLines()
         {
             int selectionStart = logBox.SelectionStart;
             int selectionEnd = selectionStart + logBox.SelectionLength;
@@ -76,9 +76,9 @@ namespace Perun2Gui
                 StringSplitOptions.None); ;
         }
 
-        List<string> GetSelectedLogLines(bool forSelection)
+        List<string> ExistingSelectedLogLines(bool forSelection)
         {
-            string[] lines = GetSelected();
+            string[] lines = SelectedLogLines();
 
             List<string> result = new List<string>();
 
@@ -136,7 +136,7 @@ namespace Perun2Gui
             bool knownShow = false;
             bool knownOpen = false;
 
-            string[] lines = GetSelected();
+            string[] lines = SelectedLogLines();
 
             foreach (string line in lines)
             {
@@ -191,13 +191,13 @@ namespace Perun2Gui
 
         private void showThemToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            List<string> paths = GetSelectedLogLines(true);
+            List<string> paths = ExistingSelectedLogLines(true);
             Explorer.SelectFiles(paths);
         }
 
         private void openThemToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            List<string> paths = GetSelectedLogLines(false);
+            List<string> paths = ExistingSelectedLogLines(false);
 
             if (paths.Count >= Constants.A_LOT_TO_OPEN_THREHOLD)
             {
