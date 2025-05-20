@@ -101,14 +101,22 @@ namespace Perun2Gui
         private void RunStart(ExecutionMode mode)
         {
             if (Running || Stopped)
+            {
                 return;
-            
-            if (!HasLocation && !LoadLocation())
-                return;
+            }
+
+            if (mode == ExecutionMode.Run)
+            {
+                if (!HasLocation && !LoadLocation())
+                {
+                    return;
+                }
+            }
 
             string code = codeBox.Text;
-            if (code.Length == 0)
+            if (code.Length == 0) {
                 return;
+            }
 
             if (HasFile)
             {
@@ -218,10 +226,14 @@ namespace Perun2Gui
             sb.Append('"');
             sb.Append(HasBackup ? BackupString : FileString);
             sb.Append('"');
-            sb.Append(" -d ");
-            sb.Append('"');
-            sb.Append(LocationString.EndsWith("\\") ? (LocationString + "\\") : LocationString);
-            sb.Append('"');
+
+            if (mode == ExecutionMode.Run)
+            {
+                sb.Append(" -d ");
+                sb.Append('"');
+                sb.Append(LocationString.EndsWith("\\") ? (LocationString + "\\") : LocationString);
+                sb.Append('"');
+            }
 
             return sb.ToString();
         }

@@ -34,14 +34,14 @@ namespace Perun2Gui
                     + NEW_LINE + LINE);
                 return;
             }
-			
-            if (!Directory.Exists(LocationString))
+
+            if (mode == ExecutionMode.Run && !Directory.Exists(LocationString))
             {
                 logBox.AppendText("Error! Current working location does not exist anymore." + NEW_LINE + LINE);
                 return;
             }
 
-            if (IsCurrentFileGlobalScript())
+            if (mode == ExecutionMode.Run && IsCurrentFileGlobalScript())
             {
                 logBox.AppendText("Error! This is a global script. You can run it only from the dropdown menu of the File Explorer."
                     + NEW_LINE + LINE);
@@ -59,7 +59,11 @@ namespace Perun2Gui
             }
 
             Process = new Process();
-            Process.StartInfo.WorkingDirectory = LocationString;
+
+            if (mode == ExecutionMode.Run) {
+                Process.StartInfo.WorkingDirectory = LocationString;
+            }
+
             Process.StartInfo.Arguments = GetRunnerArgs(mode);
             Process.StartInfo.FileName = exePath;
             Process.StartInfo.CreateNoWindow = true;
