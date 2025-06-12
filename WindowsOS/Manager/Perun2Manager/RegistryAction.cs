@@ -138,7 +138,7 @@ namespace Perun2Manager
 
                 using (RegistryKey reg2 = Registry.ClassesRoot.CreateSubKey(Command))
                 {
-                    string c = "\"" + exe + "\" -s -d \"%V \" \"" + script + "\"";
+                    string c = "\"" + exe + "\" -s -o -d \"%V \" \"" + script + "\"";
                     reg2.SetValue("", c);
                 }
             }
