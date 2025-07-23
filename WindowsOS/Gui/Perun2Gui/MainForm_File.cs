@@ -56,9 +56,9 @@ namespace Perun2Gui
                 dialog.FileName = FileNameString;
             }
 
-            if (HasLocation && Directory.Exists(LocationString))
+            if (HasLocation && Directory.Exists(LocationPathString))
             {
-                dialog.InitialDirectory = LocationString;
+                dialog.InitialDirectory = LocationPathString;
                 dialog.RestoreDirectory = true;
             }
 
@@ -104,7 +104,7 @@ namespace Perun2Gui
             {
                 dialog = new DirectorySelectDialog
                 {
-                    InitialDirectory = LocationString,
+                    InitialDirectory = LocationPathString,
                     Title = LOAD_LOCATION_TITLE
                 };
             }
@@ -136,7 +136,7 @@ namespace Perun2Gui
         private void SetFile(string file)
         {
             HasFile = file != null;
-            FileString = file;
+            FilePathString = file;
             FileNameString = Path.GetFileName(file);
             fileBox.Text = file == null ? String.Empty : StringUtil.NameShortcut(FileNameString, FILE_SHOW_MAX_LENGTH);
         }
@@ -144,7 +144,7 @@ namespace Perun2Gui
         private void SetLocation(string location)
         {
             HasLocation = location != null;
-            LocationString = location;
+            LocationPathString = location;
             locationBox.Text = location == null ? String.Empty : StringUtil.PathShortcut(location, LOCATION_SHOW_MAX_LENGTH);
         }
 
@@ -160,9 +160,9 @@ namespace Perun2Gui
             dialog.RestoreDirectory = true;
             dialog.Title = OPEN_FILE_TITLE;
 
-            if (HasLocation && Directory.Exists(LocationString))
+            if (HasLocation && Directory.Exists(LocationPathString))
             {
-                dialog.InitialDirectory = LocationString;
+                dialog.InitialDirectory = LocationPathString;
                 dialog.RestoreDirectory = true;
             }
 
@@ -187,7 +187,7 @@ namespace Perun2Gui
 
         private void SetSourceFile(string path, string code, bool saveProgress)
         {
-            if (HasFile && path.Equals(FileString) && code.Equals(codeBox.Text))
+            if (HasFile && path.Equals(FilePathString) && code.Equals(codeBox.Text))
             {
                 return;
             }
@@ -237,15 +237,15 @@ namespace Perun2Gui
             {
                 string code = codeBox.Text;
 
-                if (!File.Exists(FileString))
+                if (!File.Exists(FilePathString))
                 {
-                    if (!Directory.Exists(LocationString))
+                    if (!Directory.Exists(LocationPathString))
                     {
-                        Directory.CreateDirectory(LocationString);
+                        Directory.CreateDirectory(LocationPathString);
                     }
                 }
 
-                File.WriteAllText(FileString, code);
+                File.WriteAllText(FilePathString, code);
                 IsCodeSaved = false;
                 HasBackup = false;
                 PrevCode = code;
@@ -269,9 +269,9 @@ namespace Perun2Gui
             dialog.Filter = SCRIPT_FILTHER;
             dialog.Title = SAVE_AS_TITLE;
 
-            if (HasLocation && Directory.Exists(LocationString))
+            if (HasLocation && Directory.Exists(LocationPathString))
             {
-                dialog.InitialDirectory = LocationString;
+                dialog.InitialDirectory = LocationPathString;
                 dialog.RestoreDirectory = true;
             }
 
@@ -332,9 +332,9 @@ namespace Perun2Gui
             dialog.Title = "Save Logs";
             dialog.FileName = GetLogsFileName();
 
-            if (HasLocation && Directory.Exists(LocationString))
+            if (HasLocation && Directory.Exists(LocationPathString))
             {
-                dialog.InitialDirectory = LocationString;
+                dialog.InitialDirectory = LocationPathString;
                 dialog.RestoreDirectory = true;
             }
 
@@ -370,7 +370,7 @@ namespace Perun2Gui
 
         private void enterLocationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            EnterDirectory(LocationString);
+            EnterDirectory(LocationPathString);
         }
 
         private void turnIntoGlobalScriptToolStripMenuItem_Click(object sender, EventArgs e)

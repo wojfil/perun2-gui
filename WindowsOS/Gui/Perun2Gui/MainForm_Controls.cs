@@ -191,17 +191,17 @@ namespace Perun2Gui
         {
             if (HasFile)
             {
-                Clipboard.SetText(FileString);
+                Clipboard.SetText(FilePathString);
                 codeBox.Focus();
             }
         }
 
         private void showInDirectoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string path = Path.GetDirectoryName(FileString);
-            if (Directory.Exists(path) && File.Exists(FileString))
+            string path = Path.GetDirectoryName(FilePathString);
+            if (Directory.Exists(path) && File.Exists(FilePathString))
             {
-                OpenFolderAndSelectItem(path, FileString);
+                OpenFolderAndSelectItem(path, FilePathString);
                 codeBox.Focus();
             }
         }
@@ -243,7 +243,7 @@ namespace Perun2Gui
         {
             if (HasLocation)
             {
-                Clipboard.SetText(LocationString);
+                Clipboard.SetText(LocationPathString);
                 codeBox.Focus();
             }
         }
@@ -262,14 +262,14 @@ namespace Perun2Gui
             SetNullHint();
             copyPathToolStripMenuItem_file.Enabled = HasFile;
             copyNameToolStripMenuItem.Enabled = HasFile;
-            showInDirectoryToolStripMenuItem.Enabled = HasFile && File.Exists(FileString);
+            showInDirectoryToolStripMenuItem.Enabled = HasFile && File.Exists(FilePathString);
         }
 
         private void locationMenuStrip_Opening(object sender, CancelEventArgs e)
         {
             SetNullHint();
             copyPathToolStripMenuItem_location.Enabled = HasLocation;
-            enterToolStripMenuItem.Enabled = HasLocation && Directory.Exists(LocationString);
+            enterToolStripMenuItem.Enabled = HasLocation && Directory.Exists(LocationPathString);
         }
 
         private void locationBox_MouseDown(object sender, MouseEventArgs e)

@@ -150,10 +150,10 @@ namespace Perun2Gui
         {
             string backups = Paths.GetInstance().GetBackupsPath();
             Directory.CreateDirectory(backups);
-            BackupString = Path.Combine(backups, GetNewBackupName() + Constants.PERUN2_EXTENSION);
+            BackupPathString = Path.Combine(backups, GetNewBackupName() + Constants.PERUN2_EXTENSION);
             HasBackup = true;
-            File.Create(BackupString).Dispose();
-            File.WriteAllText(BackupString, code);
+            File.Create(BackupPathString).Dispose();
+            File.WriteAllText(BackupPathString, code);
         }
 
         private string GetNewBackupName()
@@ -185,7 +185,7 @@ namespace Perun2Gui
             }
 
             string s1 = Paths.GetInstance().GetRootPath();
-            string s2 = Path.GetDirectoryName(LocationString);
+            string s2 = Path.GetDirectoryName(LocationPathString);
             return String.Equals(s1, s2, StringComparison.OrdinalIgnoreCase);
         }
 
@@ -224,14 +224,14 @@ namespace Perun2Gui
             }
 
             sb.Append('"');
-            sb.Append(HasBackup ? BackupString : FileString);
+            sb.Append(HasBackup ? BackupPathString : FilePathString);
             sb.Append('"');
 
             if (mode == ExecutionMode.Run)
             {
                 sb.Append(" -d ");
                 sb.Append('"');
-                sb.Append(LocationString.EndsWith("\\") ? (LocationString + "\\") : LocationString);
+                sb.Append(LocationPathString.EndsWith("\\") ? (LocationPathString + "\\") : LocationPathString);
                 sb.Append('"');
             }
 

@@ -36,10 +36,10 @@ namespace Perun2Gui
         private bool HasLocation;
         private bool HasFile;
         private bool HasBackup;
-        private string LocationString;
-        private string FileString;
+        private string LocationPathString;
+        private string FilePathString;
         private string FileNameString;
-        private string BackupString;
+        private string BackupPathString;
         private string PrevCode;
 
 
@@ -53,9 +53,9 @@ namespace Perun2Gui
             HasLocation = false;
             HasFile = false;
             HasBackup = false;
-            LocationString = null;
-            FileString = null;
-            BackupString = null;
+            LocationPathString = null;
+            FilePathString = null;
+            BackupPathString = null;
             PrevCode = null;
             SaveAsEnabled = false;
 
@@ -70,8 +70,8 @@ namespace Perun2Gui
 
             HasFile = false;
             HasBackup = false;
-            FileString = null;
-            BackupString = null;
+            FilePathString = null;
+            BackupPathString = null;
             PrevCode = null;
             SaveAsEnabled = false;
 
@@ -87,7 +87,7 @@ namespace Perun2Gui
             InitializeComponent();
 
             HasBackup = false;
-            BackupString = null;
+            BackupPathString = null;
             SaveAsEnabled = !String.IsNullOrEmpty(code);
 
             Init();

@@ -93,7 +93,7 @@ namespace Perun2Gui
 
                 try
                 {
-                    string path = Path.GetFullPath(Path.Combine(LocationString, trimmed));
+                    string path = Path.GetFullPath(Path.Combine(LocationPathString, trimmed));
 
                     if (!File.Exists(path) && !Directory.Exists(path))
                     {
@@ -104,7 +104,7 @@ namespace Perun2Gui
                         continue;
                     }
 
-                    result.Add(Path.Combine(LocationString, trimmed));
+                    result.Add(Path.Combine(LocationPathString, trimmed));
                 }
                 catch { }
             }
@@ -154,7 +154,7 @@ namespace Perun2Gui
 
                 try
                 {
-                    string path = Path.GetFullPath(Path.Combine(LocationString, trimmed));
+                    string path = Path.GetFullPath(Path.Combine(LocationPathString, trimmed));
 
                     if (! File.Exists(path) && ! Directory.Exists(path))
                     {
