@@ -126,7 +126,7 @@ namespace Perun2Gui
 
         private void RefreshLogMenuStripState()
         {
-            if (! state.HasLocation())
+            if (Running || ! state.HasLocation())
             {
                 showThemToolStripMenuItem.Enabled = false;
                 openThemToolStripMenuItem.Enabled = false;

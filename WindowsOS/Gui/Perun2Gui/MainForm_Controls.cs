@@ -419,6 +419,11 @@ namespace Perun2Gui
         {
             SetNullHint();
 
+            if (logBox.SelectionLength > 0)
+            {
+                return;
+            }
+
             if (e.Button == MouseButtons.Right)
             {
                 int WM_LBUTTONDOWN = 0x0201;
