@@ -34,6 +34,8 @@ namespace Perun2Gui
         public static extern void SHParseDisplayName([MarshalAs(UnmanagedType.LPWStr)] string name, 
             IntPtr bindingContext, [Out] out IntPtr pidl, uint sfgaoIn, [Out] out uint psfgaoOut);
 
+        [DllImport("user32.dll")]
+        private static extern IntPtr SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
 
         private int MousePressCaret = 0;
         private bool MousePressed = false;
@@ -411,7 +413,15 @@ namespace Perun2Gui
         private void logBox_MouseDown(object sender, MouseEventArgs e)
         {
             SetNullHint();
-        }
 
+            if (e.Button == MouseButtons.Right)
+            {
+                int WM_LBUTTONDOWN = 0x0201;
+                int WM_LBUTTONUP = 0x0202;
+                int lParam = (e.Y << 16) | (e.X & 0xFFFF);
+                SendMessage(logBox.Handle, WM_LBUTTONDOWN, 0x00000001, lParam);
+                SendMessage(logBox.Handle, WM_LBUTTONUP, 0x00000000, lParam);
+            }
+        }
     }
 }
