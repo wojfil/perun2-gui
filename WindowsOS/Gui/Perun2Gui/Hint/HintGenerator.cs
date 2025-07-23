@@ -75,6 +75,7 @@ namespace Perun2Gui.Hint
         private HintArray A_Perun2;
         private HintArray A_AfterNot;
         private HintArray A_DirectoryFunctions;
+        private HintArray A_PrecedingStringLiteral;
 
         private string RecentValue;
         private HintType RecentHintType;
@@ -92,7 +93,8 @@ namespace Perun2Gui.Hint
             A_CommandsSF = new HintArray(new string[] { "copy", "create", "createDirectory", "createFile", "createDirectories", "createFiles", "move", "rename" });
             A_Commands = new HintArray(new string[] { "print", "copy", "create", "createDirectory", "createFile", "createDirectories", "createFiles",
                 "delete", "drop", "hide", "lock", "move", "open", 
-                "select", "sleep", "rename", "recreate", "remodify", "reaccess", "rechange", "run", "unhide", "unlock", "inside", "if", "while", "else", "foreach", "popup" });
+                "select", "sleep", "rename", "recreate", "remodify", "reaccess", "rechange", "run", "unhide", "unlock", "inside", "if", "while", "else", "foreach", 
+                "popup", "python3", "execute" });
             A_MultiCoreVariables = new HintArray(new string[] { "files", "directories", "recursiveFiles", "recursiveDirectories",
                 "images", "videos", "recursiveImages", "recursiveVideos"
             });
@@ -106,7 +108,7 @@ namespace Perun2Gui.Hint
                 "min()", "numbers()", "newYear()", "number()", "path()", "parent()", "power()", "replace()","random()",
                 "repeat()", "reverse()", "right()", "round()", "roman()", "substring()", "sign()", "size()", "split()", "sqrt()", "findText()",
                 "startsWith()", "string()", "sum()", "trim()", "truncate()", "time()", "upper()", "words()", "weekDayName()", "shiftMonth()", 
-                "shiftWeekDay()", "isNaN()", "isNever()", "clock()", "raw()", "resemblance()", "duration()" }, HintType.Retreating);
+                "shiftWeekDay()", "isNaN()", "isNever()", "clock()", "raw()", "resemblance()", "duration()", "askPython3()" }, HintType.Retreating);
             A_AllVariables = new HintArray(new string[] {
                 "now", "today", "yesterday", "tomorrow", "desktop", "Perun2", "origin", "access",  "alphabet", "ascii", "arguments",
                 "files", "recursiveFiles", "directories", "recursiveDirectories", "index", "this", "location", "success",
@@ -173,7 +175,7 @@ namespace Perun2Gui.Hint
             A_Operators = new HintArray(new string[] { ",", "[", ":", "-", "+", "%", "?" });
             A_BoolFunctions = new HintArray(new string[] { "startsWith()", "anyInside()", "any()", "contains()",
                 "endsWith()", "empty()", "existsInside()", "exists()", "existInside()", "exist()", "hidden()", "isDigit()", "isBinary()", "isHex()",
-                "isLetter()", "isLower()", "isNumber()", "isUpper()", "random()", "findText()", "isNaN()", "isNever()" }, HintType.Retreating);
+                "isLetter()", "isLower()", "isNumber()", "isUpper()", "random()", "findText()", "isNaN()", "isNever()", "askPython3()" }, HintType.Retreating);
             A_Limit = new HintArray(new string[] { "limit" });
             A_Brackets = new HintArray(new string[] { "()" }, HintType.Retreating);
             A_CurlyBrackets = new HintArray(new string[] { "{}" }, HintType.Retreating);
@@ -183,6 +185,8 @@ namespace Perun2Gui.Hint
             A_Perun2 = new HintArray(new string[] { "Perun2" });
             A_AfterNot = new HintArray(new string[] { "empty", "like", "in", "true", "false" });
             A_DirectoryFunctions = new HintArray(new string[] { "anyInside()", "countInside()", "existsInside()", "existInside()" }, HintType.Retreating);
+            A_PrecedingStringLiteral = new HintArray(new string[] { "python3", "execute", "like", "resembles",
+                "between", "popup", "regexp"});
 
             InitTimeWords();
         }
@@ -534,8 +538,7 @@ namespace Perun2Gui.Hint
                     || CheckMatch(A_Filters)
                     || CheckMatch(A_TAFW);
             }
-            else if (prev.Equals("like") || prev.Equals("resembles") 
-                || prev.Equals("between") || prev.Equals("popup") || prev.Equals("regexp"))
+            else if (A_PrecedingStringLiteral.ContainsValue(prev))
             {
                 return CheckMatch(A_String);
             }

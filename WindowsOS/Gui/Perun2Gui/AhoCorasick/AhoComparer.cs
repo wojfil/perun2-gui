@@ -45,7 +45,8 @@ namespace Perun2Gui
                 "copy", "create", "createfile", "createdirectory",
                 "createfiles", "createdirectories", "delete", "drop", "hide", "lock", "move",
                 "open", "reaccess", "rechange", "recreate", "remodify", "rename", "select",
-                "unhide", "unlock", "force", "stack", "print", "run", "sleep", "exit", "error", "popup"
+                "unhide", "unlock", "force", "stack", "print", "run", "sleep", "exit", "error", "popup",
+                "execute", "python3"
             };
 
             string[] USUAL_WORDS = {
