@@ -57,7 +57,7 @@ namespace Perun2Gui
 
         private void InitMenu()
         {
-            enterLocationToolStripMenuItem.Enabled = HasLocation;
+            enterLocationToolStripMenuItem.Enabled = state.HasLocation();
         }
 
         private void RefreshHistoryMenuItems()

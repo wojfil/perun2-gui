@@ -93,7 +93,7 @@ namespace Perun2Gui
 
                 try
                 {
-                    string path = Path.GetFullPath(Path.Combine(LocationPathString, trimmed));
+                    string path = Path.GetFullPath(Path.Combine(state.LocationPathString, trimmed));
 
                     if (!File.Exists(path) && !Directory.Exists(path))
                     {
@@ -104,7 +104,7 @@ namespace Perun2Gui
                         continue;
                     }
 
-                    result.Add(Path.Combine(LocationPathString, trimmed));
+                    result.Add(Path.Combine(state.LocationPathString, trimmed));
                 }
                 catch { }
             }
@@ -126,7 +126,7 @@ namespace Perun2Gui
 
         private void RefreshLogMenuStripState()
         {
-            if (! HasLocation)
+            if (! state.HasLocation())
             {
                 showThemToolStripMenuItem.Enabled = false;
                 openThemToolStripMenuItem.Enabled = false;
@@ -154,7 +154,7 @@ namespace Perun2Gui
 
                 try
                 {
-                    string path = Path.GetFullPath(Path.Combine(LocationPathString, trimmed));
+                    string path = Path.GetFullPath(Path.Combine(state.LocationPathString, trimmed));
 
                     if (! File.Exists(path) && ! Directory.Exists(path))
                     {

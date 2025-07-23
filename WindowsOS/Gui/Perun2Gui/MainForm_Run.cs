@@ -107,7 +107,7 @@ namespace Perun2Gui
 
             if (mode == ExecutionMode.Run)
             {
-                if (!HasLocation && !LoadLocation())
+                if (! state.HasLocation() && ! LoadLocation())
                 {
                     return;
                 }
@@ -118,7 +118,7 @@ namespace Perun2Gui
                 return;
             }
 
-            if (HasFile)
+            if (! state.HasFile())
             {
                 if (!code.Equals(PrevCode))
                 {
@@ -128,7 +128,7 @@ namespace Perun2Gui
             }
             else
             {
-                if (HasBackup)
+                if (state.HasBackup())
                 {
                     if (!code.Equals(PrevCode))
                     {
@@ -150,10 +150,9 @@ namespace Perun2Gui
         {
             string backups = Paths.GetInstance().GetBackupsPath();
             Directory.CreateDirectory(backups);
-            BackupPathString = Path.Combine(backups, GetNewBackupName() + Constants.PERUN2_EXTENSION);
-            HasBackup = true;
-            File.Create(BackupPathString).Dispose();
-            File.WriteAllText(BackupPathString, code);
+            state.BackupPathString = Path.Combine(backups, GetNewBackupName() + Constants.PERUN2_EXTENSION);
+            File.Create(state.BackupPathString).Dispose();
+            File.WriteAllText(state.BackupPathString, code);
         }
 
         private string GetNewBackupName()
@@ -179,13 +178,13 @@ namespace Perun2Gui
 
         private bool IsCurrentFileGlobalScript()
         {
-            if (!HasFile)
+            if (! state.HasFile())
             {
                 return false;
             }
 
             string s1 = Paths.GetInstance().GetRootPath();
-            string s2 = Path.GetDirectoryName(LocationPathString);
+            string s2 = Path.GetDirectoryName(state.LocationPathString);
             return String.Equals(s1, s2, StringComparison.OrdinalIgnoreCase);
         }
 
@@ -224,14 +223,14 @@ namespace Perun2Gui
             }
 
             sb.Append('"');
-            sb.Append(HasBackup ? BackupPathString : FilePathString);
+            sb.Append(state.HasBackup() ? state.BackupPathString : state.FilePathString);
             sb.Append('"');
 
             if (mode == ExecutionMode.Run)
             {
                 sb.Append(" -d ");
                 sb.Append('"');
-                sb.Append(LocationPathString.EndsWith("\\") ? (LocationPathString + "\\") : LocationPathString);
+                sb.Append(state.LocationPathString.EndsWith("\\") ? (state.LocationPathString + "\\") : state.LocationPathString);
                 sb.Append('"');
             }
 

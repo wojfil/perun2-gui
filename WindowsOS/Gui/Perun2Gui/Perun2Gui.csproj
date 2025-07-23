@@ -259,6 +259,7 @@
       <DependentUpon>SaveChangesForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SavedSettings.cs" />
+    <Compile Include="State.cs" />
     <Compile Include="StringUtil.cs" />
     <Compile Include="TermsForm.cs">
       <SubType>Form</SubType>

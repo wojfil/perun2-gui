@@ -24,6 +24,7 @@ using System.Windows.Forms;
 using FastColoredTextBoxNS;
 using Perun2Gui.Properties;
 using Perun2Gui.Hint;
+using static System.Windows.Forms.AxHost;
 
 namespace Perun2Gui
 {
@@ -33,29 +34,18 @@ namespace Perun2Gui
         private string NEW_LINE = Environment.NewLine;
 
         private bool IsCodeSaved;
-        private bool HasLocation;
-        private bool HasFile;
-        private bool HasBackup;
-        private string LocationPathString;
-        private string FilePathString;
-        private string FileNameString;
-        private string BackupPathString;
         private string PrevCode;
-
+        private State state;
 
 
         // open application from Menu Start or directly
         public MainForm()
         {
+            state = new State();
+
             PreInit();
             InitializeComponent();
 
-            HasLocation = false;
-            HasFile = false;
-            HasBackup = false;
-            LocationPathString = null;
-            FilePathString = null;
-            BackupPathString = null;
             PrevCode = null;
             SaveAsEnabled = false;
 
@@ -65,13 +55,11 @@ namespace Perun2Gui
         // open application inside a directory
         public MainForm(string location)
         {
+            state = new State();
+
             PreInit();
             InitializeComponent();
 
-            HasFile = false;
-            HasBackup = false;
-            FilePathString = null;
-            BackupPathString = null;
             PrevCode = null;
             SaveAsEnabled = false;
 
@@ -83,11 +71,12 @@ namespace Perun2Gui
         // open a source file
         public MainForm(string location, string file, string code)
         {
+            state = new State();
+
             PreInit();
             InitializeComponent();
 
-            HasBackup = false;
-            BackupPathString = null;
+            PrevCode = null;
             SaveAsEnabled = !String.IsNullOrEmpty(code);
 
             Init();

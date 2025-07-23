@@ -30,7 +30,7 @@ namespace Perun2Gui
 
         private void RefreshSavedProgress()
         {
-            IsCodeSaved = HasFile
+            IsCodeSaved = state.HasFile()
                ? PrevCode.Equals(codeBox.Text)
                : String.IsNullOrEmpty(codeBox.Text);
 
@@ -39,17 +39,17 @@ namespace Perun2Gui
 
         private void RefreshFormTitle()
         {
-            if (HasFile)
+            if (state.HasFile())
             {
                 if (IsCodeSaved)
                 {
                     saveToolStripMenuItem.Enabled = false;
-                    Text = FileNameString + " - " + Constants.LANGUAGE_NAME;
+                    Text = state.FileNameString + " - " + Constants.LANGUAGE_NAME;
                 }
                 else
                 {
                     saveToolStripMenuItem.Enabled = true;
-                    Text = "*" + FileNameString + " - " + Constants.LANGUAGE_NAME;
+                    Text = "*" + state.FileNameString + " - " + Constants.LANGUAGE_NAME;
                 }
             }
             else

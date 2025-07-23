@@ -35,7 +35,7 @@ namespace Perun2Gui
                 return;
             }
 
-            if (mode == ExecutionMode.Run && !Directory.Exists(LocationPathString))
+            if (mode == ExecutionMode.Run && !Directory.Exists(state.LocationPathString))
             {
                 logBox.AppendText("Error! Current working location does not exist anymore." + NEW_LINE + LINE);
                 return;
@@ -53,7 +53,7 @@ namespace Perun2Gui
                 if (Process != null) return;
             }
 
-            if (!HasBackup && HasFile && !File.Exists(FilePathString))
+            if (! state.HasBackup() && state.HasFile() && !File.Exists(state.FilePathString))
             {
                 SetBackup(codeBox.Text);
             }
@@ -61,7 +61,7 @@ namespace Perun2Gui
             Process = new Process();
 
             if (mode == ExecutionMode.Run) {
-                Process.StartInfo.WorkingDirectory = LocationPathString;
+                Process.StartInfo.WorkingDirectory = state.LocationPathString;
             }
 
             Process.StartInfo.Arguments = GetRunnerArgs(mode);

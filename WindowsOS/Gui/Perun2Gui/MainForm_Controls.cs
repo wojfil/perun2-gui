@@ -180,29 +180,32 @@ namespace Perun2Gui
 
         private void copyNameToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (HasFile)
+            if (state.HasFile())
             {
-                Clipboard.SetText(FileNameString);
+                Clipboard.SetText(state.FileNameString);
                 codeBox.Focus();
             }
         }
 
         private void copyPathToolStripMenuItem_file_Click(object sender, EventArgs e)
         {
-            if (HasFile)
+            if (state.HasFile())
             {
-                Clipboard.SetText(FilePathString);
+                Clipboard.SetText(state.FilePathString);
                 codeBox.Focus();
             }
         }
 
         private void showInDirectoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string path = Path.GetDirectoryName(FilePathString);
-            if (Directory.Exists(path) && File.Exists(FilePathString))
+            if (state.HasFile())
             {
-                OpenFolderAndSelectItem(path, FilePathString);
-                codeBox.Focus();
+                string path = Path.GetDirectoryName(state.FilePathString);
+                if (Directory.Exists(path) && File.Exists(state.FilePathString))
+                {
+                    OpenFolderAndSelectItem(path, state.FilePathString);
+                    codeBox.Focus();
+                }
             }
         }
 
@@ -241,16 +244,16 @@ namespace Perun2Gui
 
         private void copyPathToolStripMenuItem_location_Click(object sender, EventArgs e)
         {
-            if (HasLocation)
+            if (state.HasLocation())
             {
-                Clipboard.SetText(LocationPathString);
+                Clipboard.SetText(state.LocationPathString);
                 codeBox.Focus();
             }
         }
 
         private void enterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (HasLocation)
+            if (state.HasLocation())
             {
                 enterLocationToolStripMenuItem_Click(sender, e);
                 codeBox.Focus();
@@ -260,16 +263,18 @@ namespace Perun2Gui
         private void fileMenuStrip_Opening(object sender, CancelEventArgs e)
         {
             SetNullHint();
-            copyPathToolStripMenuItem_file.Enabled = HasFile;
-            copyNameToolStripMenuItem.Enabled = HasFile;
-            showInDirectoryToolStripMenuItem.Enabled = HasFile && File.Exists(FilePathString);
+            copyPathToolStripMenuItem_file.Enabled = state.HasFile();
+            copyNameToolStripMenuItem.Enabled = state.HasFile();
+            showInDirectoryToolStripMenuItem.Enabled = state.HasFile() 
+                && File.Exists(state.FilePathString);
         }
 
         private void locationMenuStrip_Opening(object sender, CancelEventArgs e)
         {
             SetNullHint();
-            copyPathToolStripMenuItem_location.Enabled = HasLocation;
-            enterToolStripMenuItem.Enabled = HasLocation && Directory.Exists(LocationPathString);
+            copyPathToolStripMenuItem_location.Enabled = state.HasLocation();
+            enterToolStripMenuItem.Enabled = state.HasLocation() 
+                && Directory.Exists(state.LocationPathString);
         }
 
         private void locationBox_MouseDown(object sender, MouseEventArgs e)
