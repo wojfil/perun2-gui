@@ -334,6 +334,8 @@ namespace Perun2Gui
             licenseToolStripMenuItem.Enabled = false;
             versionToolStripMenuItem.Enabled = false;
             aboutToolStripMenuItem.Enabled = false;
+
+            changePathToolStripMenuItem.Enabled = false;
         }
 
         private void RunStopRefreshForm()
@@ -391,6 +393,8 @@ namespace Perun2Gui
             RefreshSelectionMenuItems();
             RefreshCodeAlterEnableness();
             RefreshSelectAllEnableness();
+
+            changePathToolStripMenuItem.Enabled = true;
         }
 
         private void EnableCodeBox()

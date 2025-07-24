@@ -118,6 +118,8 @@ namespace Perun2Gui
             this.locationMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.copyPathToolStripMenuItem_location = new System.Windows.Forms.ToolStripMenuItem();
             this.enterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator17 = new System.Windows.Forms.ToolStripSeparator();
+            this.changePathToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.locationPanel = new System.Windows.Forms.Panel();
             this.locPictureBox = new System.Windows.Forms.PictureBox();
             this.filePanel = new System.Windows.Forms.Panel();
@@ -748,24 +750,38 @@ namespace Perun2Gui
             this.locationMenuStrip.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.locationMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.copyPathToolStripMenuItem_location,
-            this.enterToolStripMenuItem});
+            this.enterToolStripMenuItem,
+            this.toolStripSeparator17,
+            this.changePathToolStripMenuItem});
             this.locationMenuStrip.Name = "locationMenuStrip";
-            this.locationMenuStrip.Size = new System.Drawing.Size(152, 56);
+            this.locationMenuStrip.Size = new System.Drawing.Size(181, 110);
             this.locationMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.locationMenuStrip_Opening);
             // 
             // copyPathToolStripMenuItem_location
             // 
             this.copyPathToolStripMenuItem_location.Name = "copyPathToolStripMenuItem_location";
-            this.copyPathToolStripMenuItem_location.Size = new System.Drawing.Size(151, 26);
+            this.copyPathToolStripMenuItem_location.Size = new System.Drawing.Size(180, 26);
             this.copyPathToolStripMenuItem_location.Text = "Copy path";
             this.copyPathToolStripMenuItem_location.Click += new System.EventHandler(this.copyPathToolStripMenuItem_location_Click);
             // 
             // enterToolStripMenuItem
             // 
             this.enterToolStripMenuItem.Name = "enterToolStripMenuItem";
-            this.enterToolStripMenuItem.Size = new System.Drawing.Size(151, 26);
+            this.enterToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.enterToolStripMenuItem.Text = "Enter";
             this.enterToolStripMenuItem.Click += new System.EventHandler(this.enterToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator17
+            // 
+            this.toolStripSeparator17.Name = "toolStripSeparator17";
+            this.toolStripSeparator17.Size = new System.Drawing.Size(177, 6);
+            // 
+            // changePathToolStripMenuItem
+            // 
+            this.changePathToolStripMenuItem.Name = "changePathToolStripMenuItem";
+            this.changePathToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.changePathToolStripMenuItem.Text = "Set path";
+            this.changePathToolStripMenuItem.Click += new System.EventHandler(this.changePathToolStripMenuItem_Click);
             // 
             // locationPanel
             // 
@@ -832,7 +848,7 @@ namespace Perun2Gui
             this.showThemToolStripMenuItem,
             this.openThemToolStripMenuItem});
             this.logMenuStrip.Name = "contextMenuStrip1";
-            this.logMenuStrip.Size = new System.Drawing.Size(198, 136);
+            this.logMenuStrip.Size = new System.Drawing.Size(198, 114);
             this.logMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.logMenuStrip_Opening);
             // 
             // copyToolStripMenuItem_log
@@ -1153,6 +1169,8 @@ namespace Perun2Gui
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator16;
         private System.Windows.Forms.ToolStripMenuItem showThemToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openThemToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator17;
+        private System.Windows.Forms.ToolStripMenuItem changePathToolStripMenuItem;
     }
 }
 

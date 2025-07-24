@@ -92,8 +92,6 @@ namespace Perun2Gui
         private void relocateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             LoadLocation();
-            IsCodeSaved = false;
-            RefreshFormTitle();
         }
 
         private bool LoadLocation()

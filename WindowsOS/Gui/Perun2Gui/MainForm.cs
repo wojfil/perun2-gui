@@ -250,5 +250,10 @@ namespace Perun2Gui
        {
            SetNullHint();
        }
+
+        private void changePathToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoadLocation();
+        }
     }
 }
