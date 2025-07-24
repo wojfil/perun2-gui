@@ -63,6 +63,26 @@ namespace Perun2Installer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] analyzer {
+            get {
+                object obj = ResourceManager.GetObject("analyzer", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] asker {
+            get {
+                object obj = ResourceManager.GetObject("asker", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] avcodec_61 {
             get {
                 object obj = ResourceManager.GetObject("avcodec_61", resourceCulture);

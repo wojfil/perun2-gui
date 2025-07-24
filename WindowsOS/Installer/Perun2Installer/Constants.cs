@@ -61,5 +61,8 @@ namespace Perun2Installer
         public static readonly string REGISTRY_UNINSTALL_GUID = "{BD9E139C-380D-4775-88E1-28EE77B626AF}";
         public static readonly string SHORTCUT_NAME = "Perun2.lnk";
 
+        public static readonly string PYTHON_FILE_ANALYZER = "analyzer.py";
+        public static readonly string PYTHON_FILE_ASKER = "asker.py";
+
     }
 }
