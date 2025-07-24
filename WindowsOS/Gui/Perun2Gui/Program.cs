@@ -129,10 +129,9 @@ namespace Perun2Gui
                 return;
             }
 
-            string location = Path.GetDirectoryName(path);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm(location, path, code));
+            Application.Run(new MainForm(path, code));
         }
 
         public static void showActualizationResultPopup()

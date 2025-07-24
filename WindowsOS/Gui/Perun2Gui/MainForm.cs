@@ -69,7 +69,7 @@ namespace Perun2Gui
         }
 
         // open a source file
-        public MainForm(string location, string file, string code)
+        public MainForm(string file, string code)
         {
             state = new State();
 
