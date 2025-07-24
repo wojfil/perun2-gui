@@ -22,6 +22,9 @@ namespace Perun2Installer.Actions
                 string settings = Path.Combine(intallation, Constants.FILE_SETTINGS);
                 string icon = Path.Combine(intallation, Constants.FILE_ICON);
 
+                string py_analyzer = Path.Combine(intallation, Constants.PYTHON_FILE_ANALYZER);
+                string py_asker = Path.Combine(intallation, Constants.PYTHON_FILE_ASKER);
+
                 string dll_avcodec = Path.Combine(intallation, "avcodec-61.dll");
                 string dll_avdevice = Path.Combine(intallation, "avdevice-61.dll");
                 string dll_avfilter = Path.Combine(intallation, "avfilter-10.dll");
@@ -38,6 +41,9 @@ namespace Perun2Installer.Actions
                 DeleteFileIfExists(settings);
                 DeleteFileIfExists(icon);
 
+                DeleteFileIfExists(py_analyzer);
+                DeleteFileIfExists(py_asker);
+
                 DeleteFileIfExists(dll_avcodec);
                 DeleteFileIfExists(dll_avdevice);
                 DeleteFileIfExists(dll_avfilter);
@@ -52,6 +58,9 @@ namespace Perun2Installer.Actions
                 Create(perun2, Properties.Resources.perun2);
                 Create(uninstall, Properties.Resources.uninstall);
                 CreateTextFile(settings, GetDefaultSettings());
+
+                Create(py_analyzer, Properties.Resources.analyzer);
+                Create(py_asker, Properties.Resources.asker);
 
                 Create(dll_avcodec, Properties.Resources.avcodec_61);
                 Create(dll_avdevice, Properties.Resources.avdevice_61);
