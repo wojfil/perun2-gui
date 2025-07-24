@@ -280,6 +280,7 @@ namespace Perun2Gui
             // 
             // enterLocationToolStripMenuItem
             // 
+            this.enterLocationToolStripMenuItem.Enabled = false;
             this.enterLocationToolStripMenuItem.Name = "enterLocationToolStripMenuItem";
             this.enterLocationToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
             this.enterLocationToolStripMenuItem.Size = new System.Drawing.Size(289, 26);

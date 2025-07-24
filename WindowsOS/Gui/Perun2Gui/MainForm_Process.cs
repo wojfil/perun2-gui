@@ -41,13 +41,6 @@ namespace Perun2Gui
                 return;
             }
 
-            /*if (mode == ExecutionMode.Run && IsCurrentFileGlobalScript())
-            {
-                logBox.AppendText("Error! This is a global script. You can run it only from the dropdown menu of the File Explorer."
-                    + NEW_LINE + LINE);
-                return;
-            }*/
-
             lock (SyncGate)
             {
                 if (Process != null) return;

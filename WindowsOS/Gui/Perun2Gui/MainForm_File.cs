@@ -108,6 +108,16 @@ namespace Perun2Gui
                     Title = LOAD_LOCATION_TITLE
                 };
             }
+            else if (state.HasFile())
+            {
+                string defaultLocation = Path.GetDirectoryName(state.FilePathString);
+
+                dialog = new DirectorySelectDialog
+                {
+                    InitialDirectory = defaultLocation,
+                    Title = LOAD_LOCATION_TITLE
+                };
+            }
             else
             {
                 dialog = new DirectorySelectDialog
@@ -122,7 +132,6 @@ namespace Perun2Gui
                 enterLocationToolStripMenuItem.Enabled = true;
 
                 SetLocation(dialog.FileName);
-                SetFile(null);
                 InitSavedProgress();
                 RefreshFormTitle();
                 return true;
@@ -155,11 +164,13 @@ namespace Perun2Gui
             {
                 state.LocationPathString = String.Empty;
                 locationBox.Text = String.Empty;
+                enterLocationToolStripMenuItem.Enabled = false;
             }
             else
             {
                 state.LocationPathString = location;
                 locationBox.Text = StringUtil.PathShortcut(location, LOCATION_SHOW_MAX_LENGTH);
+                enterLocationToolStripMenuItem.Enabled = true;
             }
  
         }
@@ -219,10 +230,8 @@ namespace Perun2Gui
             RefreshHistoryMenuItems();
 
             SetFile(path);
-            SetLocation(Path.GetDirectoryName(path));
             state.BackupPathString = String.Empty;
 
-            enterLocationToolStripMenuItem.Enabled = true;
             saveAsToolStripMenuItem.Enabled = true;
             InitSavedProgress();
             RefreshFormTitle();
