@@ -51,6 +51,11 @@ namespace Perun2Gui
             int selectionStart = logBox.SelectionStart;
             int selectionEnd = selectionStart + logBox.SelectionLength;
 
+            if (logBox.SelectionLength == 0 && logBox.Text.Length == 0)
+            {
+                return new string[] { };
+            }
+
             while (selectionStart >= 0)
             {
                 if (IsNewLine(logBox.Text[selectionStart]))
@@ -69,6 +74,11 @@ namespace Perun2Gui
                 }
 
                 selectionEnd++;
+            }
+
+            if (selectionStart < 0)
+            {
+                selectionStart = 0;
             }
 
             string selectedText = logBox.Text.Substring(selectionStart, selectionEnd - selectionStart);
