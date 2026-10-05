@@ -25,14 +25,13 @@ namespace Perun2Installer.Actions
                 string py_analyzer = Path.Combine(intallation, Constants.PYTHON_FILE_ANALYZER);
                 string py_asker = Path.Combine(intallation, Constants.PYTHON_FILE_ASKER);
 
-                string dll_avcodec = Path.Combine(intallation, "avcodec-61.dll");
-                string dll_avdevice = Path.Combine(intallation, "avdevice-61.dll");
-                string dll_avfilter = Path.Combine(intallation, "avfilter-10.dll");
-                string dll_avformat = Path.Combine(intallation, "avformat-61.dll");
-                string dll_avutil = Path.Combine(intallation, "avutil-59.dll");
-                string dll_postproc = Path.Combine(intallation, "postproc-58.dll");
-                string dll_swresample = Path.Combine(intallation, "swresample-5.dll");
-                string dll_swscale = Path.Combine(intallation, "swscale-8.dll");
+                string dll_avcodec = Path.Combine(intallation, "avcodec-62.dll");
+                string dll_avformat = Path.Combine(intallation, "avformat-62.dll");
+                string dll_avutil = Path.Combine(intallation, "avutil-60.dll");
+                string dll_icudt78 = Path.Combine(intallation, "icudt78.dll");
+                string dll_icuin78 = Path.Combine(intallation, "icuin78.dll");
+                string dll_icuuc78 = Path.Combine(intallation, "icuuc78.dll");
+                string dll_swresample = Path.Combine(intallation, "swresample-6.dll");
 
                 DeleteFileIfExists(gui);
                 DeleteFileIfExists(manager);
@@ -45,13 +44,12 @@ namespace Perun2Installer.Actions
                 DeleteFileIfExists(py_asker);
 
                 DeleteFileIfExists(dll_avcodec);
-                DeleteFileIfExists(dll_avdevice);
-                DeleteFileIfExists(dll_avfilter);
                 DeleteFileIfExists(dll_avformat);
                 DeleteFileIfExists(dll_avutil);
-                DeleteFileIfExists(dll_postproc);
+                DeleteFileIfExists(dll_icudt78);
+                DeleteFileIfExists(dll_icuin78);
+                DeleteFileIfExists(dll_icuuc78);
                 DeleteFileIfExists(dll_swresample);
-                DeleteFileIfExists(dll_swscale);
 
                 Create(gui, Properties.Resources.Perun2Gui);
                 Create(manager, Properties.Resources.Perun2Manager);
@@ -62,14 +60,13 @@ namespace Perun2Installer.Actions
                 Create(py_analyzer, Properties.Resources.analyzer);
                 Create(py_asker, Properties.Resources.asker);
 
-                Create(dll_avcodec, Properties.Resources.avcodec_61);
-                Create(dll_avdevice, Properties.Resources.avdevice_61);
-                Create(dll_avfilter, Properties.Resources.avfilter_10);
-                Create(dll_avformat, Properties.Resources.avformat_61);
-                Create(dll_avutil, Properties.Resources.avutil_59);
-                Create(dll_postproc, Properties.Resources.postproc_58);
-                Create(dll_swresample, Properties.Resources.swresample_5);
-                Create(dll_swscale, Properties.Resources.swscale_8);
+                Create(dll_avcodec, Properties.Resources.avcodec_62);
+                Create(dll_avformat, Properties.Resources.avformat_62);
+                Create(dll_avutil, Properties.Resources.avutil_60);
+                Create(dll_icudt78, Properties.Resources.icudt78);
+                Create(dll_icuin78, Properties.Resources.icuin78);
+                Create(dll_icuuc78, Properties.Resources.icuuc78);
+                Create(dll_swresample, Properties.Resources.swresample_6);
 
                 using (FileStream fs = new FileStream(icon, FileMode.Create))
                 {

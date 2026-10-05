@@ -209,19 +209,25 @@
     <None Include="Resources\background.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\avcodec-61.dll" />
+    <None Include="Resources\avcodec-62.dll" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\avdevice-61.dll" />
+    <None Include="Resources\avformat-62.dll" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\avfilter-10.dll" />
+    <None Include="Resources\avutil-60.dll" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\avformat-61.dll" />
+    <None Include="Resources\icudt78.dll" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\avutil-59.dll" />
+    <None Include="Resources\icuin78.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icuuc78.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\swresample-6.dll" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\postproc-58.dll" />

@@ -83,9 +83,9 @@ namespace Perun2Installer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] avcodec_61 {
+        internal static byte[] avcodec_62 {
             get {
-                object obj = ResourceManager.GetObject("avcodec_61", resourceCulture);
+                object obj = ResourceManager.GetObject("avcodec_62", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace Perun2Installer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] avdevice_61 {
+        internal static byte[] avformat_62 {
             get {
-                object obj = ResourceManager.GetObject("avdevice_61", resourceCulture);
+                object obj = ResourceManager.GetObject("avformat_62", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace Perun2Installer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] avfilter_10 {
+        internal static byte[] avutil_60 {
             get {
-                object obj = ResourceManager.GetObject("avfilter_10", resourceCulture);
+                object obj = ResourceManager.GetObject("avutil_60", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -113,9 +113,9 @@ namespace Perun2Installer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] avformat_61 {
+        internal static byte[] icudt78 {
             get {
-                object obj = ResourceManager.GetObject("avformat_61", resourceCulture);
+                object obj = ResourceManager.GetObject("icudt78", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -123,9 +123,9 @@ namespace Perun2Installer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] avutil_59 {
+        internal static byte[] icuin78 {
             get {
-                object obj = ResourceManager.GetObject("avutil_59", resourceCulture);
+                object obj = ResourceManager.GetObject("icuin78", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -212,9 +212,9 @@ namespace Perun2Installer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] postproc_58 {
+        internal static byte[] icuuc78 {
             get {
-                object obj = ResourceManager.GetObject("postproc_58", resourceCulture);
+                object obj = ResourceManager.GetObject("icuuc78", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -222,19 +222,9 @@ namespace Perun2Installer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] swresample_5 {
+        internal static byte[] swresample_6 {
             get {
-                object obj = ResourceManager.GetObject("swresample_5", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] swscale_8 {
-            get {
-                object obj = ResourceManager.GetObject("swscale_8", resourceCulture);
+                object obj = ResourceManager.GetObject("swresample_6", resourceCulture);
                 return ((byte[])(obj));
             }
         }
