@@ -31,6 +31,11 @@ namespace Perun2Gui
             return ! String.IsNullOrWhiteSpace(this.BackupPathString);
         }
 
+        public void RemoveBackup()
+        {
+            BackupPathString = String.Empty;
+        }
+
         //public bool HasLocation;
         //public bool HasFile;
         //public bool HasBackup;

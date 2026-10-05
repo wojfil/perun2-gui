@@ -118,17 +118,9 @@ namespace Perun2Gui
                 return;
             }
 
-            if (! state.HasFile())
+            try
             {
-                if (!code.Equals(PrevCode))
-                {
-                    PrevCode = code;
-                    SetBackup(code);
-                }
-            }
-            else
-            {
-                if (state.HasBackup())
+                if (!state.HasFile())
                 {
                     if (!code.Equals(PrevCode))
                     {
@@ -138,9 +130,38 @@ namespace Perun2Gui
                 }
                 else
                 {
-                    PrevCode = code;
-                    SetBackup(code);
+                    if (state.HasBackup())
+                    {
+                        if (!code.Equals(PrevCode))
+                        {
+                            PrevCode = code;
+                            SetBackup(code);
+                        }
+                    }
+                    else
+                    {
+                        PrevCode = code;
+                        SetBackup(code);
+                    }
                 }
+            }
+            catch (System.Text.EncoderFallbackException ex)
+            {
+                logBox.AppendText("Error! The source code contains broken Unicode characters."
+                    + NEW_LINE + LINE);
+
+                if (state.HasBackup())
+                {
+                    state.RemoveBackup();
+                    PrevCode = String.Empty;
+                }
+                return;
+            }
+            catch (Exception)
+            {
+                logBox.AppendText("Error! The script could not be run because of an IO issue."
+                    + NEW_LINE + LINE);
+                return;
             }
 
             Run(mode);
