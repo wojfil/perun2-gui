@@ -128,7 +128,7 @@ namespace Perun2Gui
             }
             catch (Exception)
             {
-                Popup.Error("Something went wrong and file '" + file + "' could not be opened.");
+                Popup.Error("Something went wrong and the file '" + file + "' could not be opened.");
                 return;
             }
 
@@ -141,25 +141,25 @@ namespace Perun2Gui
         {
             if (! File.Exists(Paths.GetInstance().EXE_PATH))
             {
-                Popup.Error("Actualization has failed. File '" + Paths.GetInstance().EXE_PATH + "' not found.");
+                Popup.Error("The actualization has failed. The file '" + Paths.GetInstance().EXE_PATH + "' is not found.");
                 return;
             }
             
             if (! File.Exists(Paths.GetInstance().UNINSTALL_PATH))
             {
-                Popup.Error("Actualization has failed. File '" + Paths.GetInstance().UNINSTALL_PATH + "' not found.");
+                Popup.Error("The actualization has failed. The file '" + Paths.GetInstance().UNINSTALL_PATH + "' is not found.");
                 return;
             }
             
             if (! File.Exists(Paths.GetInstance().GUI_PATH)) // this seems pointless... but let it be
             {
-                Popup.Error("Actualization has failed. File '" + Paths.GetInstance().GUI_PATH + "' not found.");
+                Popup.Error("The actualization has failed. The file '" + Paths.GetInstance().GUI_PATH + "' is not found.");
                 return;
             }
             
             if (! File.Exists(Paths.GetInstance().MANAGER_PATH))
             {
-                Popup.Error("Actualization has failed. File '" + Paths.GetInstance().MANAGER_PATH + "' not found.");
+                Popup.Error("The actualization has failed. The file '" + Paths.GetInstance().MANAGER_PATH + "' is not found.");
                 return;
             }
 
