@@ -96,7 +96,7 @@ namespace Perun2Gui
             }
             else
             {
-                Popup.Error("Path '" + path + "' does not lead to a valid directory nor a Perun2 script file. Note: Perun2 works only on hard disc drives.");
+                Popup.Error("The path '" + path + "' does not lead to a valid directory nor a Perun2 script file. Note: Perun2 works only on hard disc drives.");
             }
         }
 
