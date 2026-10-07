@@ -11,6 +11,6 @@ If you build this project on your own, then the answer is probably *no*. So, ent
 6. Copy all four programs to *Installer/Perun2Installer/Resources*.
   Their names should be: *perun2.exe*, *Perun2Gui.exe*, *Perun2Manager.exe*, *uninstall.exe*.
 7. Prepare external dependencies. They are *dll* libraries that appear in the same folder as *perun2.exe* after compilation.
-Copy them all to *Installer/Perun2Installer/Resources* as well.
+Copy them all to *Installer/Perun2Installer/Resources*.
 8. Compile the installer (directory *Installer*).
 9. (*) Finally, sign this executable wth your certificate.
