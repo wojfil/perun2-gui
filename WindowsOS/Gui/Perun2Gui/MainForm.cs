@@ -81,6 +81,13 @@ namespace Perun2Gui
 
             Init();
             SetSourceFile(file, code, false);
+            string location = Path.GetDirectoryName(file);
+
+            if (location != null) 
+            {
+                SetLocation(location);
+            }
+
             try
             {
                 SavedSettings.GetInstance().AddRecentFile(file);
