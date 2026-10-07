@@ -42,47 +42,50 @@ namespace Perun2Gui
             if (path.IsEmptyPath())
             {
                 Popup.Error("Path is empty.");
+				return;
             }
-            else if (path.Equals("."))
+			
+            if (path.Equals("."))
             {
                 string origin = Environment.CurrentDirectory;
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
                 Application.Run(new MainForm(origin));
+				return;
             }
-            else
+        
+            if (path.Length == 3 && path[1] == ':' && Char.IsLetter(path[0]))
             {
-                if (path.Length == 3 && path[1] == ':' && Char.IsLetter(path[0]))
-                {
-                    path = path.Substring(0, 2) + "\\";
-                }
-
-                if (Directory.Exists(path))
-                {
-                    Start_OpenDirectory(path);
-                }
-                else if (File.Exists(path))
-                {
-                    Start_OpenFile(path);
-                }
-                else
-                {
-                    string newPath = Path.Combine(Environment.CurrentDirectory, path);
-
-                    if (File.Exists(newPath))
-                    {
-                        Start_OpenFile(newPath);
-                    }
-                    else if (Directory.Exists(newPath))
-                    {
-                        Start_OpenDirectory(newPath);
-                    }
-                    else
-                    {
-                        ShowPathError(path);
-                    }
-                }
+                path = path.Substring(0, 2) + "\\";
             }
+
+            if (Directory.Exists(path))
+            {
+                Start_OpenDirectory(path);
+                return;
+            }
+
+            if (File.Exists(path))
+            {
+                Start_OpenFile(path);
+                return;
+            }
+
+            string newPath = Path.Combine(Environment.CurrentDirectory, path);
+
+            if (File.Exists(newPath))
+            {
+                Start_OpenFile(newPath);
+                return;
+            }
+            
+            if (Directory.Exists(newPath))
+            {
+                Start_OpenDirectory(newPath);
+                return;
+            }
+
+            ShowPathError(path);
         }
 
         static void ShowPathError(string path)
