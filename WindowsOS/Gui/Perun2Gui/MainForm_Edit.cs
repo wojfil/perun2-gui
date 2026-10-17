@@ -314,6 +314,8 @@ namespace Perun2Gui
                 codeBox.SelectAll();
                 codeBox.Focus();
                 SetFinalLineCol();
+                RefreshCopyEnableness();
+                RefreshCutEnableness();
             }
         }
 

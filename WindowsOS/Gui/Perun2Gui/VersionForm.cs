@@ -34,9 +34,11 @@ namespace Perun2Gui
         private string LatestVersion;
         private bool LatestVersionLoaded;
         private bool Actualizable;
+        private MainForm _MainForm;
 
-        public VersionForm()
+        public VersionForm(MainForm mainForm)
         {
+            _MainForm = mainForm;
             InitializeComponent();
             this.Icon = Resources.perun256;
 
@@ -202,6 +204,17 @@ namespace Perun2Gui
         
         private void Actualize()
         {
+            if (_MainForm.IsProgressNotSaved())
+            {
+                var form = new SaveChangesForm(_MainForm);
+                form.ShowDialog();
+                if (form.IsExitCancelled())
+                {
+                    Popup.Error("Actualization has failed.");
+                    return;
+                }
+            }
+
             if (TooManyRunningProcesses() || !DeleteOldFiles())
             {
                 return;

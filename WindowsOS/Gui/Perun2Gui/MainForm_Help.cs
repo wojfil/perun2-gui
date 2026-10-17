@@ -61,7 +61,7 @@ namespace Perun2Gui
         {
             if (Constants.ACTUALIZATIONS_ENABLED)
             {
-                var form = new VersionForm();
+                var form = new VersionForm(this);
                 form.ShowDialog();
             }
             else

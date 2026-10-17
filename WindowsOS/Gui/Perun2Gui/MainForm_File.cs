@@ -237,7 +237,7 @@ namespace Perun2Gui
             MousePressed = false;
         }
 
-        private bool IsProgressNotSaved()
+        public bool IsProgressNotSaved()
         {
             return !IsCodeSaved && state.HasFile();
         }
